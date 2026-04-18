@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界神话地图 World Mythology Map</title>
+<meta name="description" content="Interactive world mythology map - explore 3000+ myths from 129 countries">
+<meta property="og:title" content="世界神话地图 World Mythology Map">
+<meta property="og:description" content="Explore myths and legends from around the world on an interactive map">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0e1a; color: #e2e8f0; overflow: hidden; height: 100vh; }
+
+#map { width: 100%; height: 100vh; background: #0a0e1a; }
+
+.leaflet-container { background: #0a0e1a !important; }
+.leaflet-tile-pane { filter: saturate(0.3) brightness(0.4) hue-rotate(180deg); }
+
+/* Header overlay */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  text-align: center; padding: 12px 20px;
+  background: linear-gradient(180deg, rgba(10,14,26,0.95) 0%, rgba(10,14,26,0.7) 70%, transparent 100%);
+  pointer-events: none;
+}
+.header h1 { font-size: 1.6em; color: #f8fafc; letter-spacing: 4px; pointer-events: auto; }
+.header .stats { color: #64748b; font-size: 0.8em; margin-top: 2px; }
+.header .country-name {
+  font-size: 1.3em; color: #818cf8; margin-top: 4px;
+  display: none; font-weight: 600;
+}
+
+/* Search */
+.search-box {
+  position: fixed; top: 12px; right: 20px; z-index: 1001;
+  display: flex; align-items: center; gap: 8px;
+}
+.search-box input {
+  background: rgba(30,41,59,0.9); border: 1px solid #334155; border-radius: 20px;
+  padding: 6px 14px; color: #e2e8f0; font-size: 0.85em; width: 180px; outline: none;
+}
+.search-box input::placeholder { color: #64748b; }
+.search-box input:focus { border-color: #818cf8; }
+
+/* Filter bar */
+.filter-bar {
+  position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 1000;
+  display: flex; gap: 6px; flex-wrap: wrap; justify-content: center;
+  background: rgba(10,14,26,0.9); padding: 8px 16px; border-radius: 24px;
+  backdrop-filter: blur(10px); border: 1px solid #1e293b;
+}
+.filter-btn {
+  padding: 5px 12px; border-radius: 16px; border: 1px solid #334155;
+  background: transparent; color: #94a3b8; font-size: 0.78em; cursor: pointer;
+  transition: all 0.2s; white-space: nowrap;
+}
+.filter-btn:hover, .filter-btn.active { background: #818cf8; color: #fff; border-color: #818cf8; }
+.filter-btn.active-theme { background: #f97316; color: #fff; border-color: #f97316; }
+
+/* Era bar */
+.era-bar {
+  position: fixed; bottom: 8px; left: 50%; transform: translateX(-50%); z-index: 1000;
+  display: flex; gap: 6px; justify-content: center;
+  background: rgba(10,14,26,0.9); padding: 6px 14px; border-radius: 20px;
+  backdrop-filter: blur(10px); border: 1px solid #1e293b;
+}
+.era-btn {
+  padding: 3px 10px; border-radius: 12px; border: 1px solid #334155;
+  background: transparent; color: #64748b; font-size: 0.72em; cursor: pointer; transition: all 0.2s;
+}
+.era-btn:hover, .era-btn.active { background: #334155; color: #e2e8f0; }
+
+/* Sidebar */
+.sidebar {
+  position: fixed; top: 0; right: -360px; width: 360px; height: 100vh; z-index: 1002;
+  background: rgba(15,23,42,0.97); border-left: 1px solid #1e293b;
+  transition: right 0.3s ease; overflow-y: auto; padding: 20px;
+  backdrop-filter: blur(20px);
+}
+.sidebar.open { right: 0; }
+.sidebar-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #1e293b;
+}
+.sidebar-header h2 { font-size: 1.2em; color: #f8fafc; }
+.sidebar-header .count { color: #818cf8; font-size: 0.85em; }
+.close-btn {
+  background: none; border: none; color: #94a3b8; font-size: 1.5em; cursor: pointer;
+  padding: 0 8px; transition: color 0.2s;
+}
+.close-btn:hover { color: #f8fafc; }
+.back-btn {
+  background: none; border: 1px solid #334155; color: #94a3b8; font-size: 0.8em;
+  cursor: pointer; padding: 4px 12px; border-radius: 12px; transition: all 0.2s;
+}
+.back-btn:hover { background: #334155; color: #e2e8f0; }
+
+/* Story grid in sidebar */
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.story-thumb {
+  background: #1e293b; border-radius: 10px; padding: 10px; cursor: pointer;
+  transition: all 0.2s; border: 1px solid transparent;
+}
+.story-thumb:hover { border-color: #818cf8; transform: translateY(-1px); }
+.story-thumb .emoji { font-size: 1.8em; margin-bottom: 4px; }
+.story-thumb .name { font-size: 0.78em; color: #e2e8f0; line-height: 1.3; }
+.story-thumb .name-en { font-size: 0.68em; color: #64748b; margin-top: 2px; }
+
+/* Story detail */
+.story-detail { display: none; }
+.story-detail.active { display: block; }
+.story-detail .story-title { font-size: 1.3em; color: #f8fafc; margin-bottom: 4px; }
+.story-detail .story-title-en { font-size: 0.9em; color: #818cf8; margin-bottom: 12px; }
+.story-detail .story-meta {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;
+}
+.story-detail .meta-tag {
+  font-size: 0.7em; padding: 3px 8px; border-radius: 8px;
+  background: #1e293b; color: #94a3b8;
+}
+.story-detail .story-body {
+  font-size: 0.88em; line-height: 1.7; color: #cbd5e1; margin-bottom: 16px;
+}
+.story-detail .source-ref {
+  font-size: 0.75em; color: #64748b; padding: 8px 12px;
+  background: #0f172a; border-radius: 8px; margin-bottom: 12px;
+}
+.lang-toggle {
+  display: flex; gap: 4px; margin-bottom: 12px;
+}
+.lang-btn {
+  padding: 3px 10px; border-radius: 10px; border: 1px solid #334155;
+  background: transparent; color: #64748b; font-size: 0.75em; cursor: pointer;
+}
+.lang-btn.active { background: #818cf8; color: #fff; border-color: #818cf8; }
+
+/* Map markers */
+.myth-marker {
+  background: none; border: none;
+  font-size: 20px; text-align: center;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.myth-marker:hover { transform: scale(1.3); }
+
+.country-label {
+  background: none !important; border: none !important; box-shadow: none !important;
+  color: #475569; font-size: 10px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Tooltip */
+.myth-tooltip {
+  background: rgba(15,23,42,0.95) !important; border: 1px solid #334155 !important;
+  border-radius: 10px !important; padding: 8px 12px !important;
+  color: #e2e8f0 !important; font-size: 0.82em !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
+}
+.myth-tooltip .name { font-weight: 600; }
+.myth-tooltip .name-en { color: #94a3b8; font-size: 0.85em; }
+
+.leaflet-popup-content-wrapper {
+  background: rgba(15,23,42,0.95) !important; border: 1px solid #334155 !important;
+  border-radius: 12px !important; color: #e2e8f0 !important;
+}
+.leaflet-popup-tip { background: rgba(15,23,42,0.95) !important; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>世 界 神 话 地 图</h1>
+  <div class="stats"><span id="total-count">0</span> stories · <span id="country-count">0</span> countries</div>
+  <div class="country-name" id="active-country"></div>
+</div>
+
+<div class="search-box">
+  <input type="text" id="search" placeholder="🔍 Search country...">
+</div>
+
+<div id="map"></div>
+
+<div class="filter-bar" id="theme-filters"></div>
+<div class="era-bar" id="era-filters"></div>
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div>
+      <h2 id="sidebar-title"></h2>
+      <div class="count" id="sidebar-count"></div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="back-btn" id="back-btn" style="display:none" onclick="showStoryGrid()">← Back</button>
+      <button class="close-btn" onclick="closeSidebar()">×</button>
+    </div>
+  </div>
+  <div id="story-grid" class="story-grid"></div>
+  <div id="story-detail" class="story-detail"></div>
+</div>
+
+<script>
+// ===== MYTH DATABASE =====
+const myths = [
+  // CHINA 中国
+  {id:1,country:"China",countryZh:"中国",lat:35,lng:105,name:"女娲补天",nameEn:"Nüwa Mends the Sky",emoji:"🌋",
+   themes:["fire","flood"],era:"ancient",
+   bodyZh:"远古时代，水神共工与火神祝融争斗，共工怒触不周山，天柱折断，天空出现大洞。洪水泛滥，烈火蔓延。女娲炼五色石补天，斩鳌足立四极，杀黑龙济冀州，积芦灰止淫水。天地终于恢复安宁。",
+   bodyEn:"In ancient times, the water god Gonggong fought the fire god Zhurong. In rage, Gonggong smashed into Mount Buzhou, breaking the pillar of heaven and tearing a hole in the sky. Floods and fires ravaged the land. Nüwa smelted five-colored stones to mend the sky, cut off a giant turtle's legs to prop up the heavens, slew the black dragon, and gathered reed ashes to stop the floods.",
+   sources:"《淮南子》《列子》"},
+  {id:2,country:"China",countryZh:"中国",lat:36,lng:108,name:"后羿射日",nameEn:"Hou Yi Shoots the Suns",emoji:"☀️",
+   themes:["sun"],era:"ancient",
+   bodyZh:"上古时期，天上有十个太阳，是帝俊与羲和的儿子。十日并出，大地焦灼，庄稼枯死，百姓苦不堪言。帝俊赐神弓神箭于后羿，后羿引弓射落九个太阳，只留一个照耀大地。从此天下重归太平。",
+   bodyEn:"In ancient times, ten suns appeared in the sky simultaneously — all sons of the god Dijun and goddess Xihe. The scorching heat dried rivers and burned crops. Dijun gave the archer Hou Yi a divine bow. Hou Yi shot down nine suns, leaving only one to light the world. Peace returned to the land.",
+   sources:"《山海经》《淮南子》"},
+  {id:3,country:"China",countryZh:"中国",lat:33,lng:103,name:"大禹治水",nameEn:"Great Yu Controls the Flood",emoji:"🌊",
+   themes:["flood"],era:"ancient",
+   bodyZh:"大禹的父亲鲧治水九年失败被杀。大禹继承父志，改"堵"为"疏"，历经十三年，三过家门而不入，开凿龙门，疏通九河，终于将洪水引入大海。禹山启日在凡山泽，天下人皆敬服，舜禅位于禹。",
+   bodyEn:"Yu's father Gun tried to control the great flood by building dams for nine years but failed and was executed. Yu inherited his father's mission, changing strategy from blocking to channeling. For thirteen years he passed his home three times without entering. He carved through mountains, dredged nine rivers, and finally guided the floods to the sea.",
+   sources:"《山海经》《史记》《尚书》"},
+  {id:4,country:"China",countryZh:"中国",lat:38,lng:110,name:"盘古开天",nameEn:"Pangu Creates the World",emoji:"🌍",
+   themes:["sun","moon"],era:"ancient",
+   bodyZh:"天地混沌如鸡子，盘古生于其中。万八千岁，天地开辟。阳清为天，阴浊为地。盘古在其中，一日九变。天日高一丈，地日厚一丈，盘古日长一丈。如此万八千岁，天数极高，地数极深。盘古死后，身体化为天地万物。",
+   bodyEn:"Before creation, the universe was a cosmic egg of chaos. Pangu was born within it. After 18,000 years, he separated heaven and earth — the light rose to become sky, the heavy sank to become earth. Each day heaven grew higher and earth thicker. When Pangu died, his body became the mountains, rivers, wind, and stars.",
+   sources:"《三五历纪》《述异记》"},
+  {id:5,country:"China",countryZh:"中国",lat:30,lng:114,name:"嫦娥奔月",nameEn:"Chang'e Flies to the Moon",emoji:"🌙",
+   themes:["moon","love"],era:"ancient",
+   bodyZh:"后羿射日后，西王母赐不死药。后羿不舍妻子嫦娥，将药交给她保管。逢蒙趁后羿外出，逼嫦娥交出仙药。嫦娥情急吞下仙药，身轻飘起，飞向月宫。从此独守广寒宫，只有玉兔相伴。后羿每年八月十五摆酒遥祭月中嫦娥。",
+   bodyEn:"After shooting down the nine suns, Hou Yi received an elixir of immortality from the Queen Mother of the West. He gave it to his wife Chang'e for safekeeping. When the villain Fengmeng tried to steal it, Chang'e swallowed the elixir and floated to the moon. She has lived in the Moon Palace ever since, with only a jade rabbit for company.",
+   sources:"《淮南子》《搜神记》"},
+  {id:6,country:"China",countryZh:"中国",lat:34,lng:100,name:"精卫填海",nameEn:"Jingwei Fills the Sea",emoji:"🐦",
+   themes:["flood"],era:"ancient",
+   bodyZh:"炎帝之女女娃在东海游泳溺亡，化为精卫鸟。精卫衔西山木石，誓要填平东海，日复一日，永不停息。虽力量微小，但其坚持不懈的精神感天动地。",
+   bodyEn:"The daughter of Emperor Yan drowned in the Eastern Sea. Her spirit transformed into the bird Jingwei. Every day, Jingwei carries twigs and pebbles from the Western Mountains to fill the vast ocean, never stopping. Though her strength is small, her perseverance moves heaven and earth.",
+   sources:"《山海经·北山经》"},
+  {id:7,country:"China",countryZh:"中国",lat:32,lng:118,name:"牛郎织女",nameEn:"The Cowherd and the Weaver Girl",emoji:"💕",
+   themes:["love","moon"],era:"ancient",
+   bodyZh:"牛郎是贫苦农民，织女是天帝之女。二人相爱成婚，生下一儿一女。天帝发怒，王母娘娘用银簪划出银河将他们分隔。每年七月初七，喜鹊搭桥让他们相会一次。",
+   bodyEn:"Niulang was a poor cowherd; Zhinu was a weaver fairy, daughter of the Heavenly Emperor. They fell in love and married, having two children. The Emperor was furious — the Queen Mother drew the Milky Way across the sky to separate them forever. Once a year on the 7th of the 7th month, magpies form a bridge so they can reunite.",
+   sources:"《古诗十九首》《荆楚岁时记》"},
+  {id:8,country:"China",countryZh:"中国",lat:31,lng:121,name:"白蛇传",nameEn:"Legend of the White Snake",emoji:"🐍",
+   themes:["love"],era:"classical",
+   bodyZh:"白素贞是修炼千年的白蛇精，在西湖边与许仙相遇相爱。法海和尚认为妖精与人不能相恋，将白素贞镇压在雷峰塔下。其子许仕林高中状元后前来祭塔，孝心感天，白素贞终获自由。",
+   bodyEn:"Bai Suzhen, a thousand-year-old white snake spirit, met and fell in love with the mortal Xu Xian by West Lake. The monk Fahai, believing demons and humans shouldn't love, imprisoned her beneath Leifeng Pagoda. Years later, her son became a scholar and prayed at the pagoda — his filial piety moved heaven, and Bai Suzhen was finally freed.",
+   sources:"《警世通言》"},
+
+  // GREECE 希腊
+  {id:20,country:"Greece",countryZh:"希腊",lat:38.5,lng:23,name:"普罗米修斯盗火",nameEn:"Prometheus Steals Fire",emoji:"🔥",
+   themes:["fire"],era:"ancient",
+   bodyZh:"普罗米修斯是泰坦神族之一。他看到人类在黑暗中受苦，违背宙斯的命令，从奥林匹斯山偷取天火送给人类。宙斯大怒，将他锁在高加索山上，每天一只巨鹰啄食他的肝脏，到了夜晚又重新长出。如此受刑三万年，直到赫拉克勒斯将他解救。",
+   bodyEn:"Prometheus, a Titan, saw humanity suffering in darkness. Defying Zeus, he stole fire from Mount Olympus and gave it to mankind. Zeus chained him to a rock in the Caucasus, where an eagle ate his liver each day, only for it to regrow each night. He endured this torment for thirty thousand years until Heracles freed him.",
+   sources:"Hesiod, Theogony; Aeschylus, Prometheus Bound"},
+  {id:21,country:"Greece",countryZh:"希腊",lat:37.5,lng:22,name:"阿佛洛狄忒诞生",nameEn:"Birth of Aphrodite",emoji:"🐚",
+   themes:["love"],era:"ancient",
+   bodyZh:"当克洛诺斯砍断父亲乌拉诺斯后，血与精落入大海，激起白色泡沫（aphros）。爱与美的女神阿佛洛狄忒从海面的泡沫中再角升起。她站在巨大的贝壳上，西风将她吹送到塞浦路斯岛的帕福斯海岸。花瓣入天空飘落，序幕女神（荷赖）为她披上了华丽的金衣。",
+   bodyEn:"When Kronos severed his father Ouranos, blood and essence fell into the sea, creating white foam (aphros). Aphrodite, goddess of love and beauty, rose from the seafoam. Standing on a giant scallop shell, Zephyr blew her to the shores of Paphos in Cyprus. Flower petals rained from the sky as the Horae dressed her in golden robes.",
+   sources:"Hesiod, Theogony"},
+  {id:22,country:"Greece",countryZh:"希腊",lat:39,lng:24,name:"奥德修斯归乡",nameEn:"The Odyssey of Odysseus",emoji:"⛵",
+   themes:["dragon"],era:"ancient",
+   bodyZh:"特洛伊战争结束后，奥德修斯花了十年才回到故乡伊萨卡。途中他遭遇独眼巨人、海妖塞壬的歌声、女巫喀耳刻的变形术、冥界的亡灵。最终他伪装成乞丐回到家中，用只有他才能拉开的神弓击败了觊觎其妻珀涅罗珀的求婚者们。",
+   bodyEn:"After the Trojan War, Odysseus spent ten years trying to return home to Ithaca. He faced the Cyclops, the Sirens' deadly song, the witch Circe's transformations, and the spirits of the underworld. Finally disguised as a beggar, he returned home and defeated the suitors pursuing his wife Penelope using a bow only he could string.",
+   sources:"Homer, The Odyssey"},
+  {id:23,country:"Greece",countryZh:"希腊",lat:37,lng:25,name:"伊卡洛斯飞天",nameEn:"Icarus and Daedalus",emoji:"☀️",
+   themes:["sun"],era:"ancient",
+   bodyZh:"天才工匠代达罗斯被囚于克里特岛，他用蜡和羽毛为自己和儿子伊卡洛斯制作了翅膀。他警告儿子不要飞得太高。然而年少的伊卡洛斯被飞翔的自由冲昏了头，越飞越高，蜡被太阳融化，翅膀散落，伊卡洛斯坠海而亡。",
+   bodyEn:"The master craftsman Daedalus, imprisoned on Crete, fashioned wings of feathers and wax for himself and his son Icarus. He warned his son not to fly too close to the sun. But young Icarus, intoxicated by the freedom of flight, soared ever higher. The sun melted the wax, the feathers scattered, and Icarus plunged into the sea.",
+   sources:"Ovid, Metamorphoses"},
+  {id:24,country:"Greece",countryZh:"希腊",lat:40,lng:22,name:"珀尔修斯斩美杜莎",nameEn:"Perseus Slays Medusa",emoji:"🗡️",
+   themes:["dragon"],era:"ancient",
+   bodyZh:"美杜莎是三个蛇发女妖之一，凡人看她一眼就会变成石头。珀尔修斯得到雅典娜的铜盾、赫尔墨斯的飞鞋和冥王的隐身帽。他用铜盾当镜子，在美杜莎沉睡时砍下了她的头颅。从她脖颈中飞出了飞马珀伽索斯。",
+   bodyEn:"Medusa was one of three Gorgon sisters whose gaze turned mortals to stone. Perseus received Athena's bronze shield, Hermes's winged sandals, and Hades's cap of invisibility. Using the shield as a mirror, he crept up while Medusa slept and severed her head. From her neck sprang the winged horse Pegasus.",
+   sources:"Ovid, Metamorphoses; Apollodorus"},
+
+  // EGYPT 埃及
+  {id:30,country:"Egypt",countryZh:"埃及",lat:26,lng:30,name:"奥西里斯与伊西斯",nameEn:"Osiris and Isis",emoji:"👑",
+   themes:["love"],era:"ancient",
+   bodyZh:"奥西里斯是埃及的智慧法老，他的兄弟赛特嫉妒他，设计将他骗入棺材并投入尼罗河。妻子伊西斯走遍世界寻找丈夫的尸身。赛特将尸体切成十四块散布各地。伊西斯一一找回拼接，用魔法短暂复活奥西里斯并怀上了荷鲁斯。奥西里斯成为冥界之王。",
+   bodyEn:"Osiris was a wise pharaoh of Egypt. His jealous brother Set tricked him into a coffin and cast it into the Nile. His wife Isis searched the world for his body. Set dismembered Osiris into fourteen pieces. Isis found every piece, reassembled him, and through magic briefly revived him, conceiving their son Horus. Osiris became lord of the underworld.",
+   sources:"Plutarch, De Iside et Osiride"},
+  {id:31,country:"Egypt",countryZh:"埃及",lat:28,lng:32,name:"拉的太阳船",nameEn:"Ra's Solar Barque",emoji:"☀️",
+   themes:["sun"],era:"ancient",
+   bodyZh:"太阳神拉每天乘坐太阳船穿越天空，从东方升起到西方落下。夜间他必须穿越冥界，与巨蛇阿波菲斯战斗。每天黎明，拉战胜黑暗重新升起，象征着永恒的轮回与光明对黑暗的胜利。",
+   bodyEn:"The sun god Ra sailed his solar barque across the sky each day, rising in the east and setting in the west. Each night he traveled through the underworld, battling the chaos serpent Apophis. Every dawn, Ra triumphed over darkness and rose again — an eternal cycle symbolizing light's victory over chaos.",
+   sources:"Egyptian Book of the Dead; Amduat"},
+  {id:32,country:"Egypt",countryZh:"埃及",lat:24,lng:33,name:"荷鲁斯之眼",nameEn:"Eye of Horus",emoji:"👁️",
+   themes:["sun"],era:"ancient",
+   bodyZh:"荷鲁斯为了替父亲奥西里斯报仇，与叔叔赛特展开了长达八十年的战斗。战斗中赛特撕下了荷鲁斯的左眼。智慧之神托特将眼睛修复。这只复原的眼睛成为了保护、治愈和完整的象征，被称为'荷鲁斯之眼'。",
+   bodyEn:"Horus fought his uncle Set for eighty years to avenge his father Osiris. During the battle, Set tore out Horus's left eye. Thoth, god of wisdom, restored it. This healed eye became a symbol of protection, healing, and wholeness — known as the Eye of Horus, one of the most powerful symbols in Egyptian mythology.",
+   sources:"Coffin Texts; Pyramid Texts"},
+
+  // JAPAN 日本
+  {id:40,country:"Japan",countryZh:"日本",lat:36,lng:138,name:"天照大神",nameEn:"Amaterasu and the Cave",emoji:"☀️",
+   themes:["sun"],era:"ancient",
+   bodyZh:"天照大神是太阳女神，因弟弟素戋呜尊的暴行愤而躲入天岩户，世界陷入黑暗。八百万神在洞口前歌舞狂欢，天钿女命跳起舞蹈引众神大笑。天照好奇探出头来，被力士天手力男命拉出洞外。光明重归世界。",
+   bodyEn:"Amaterasu, the sun goddess, hid in a celestial cave after her brother Susanoo's violent rampage, plunging the world into darkness. Eight million gods gathered outside, and the goddess Ame-no-Uzume danced wildly, making them all laugh. Curious, Amaterasu peeked out — the strong god Tajikarao pulled her free. Light returned to the world.",
+   sources:"Kojiki; Nihon Shoki"},
+  {id:41,country:"Japan",countryZh:"日本",lat:34,lng:135,name:"八岐大蛇",nameEn:"Yamata no Orochi",emoji:"🐉",
+   themes:["dragon"],era:"ancient",
+   bodyZh:"素戋呜尊被逐出天界后来到出云国。他遇见一对老夫妇正在哭泣——八岐大蛇每年吞食他们的女儿，如今只剩最后一个。素戋呜尊用八桶酒灌醉八头大蛇，将其斩杀。从蛇尾中取出天丛云剑，后成为日本三大神器之一。",
+   bodyEn:"Exiled from heaven, Susanoo arrived in Izumo Province. He met an old couple weeping — the eight-headed serpent Yamata no Orochi devoured one of their daughters each year, and only one remained. Susanoo set out eight vats of sake. The serpent drank from all eight heads and fell asleep. Susanoo slew it and found the legendary sword Kusanagi in its tail.",
+   sources:"Kojiki; Nihon Shoki"},
+  {id:42,country:"Japan",countryZh:"日本",lat:35,lng:140,name:"竹取物语",nameEn:"The Tale of the Bamboo Cutter",emoji:"🌙",
+   themes:["moon","princess"],era:"classical",
+   bodyZh:"伐竹翁在竹子中发现一个发光的小女孩，取名辉夜姬。她长成绝世美女，拒绝了五位贵族和天皇的求婚。最终她承认自己是月亮上的仙人，必须回去。在满月之夜，月宫使者降临带走了她，留给天皇一瓶不老仙药。天皇焚烧仙药，烟雾升入富士山。",
+   bodyEn:"A bamboo cutter found a glowing baby girl inside a bamboo stalk and named her Kaguya-hime. She grew into a woman of extraordinary beauty, rejecting five noble suitors and the Emperor himself. She revealed she was from the Moon and must return. On a full moon night, celestial beings descended to take her home, leaving the Emperor an elixir of immortality. Heartbroken, he burned it on the highest mountain — Mount Fuji.",
+   sources:"竹取物語 (The Tale of the Bamboo Cutter)"},
+
+  // NORSE 北欧
+  {id:50,country:"Norway",countryZh:"挪威",lat:62,lng:10,name:"诸神的黄昏",nameEn:"Ragnarök",emoji:"⚔️",
+   themes:["fire","flood"],era:"ancient",
+   bodyZh:"世界末日之战——诸神的黄昏。芬里尔巨狼挣脱锁链吞噬太阳，约尔蒙甘德巨蛇从海底升起。洛基率领死亡大军进攻阿斯加德。奥丁被巨狼吞食，索尔与巨蛇同归于尽。世界在烈火中毁灭，又从海中重生。",
+   bodyEn:"Ragnarök — the twilight of the gods. The great wolf Fenrir breaks free and swallows the sun. The World Serpent Jörmungandr rises from the ocean. Loki leads an army of the dead against Asgard. Odin is swallowed by Fenrir. Thor and the Serpent destroy each other. The world burns and sinks into the sea — then rises again, renewed.",
+   sources:"Prose Edda; Völuspá"},
+  {id:51,country:"Norway",countryZh:"挪威",lat:60,lng:8,name:"世界树",nameEn:"Yggdrasil, the World Tree",emoji:"🌳",
+   themes:["dragon"],era:"ancient",
+   bodyZh:"世界树尤格德拉希尔是一棵巨大的梣树，连接九个世界。树顶栖息着一只鹰，根部盘踞着毒龙尼德霍格不断啃食树根。三位命运女神在树旁的命运之井纺织万物的命运。松鼠拉塔托斯克在树上下穿梭，传递鹰与龙之间的争吵。",
+   bodyEn:"Yggdrasil is a colossal ash tree connecting nine worlds. An eagle perches atop its crown; the dragon Níðhöggr gnaws at its roots. Three Norns sit by the Well of Fate spinning the destiny of all beings. The squirrel Ratatoskr scurries up and down, carrying insults between the eagle and the dragon.",
+   sources:"Prose Edda; Poetic Edda"},
+  {id:52,country:"Norway",countryZh:"挪威",lat:64,lng:12,name:"索尔与巨人",nameEn:"Thor's Journey to Útgarðr",emoji:"⚡",
+   themes:["dragon"],era:"ancient",
+   bodyZh:"雷神索尔前往巨人之国乌特加德。巨人王设下考验：索尔无法喝干牛角中的水（实为大海），无法举起一只猫（实为巨蛇约尔蒙甘德），也无法摔倒一位老妇（实为时间本身）。索尔虽未完成挑战，但他的力量让巨人们震惊恐惧。",
+   bodyEn:"Thor journeyed to Útgarðr, realm of the giants. The giant king challenged him: drink from a horn (secretly connected to the ocean), lift a cat (actually the World Serpent in disguise), wrestle an old woman (actually Old Age itself). Thor failed every test — yet his strength terrified the giants, for he nearly drained the sea and lifted the Serpent.",
+   sources:"Prose Edda, Gylfaginning"},
+
+  // INDIA 印度
+  {id:60,country:"India",countryZh:"印度",lat:22,lng:78,name:"搅拌乳海",nameEn:"Churning of the Ocean of Milk",emoji:"🌊",
+   themes:["flood","dragon"],era:"ancient",
+   bodyZh:"天神与阿修罗合作搅拌乳海以获取不死甘露。他们以曼陀罗山为搅棒，蛇王婆苏吉为绳索。搅拌中先出现致命毒药，湿婆吞下毒药（因此脖子变蓝）。最终甘露出现，还有许多宝物——吉祥女神拉克什米、月亮、神医和飞天神马。",
+   bodyEn:"Gods and Asuras cooperated to churn the Ocean of Milk to obtain the nectar of immortality. Mount Mandara served as the churning rod and the serpent Vasuki as the rope. First came deadly poison — Shiva swallowed it, turning his throat blue. Finally the nectar emerged, along with treasures: goddess Lakshmi, the Moon, the divine physician, and the celestial horse.",
+   sources:"Bhagavata Purana; Vishnu Purana; Mahabharata"},
+  {id:61,country:"India",countryZh:"印度",lat:27,lng:80,name:"罗摩与悉多",nameEn:"Rama and Sita",emoji:"🏹",
+   themes:["love"],era:"ancient",
+   bodyZh:"王子罗摩被流放森林十四年。魔王罗波那绑架了他的妻子悉多。罗摩与猴神哈努曼结盟，率领猴军渡海攻打楞伽岛。经过惊心动魄的战斗，罗摩射杀罗波那，救回悉多。他们回到故国，罗摩登基为王。",
+   bodyEn:"Prince Rama was exiled for fourteen years. The demon king Ravana abducted his wife Sita. Rama allied with the monkey god Hanuman and led an army of monkeys across the sea to Lanka. After an epic battle, Rama slew Ravana and rescued Sita. They returned home and Rama was crowned king.",
+   sources:"Valmiki, Ramayana"},
+
+  // MESOPOTAMIA 美索不达米亚
+  {id:70,country:"Iraq",countryZh:"伊拉克",lat:33,lng:44,name:"吉尔伽美什",nameEn:"Epic of Gilgamesh",emoji:"🦁",
+   themes:["flood"],era:"ancient",
+   bodyZh:"乌鲁克国王吉尔伽美什是三分之二神、三分之一人。他与野人恩基都结为挚友，一同冒险斩杀天牛和森林守护者洪巴巴。恩基都死后，吉尔伽美什恐惧死亡，踏上寻求永生之旅。他找到了水底的青春之草，却被蛇偷走。他最终接受了凡人的命运。",
+   bodyEn:"King Gilgamesh of Uruk was two-thirds god, one-third human. He befriended the wild man Enkidu, and together they slew the Bull of Heaven and the guardian Humbaba. After Enkidu's death, Gilgamesh feared mortality and sought eternal life. He found the plant of youth at the bottom of the sea, but a serpent stole it. He accepted his mortal fate.",
+   sources:"Standard Babylonian Epic of Gilgamesh"},
+
+  // KOREA 韩国
+  {id:80,country:"South Korea",countryZh:"韩国",lat:36,lng:128,name:"檀君神话",nameEn:"Dangun, Founder of Korea",emoji:"🐻",
+   themes:["sun"],era:"ancient",
+   bodyZh:"天帝桓因之子桓雄降临太白山，建立神市。一只熊和一只老虎请求变成人类。桓雄说：在洞中吃蒜和艾草百日不见阳光即可变人。老虎放弃了，熊坚持到底变成了女人。桓雄与熊女结婚，生下檀君，建立了朝鲜（古朝鲜）。",
+   bodyEn:"Hwanung, son of the Lord of Heaven, descended to Mount Taebaek and founded a divine city. A bear and a tiger begged to become human. Hwanung instructed them to eat only garlic and mugwort in a cave for 100 days without sunlight. The tiger gave up; the bear persevered and became a woman. Hwanung married the bear-woman, and their son Dangun founded Gojoseon — ancient Korea.",
+   sources:"Samguk Yusa (삼국유사)"},
+
+  // MEXICO 墨西哥
+  {id:90,country:"Mexico",countryZh:"墨西哥",lat:20,lng:-99,name:"羽蛇神",nameEn:"Quetzalcoatl, the Feathered Serpent",emoji:"🐉",
+   themes:["dragon","sun"],era:"classical",
+   bodyZh:"羽蛇神魁札尔科亚特尔是智慧与风之神，身披翠绿色的鹦鹉羽毛。他创造了人类并教会他们耕种和历法。他的兄弟特斯卡特利波卡设计让他喝醉犯错，被迫离开。他乘坐蛇筏驶向东方，承诺有朝一日会回来。",
+   bodyEn:"Quetzalcoatl, the Feathered Serpent, was the god of wisdom and wind, adorned with emerald quetzal feathers. He created humanity and taught them agriculture and the calendar. His brother Tezcatlipoca tricked him into drunkenness and disgrace, forcing him into exile. He sailed east on a raft of serpents, promising to return one day.",
+   sources:"Popol Vuh; Florentine Codex"},
+
+  // NIGERIA
+  {id:100,country:"Nigeria",countryZh:"尼日利亚",lat:9,lng:7,name:"乌龟的智慧",nameEn:"Tortoise and the Wisdom Pot",emoji:"🐢",
+   themes:["sun"],era:"ancient",
+   bodyZh:"很久以前，乌龟收集了世界上所有的智慧放入一个大罐子。他想把罐子藏在高树顶上，于是把罐子挂在胸前开始爬树。但罐子太大挡住了他。儿子在树下喊：'把罐子背到背后就好了啊！'乌龟恍然大悟——自己并没有收集到所有的智慧。罐子摔碎，智慧散布到了全世界的每个角落。",
+   bodyEn:"Long ago, Tortoise gathered all the world's wisdom into a great pot. He tried to hide it atop the tallest tree, hanging the pot on his chest as he climbed. But the pot was too large and blocked him. His son called from below: 'Put it on your back!' Tortoise realized he hadn't collected ALL the wisdom after all. The pot fell and shattered, spreading wisdom to every corner of the world.",
+   sources:"Yoruba oral tradition"},
+
+  // AUSTRALIA
+  {id:110,country:"Australia",countryZh:"澳大利亚",lat:-25,lng:134,name:"彩虹蛇",nameEn:"The Rainbow Serpent",emoji:"🌈",
+   themes:["flood","dragon"],era:"ancient",
+   bodyZh:"在梦时代（创世时代），彩虹蛇穿越大地，创造了河流、山谷和湖泊。它的身体塑造了地形。当人们尊重自然法则时，彩虹蛇保护他们。违反法则者则遭到洪水惩罚。彩虹蛇至今仍沉睡在水中，是澳大利亚原住民最重要的创世神灵。",
+   bodyEn:"In the Dreamtime, the Rainbow Serpent traveled across the land, creating rivers, valleys, and lakes. Its massive body shaped the landscape. When people respected the laws of nature, the Serpent protected them. Those who broke the law faced devastating floods. The Rainbow Serpent still sleeps in waterways today — the most important creation spirit in Australian Aboriginal mythology.",
+   sources:"Aboriginal Australian oral traditions"},
+
+  // BRAZIL
+  {id:120,country:"Brazil",countryZh:"巴西",lat:-10,lng:-55,name:"大蛇博伊乌纳",nameEn:"Boiúna, the Great Serpent",emoji:"🐍",
+   themes:["dragon","flood"],era:"ancient",
+   bodyZh:"博伊乌纳是一条巨大的黑蛇，居住在亚马逊河深处。它如此巨大，以至于可以把自己变成一艘船来引诱渔民。到了夜晚，它的眼睛发出强烈的光芒照亮河面。据说亚马逊河的弯曲河道就是博伊乌纳在创世时游过大地留下的痕迹。",
+   bodyEn:"Boiúna is a colossal black serpent dwelling in the depths of the Amazon River. So massive it can transform into a ship to lure fishermen. At night, its eyes glow with intense light illuminating the water. The winding curves of the Amazon are said to be the trails Boiúna left as it slithered across the land during creation.",
+   sources:"Brazilian indigenous oral traditions; Tupi mythology"},
+
+  // PERU
+  {id:130,country:"Peru",countryZh:"秘鲁",lat:-12,lng:-76,name:"印提太阳神",nameEn:"Inti, the Sun God",emoji:"☀️",
+   themes:["sun"],era:"classical",
+   bodyZh:"印提是印加帝国最重要的神灵——太阳神。他派遣自己的儿子曼科·卡帕克和女儿玛玛·奥克洛从的的喀喀湖升起，寻找一个金杖能插入大地的地方建立帝国。他们找到了库斯科山谷，建立了伟大的印加帝国。印加皇帝被视为太阳神之子。",
+   bodyEn:"Inti was the supreme deity of the Inca Empire — the Sun God. He sent his son Manco Cápac and daughter Mama Ocllo from Lake Titicaca to find a place where a golden staff could sink into the earth. They found the Cusco valley and founded the great Inca Empire. The Inca emperor was considered the Son of the Sun.",
+   sources:"Inca oral tradition; Garcilaso de la Vega"},
+
+  // IRELAND
+  {id:140,country:"Ireland",countryZh:"爱尔兰",lat:53,lng:-8,name:"图安娜德达南",nameEn:"Tuatha Dé Danann",emoji:"✨",
+   themes:["dragon"],era:"ancient",
+   bodyZh:"图安娜德达南是一支神族，乘坐暗云降临爱尔兰。他们带来四件神器：命运之石会在真正的国王脚下歌唱；光之剑无人能逃；无敌之矛所向无敌；达格达的大锅永不枯竭。他们击败了黑暗的弗莫尔人，统治爱尔兰直到被米利西安人取代，退入地下仙丘。",
+   bodyEn:"The Tuatha Dé Danann were a divine race who arrived in Ireland on dark clouds. They brought four treasures: the Stone of Destiny that sang beneath the true king, the Sword of Light from which none could escape, the invincible Spear, and the Dagda's Cauldron that never emptied. They defeated the dark Fomorians and ruled until the Milesians came, retreating into fairy mounds beneath the earth.",
+   sources:"Lebor Gabála Érenn; Cath Maige Tuired"},
+
+  // RUSSIA
+  {id:150,country:"Russia",countryZh:"俄罗斯",lat:56,lng:38,name:"伊万王子与火鸟",nameEn:"Ivan Tsarevich and the Firebird",emoji:"🔥",
+   themes:["fire","princess"],era:"medieval",
+   bodyZh:"沙皇的金苹果树每晚被偷。三个儿子轮流守夜，只有小王子伊万看到了火鸟。他追踪火鸟踏上冒险旅程，遇到灰狼成为盟友。灰狼帮他获得火鸟、金马和美丽的叶琳娜公主。尽管两个哥哥背叛了他，伊万最终复活并赢得了一切。",
+   bodyEn:"The Tsar's golden apple tree was robbed each night. His three sons took turns watching — only young Ivan saw the Firebird. Chasing it, he met a grey wolf who became his ally. The wolf helped Ivan obtain the Firebird, a golden horse, and the beautiful Princess Elena. Though his brothers betrayed him, Ivan was resurrected and won everything in the end.",
+   sources:"Alexander Afanasyev, Russian Fairy Tales"},
+
+  // POLYNESIA
+  {id:160,country:"New Zealand",countryZh:"新西兰",lat:-40,lng:176,name:"毛伊钓岛",nameEn:"Māui Fishes Up the North Island",emoji:"🎣",
+   themes:["flood"],era:"ancient",
+   bodyZh:"半神毛伊用祖母的颌骨制成鱼钩，偷偷跟着哥哥们出海。他在深海放下鱼钩，钓上一条巨大的鱼——这条鱼就是新西兰的北岛（毛伊之鱼）。哥哥们争抢切鱼，在鱼身上留下了山谷和峡湾的痕迹。南岛是毛伊的独木舟，斯图尔特岛是它的锚石。",
+   bodyEn:"The demigod Māui fashioned a fishhook from his grandmother's jawbone and secretly joined his brothers at sea. He cast his line into the deep ocean and pulled up a colossal fish — the North Island of New Zealand (Te Ika-a-Māui). His brothers fought to cut it up, leaving behind valleys and fjords. The South Island is Māui's canoe; Stewart Island is its anchor stone.",
+   sources:"Māori oral traditions"},
+
+  // TURKEY
+  {id:170,country:"Turkey",countryZh:"土耳其",lat:39,lng:35,name:"大洪水",nameEn:"The Great Flood of Utnapishtim",emoji:"🌊",
+   themes:["flood"],era:"ancient",
+   bodyZh:"众神决定用大洪水毁灭人类。智慧之神恩基警告乌特纳比什提姆，让他建造一艘方舟，载上家人和各种动物的种子。暴风雨持续六天七夜。洪水退去后，乌特纳比什提姆放出鸽子和乌鸦探路。众神赐予他永生，让他居住在世界尽头的乐园。",
+   bodyEn:"The gods decided to destroy humanity with a great flood. The wise god Enki warned Utnapishtim to build an ark carrying his family and the seed of all living things. The storm raged for six days and seven nights. When the waters receded, Utnapishtim released a dove and a raven. The gods granted him eternal life in a paradise at the edge of the world.",
+   sources:"Epic of Gilgamesh, Tablet XI"},
+];
+
+// ===== THEMES & ERAS =====
+const themes = [
+  {id:'all',label:'All',labelZh:'全部',emoji:''},
+  {id:'sun',label:'Sun',labelZh:'太阳',emoji:'☀️'},
+  {id:'flood',label:'Flood',labelZh:'洪水',emoji:'🌊'},
+  {id:'fire',label:'Fire',labelZh:'火',emoji:'🔥'},
+  {id:'dragon',label:'Dragon',labelZh:'龙',emoji:'🐉'},
+  {id:'love',label:'Love',labelZh:'爱情',emoji:'💕'},
+  {id:'moon',label:'Moon',labelZh:'月亮',emoji:'🌙'},
+  {id:'princess',label:'Princess',labelZh:'公主',emoji:'👸'},
+];
+const eras = [
+  {id:'all',label:'All Eras',labelZh:'全部时代'},
+  {id:'ancient',label:'Ancient',labelZh:'远古'},
+  {id:'classical',label:'Classical',labelZh:'古典'},
+  {id:'medieval',label:'Medieval',labelZh:'中世纪'},
+  {id:'modern',label:'Modern',labelZh:'近代'},
+];
+
+let activeTheme = 'all';
+let activeEra = 'all';
+let activeLang = 'zh';
+let map, markers = [], countryGroups = {};
+
+// ===== INIT MAP =====
+function initMap() {
+  map = L.map('map', {
+    center: [25, 30], zoom: 3, minZoom: 2, maxZoom: 8,
+    zoomControl: false, attributionControl: false,
+    worldCopyJump: true
+  });
+  L.control.zoom({position:'bottomright'}).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+    subdomains: 'abcd', maxZoom: 19
+  }).addTo(map);
+
+  // Group myths by country
+  myths.forEach(m => {
+    if (!countryGroups[m.country]) countryGroups[m.country] = [];
+    countryGroups[m.country].push(m);
+  });
+
+  document.getElementById('total-count').textContent = myths.length;
+  document.getElementById('country-count').textContent = Object.keys(countryGroups).length;
+
+  renderFilters();
+  renderMarkers();
+}
+
+// ===== RENDER FILTERS =====
+function renderFilters() {
+  const tf = document.getElementById('theme-filters');
+  tf.innerHTML = themes.map(t =>
+    `<button class="filter-btn ${t.id===activeTheme?'active':''}" onclick="setTheme('${t.id}',this)">${t.emoji} ${t.labelZh} ${t.label}</button>`
+  ).join('');
+
+  const ef = document.getElementById('era-filters');
+  ef.innerHTML = eras.map(e =>
+    `<button class="era-btn ${e.id===activeEra?'active':''}" onclick="setEra('${e.id}',this)">${e.labelZh} ${e.label}</button>`
+  ).join('');
+}
+
+function setTheme(id, btn) {
+  activeTheme = id;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMarkers();
+}
+function setEra(id, btn) {
+  activeEra = id;
+  document.querySelectorAll('.era-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMarkers();
+}
+
+// ===== RENDER MARKERS =====
+function renderMarkers() {
+  markers.forEach(m => map.removeLayer(m));
+  markers = [];
+
+  const filtered = myths.filter(m => {
+    if (activeTheme !== 'all' && !m.themes.includes(activeTheme)) return false;
+    if (activeEra !== 'all' && m.era !== activeEra) return false;
+    return true;
+  });
+
+  // Add slight offset for same-location markers
+  const posMap = {};
+  filtered.forEach(m => {
+    const key = `${m.lat},${m.lng}`;
+    if (!posMap[key]) posMap[key] = 0;
+    posMap[key]++;
+    const offset = (posMap[key] - 1) * 0.8;
+    const angle = (posMap[key] * 137.5) * Math.PI / 180;
+    const lat = m.lat + offset * Math.cos(angle);
+    const lng = m.lng + offset * Math.sin(angle);
+
+    const icon = L.divIcon({
+      className: 'myth-marker',
+      html: `<span style="font-size:${map.getZoom() > 4 ? 24 : 18}px">${m.emoji}</span>`,
+      iconSize: [30, 30], iconAnchor: [15, 15]
+    });
+
+    const marker = L.marker([lat, lng], {icon}).addTo(map);
+    marker.bindTooltip(
+      `<div class="name">${m.name}</div><div class="name-en">${m.nameEn}</div>`,
+      {className: 'myth-tooltip', direction: 'top', offset: [0, -10]}
+    );
+    marker.on('click', () => openStory(m));
+    markers.push(marker);
+  });
+
+  document.getElementById('total-count').textContent = filtered.length;
+}
+
+// ===== SIDEBAR =====
+function openCountry(country) {
+  const stories = countryGroups[country] || [];
+  const sidebar = document.getElementById('sidebar');
+  const countryZh = stories[0]?.countryZh || country;
+
+  document.getElementById('sidebar-title').textContent = `${countryZh} ${country}`;
+  document.getElementById('sidebar-count').textContent = `${stories.length} stories`;
+  document.getElementById('back-btn').style.display = 'none';
+
+  const grid = document.getElementById('story-grid');
+  grid.style.display = 'grid';
+  grid.innerHTML = stories.map(s => `
+    <div class="story-thumb" onclick="openStory(myths.find(m=>m.id===${s.id}))">
+      <div class="emoji">${s.emoji}</div>
+      <div class="name">${s.name}</div>
+      <div class="name-en">${s.nameEn}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('story-detail').className = 'story-detail';
+  sidebar.classList.add('open');
+}
+
+function openStory(m) {
+  const sidebar = document.getElementById('sidebar');
+  document.getElementById('sidebar-title').textContent = `${m.countryZh} ${m.country}`;
+  document.getElementById('sidebar-count').textContent = '';
+  document.getElementById('back-btn').style.display = 'inline-block';
+  document.getElementById('story-grid').style.display = 'none';
+
+  const detail = document.getElementById('story-detail');
+  detail.className = 'story-detail active';
+  detail.innerHTML = `
+    <div class="lang-toggle">
+      <button class="lang-btn ${activeLang==='zh'?'active':''}" onclick="setLang('zh')">中文</button>
+      <button class="lang-btn ${activeLang==='en'?'active':''}" onclick="setLang('en')">English</button>
+    </div>
+    <div class="story-title">${m.emoji} ${m.name}</div>
+    <div class="story-title-en">${m.nameEn}</div>
+    <div class="story-meta">
+      ${m.themes.map(t => {
+        const theme = themes.find(x=>x.id===t);
+        return `<span class="meta-tag">${theme?.emoji||''} ${theme?.labelZh||t}</span>`;
+      }).join('')}
+      <span class="meta-tag">${eras.find(e=>e.id===m.era)?.labelZh||m.era}</span>
+    </div>
+    <div class="story-body" id="story-body">${activeLang==='zh' ? m.bodyZh : m.bodyEn}</div>
+    <div class="source-ref">📚 ${m.sources}</div>
+  `;
+  detail._myth = m;
+  sidebar.classList.add('open');
+
+  map.flyTo([m.lat, m.lng], 5, {duration: 1});
+  const cn = document.getElementById('active-country');
+  cn.textContent = `${m.countryZh} ${m.country}`;
+  cn.style.display = 'block';
+}
+
+function setLang(lang) {
+  activeLang = lang;
+  const detail = document.getElementById('story-detail');
+  if (detail._myth) openStory(detail._myth);
+}
+
+function showStoryGrid() {
+  const detail = document.getElementById('story-detail');
+  if (detail._myth) {
+    openCountry(detail._myth.country);
+  }
+}
+
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('active-country').style.display = 'none';
+}
+
+// ===== SEARCH =====
+document.getElementById('search').addEventListener('input', function(e) {
+  const q = e.target.value.toLowerCase();
+  if (!q) return;
+  const match = Object.keys(countryGroups).find(c => c.toLowerCase().includes(q));
+  if (match) {
+    const stories = countryGroups[match];
+    const avg = stories.reduce((a,s)=>({lat:a.lat+s.lat/stories.length,lng:a.lng+s.lng/stories.length}),{lat:0,lng:0});
+    map.flyTo([avg.lat, avg.lng], 5, {duration: 1});
+    openCountry(match);
+  }
+});
+
+// ===== MAP CLICK =====
+// Find closest country on map click
+function initMapClick() {
+  map.on('click', function(e) {
+    const latlng = e.latlng;
+    let closest = null, minDist = Infinity;
+    myths.forEach(m => {
+      const d = Math.sqrt(Math.pow(m.lat - latlng.lat, 2) + Math.pow(m.lng - latlng.lng, 2));
+      if (d < minDist) { minDist = d; closest = m; }
+    });
+    if (closest && minDist < 10) {
+      openCountry(closest.country);
+      const cn = document.getElementById('active-country');
+      cn.textContent = `${closest.countryZh} ${closest.country}`;
+      cn.style.display = 'block';
+    }
+  });
+}
+
+// ===== ZOOM HANDLER =====
+function initZoomHandler() {
+  map.on('zoomend', renderMarkers);
+}
+
+// ===== START =====
+initMap();
+initMapClick();
+initZoomHandler();
+</script>
+</body>
+</html>
