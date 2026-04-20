@@ -21,7 +21,6 @@ export function initPanel() {
     });
   }
 
-  // Listen for myth selection
   on('mythSelect', (myth) => {
     currentMyth = myth;
     state.selectedMyth = myth;
@@ -30,13 +29,11 @@ export function initPanel() {
     flyTo(myth.lat, myth.lng);
   });
 
-  // Listen for narration state changes
   on('narrationStateChange', ({ state: nState }) => {
     narrationState = nState;
     updateNarrationUI();
   });
 
-  // Listen for narration progress
   on('narrationProgress', (pct) => {
     const bar = document.querySelector('.narration-progress-fill');
     if (bar) bar.style.width = pct + '%';
@@ -57,17 +54,17 @@ function showPanel(myth) {
     }
   }
 
-  // Title
+  // Title — both scripts
   const titleEl = panel.querySelector('.story-panel-title');
   if (titleEl) {
-    titleEl.textContent = `${myth.name} · ${myth.en}`;
+    titleEl.innerHTML = `<span class="title-zh">${myth.name}</span><span class="title-sep"> · </span><span class="title-en">${myth.en}</span>`;
   }
 
   // Tags
   const tagsEl = panel.querySelector('.story-panel-tags');
   if (tagsEl) {
     const country = state.allCountries.find(c => c.name === myth.country);
-    const color = country ? country.color : '#d5ab5b';
+    const color = country ? country.color : '#4a90d9';
     let tagsHTML = `<span class="story-panel-tag"><span class="dot" style="background:${color}"></span>${myth.country}</span>`;
     if (myth.era) tagsHTML += `<span class="story-panel-tag">${myth.era}</span>`;
     if (myth.type) tagsHTML += `<span class="story-panel-tag">${myth.type}</span>`;
@@ -77,45 +74,28 @@ function showPanel(myth) {
     tagsEl.innerHTML = tagsHTML;
   }
 
-  // Story text
+  // Bilingual story text — always show both
   const textEl = panel.querySelector('.story-panel-text');
   if (textEl) {
-    textEl.textContent = state.lang === 'zh' ? myth.zh : myth.en2;
+    textEl.innerHTML = '';
+
+    if (myth.zh) {
+      const zhBlock = document.createElement('div');
+      zhBlock.className = 'story-text-block story-text-zh';
+      zhBlock.innerHTML = `<span class="story-lang-label">中文</span><p>${myth.zh}</p>`;
+      textEl.appendChild(zhBlock);
+    }
+
+    if (myth.en2) {
+      const enBlock = document.createElement('div');
+      enBlock.className = 'story-text-block story-text-en';
+      enBlock.innerHTML = `<span class="story-lang-label">English</span><p>${myth.en2}</p>`;
+      textEl.appendChild(enBlock);
+    }
   }
 
   // Narration player
   renderNarrationPlayer(panel, myth);
-
-  // Language buttons + narration play
-  const langsEl = panel.querySelector('.story-panel-langs');
-  if (langsEl) {
-    langsEl.innerHTML = '';
-    const langs = myth.langs || ['中文', 'English'];
-    langs.forEach(lang => {
-      const btn = document.createElement('button');
-      btn.className = 'lang-btn';
-      btn.textContent = lang;
-
-      const isZh = lang === '中文';
-      if ((isZh && state.lang === 'zh') || (!isZh && state.lang === 'en')) {
-        btn.classList.add('active');
-      }
-
-      btn.addEventListener('click', () => {
-        state.lang = isZh ? 'zh' : 'en';
-        if (textEl) textEl.textContent = state.lang === 'zh' ? myth.zh : myth.en2;
-        if (titleEl) titleEl.textContent = `${myth.name} · ${myth.en}`;
-        langsEl.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        // Stop narration on language switch
-        emit('narrationStop');
-        narrationState = 'idle';
-        updateNarrationUI();
-        emit('filterChange', state.filteredMyths);
-      });
-      langsEl.appendChild(btn);
-    });
-  }
 
   panel.classList.add('open');
 }
@@ -123,78 +103,73 @@ function showPanel(myth) {
 function renderNarrationPlayer(panel, myth) {
   let player = panel.querySelector('.narration-player');
   if (!player) {
-    // Create the player element if it doesn't exist
     player = document.createElement('div');
     player.className = 'narration-player';
-    // Insert before the language buttons
-    const langs = panel.querySelector('.story-panel-langs');
-    if (langs) {
-      langs.parentElement.insertBefore(player, langs);
-    } else {
-      panel.querySelector('.story-panel-content').appendChild(player);
-    }
+    const content = panel.querySelector('.story-panel-content');
+    if (content) content.appendChild(player);
   }
 
   player.innerHTML = `
-    <button class="narration-play-btn" title="Listen to this story">
-      <span class="narration-icon">&#9654;</span>
-      <span class="narration-label">Listen</span>
+    <span class="narration-read-label">Read aloud:</span>
+    <button class="narration-play-btn" data-lang="zh" title="Listen in Chinese">
+      <span class="narration-icon">&#9654;</span> 中文
+    </button>
+    <button class="narration-play-btn" data-lang="en" title="Listen in English">
+      <span class="narration-icon">&#9654;</span> English
     </button>
     <div class="narration-progress">
       <div class="narration-progress-fill" style="width:0%"></div>
     </div>
-    <span class="narration-status"></span>
   `;
 
-  const playBtn = player.querySelector('.narration-play-btn');
-  playBtn.addEventListener('click', () => {
-    if (narrationState === 'playing') {
-      emit('narrationPause');
-    } else if (narrationState === 'paused') {
-      emit('narrationResume');
-    } else {
-      emit('narrationPlay', currentMyth);
-    }
+  player.querySelectorAll('.narration-play-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+
+      if (narrationState === 'playing' && state.lang === lang) {
+        emit('narrationPause');
+      } else if (narrationState === 'paused' && state.lang === lang) {
+        emit('narrationResume');
+      } else {
+        state.lang = lang;
+        emit('narrationStop');
+        narrationState = 'idle';
+        updateNarrationUI();
+        emit('narrationPlay', currentMyth);
+      }
+    });
   });
 }
 
 function updateNarrationUI() {
-  const icon = document.querySelector('.narration-icon');
-  const label = document.querySelector('.narration-label');
-  const statusEl = document.querySelector('.narration-status');
-  const btn = document.querySelector('.narration-play-btn');
-  if (!icon || !label) return;
+  const player = document.querySelector('.narration-player');
+  if (!player) return;
 
-  switch (narrationState) {
-    case 'playing':
-      icon.innerHTML = '&#10074;&#10074;';  // pause icon
-      label.textContent = 'Pause';
-      if (statusEl) statusEl.textContent = '';
-      if (btn) btn.classList.add('active');
-      break;
-    case 'paused':
-      icon.innerHTML = '&#9654;';  // play icon
-      label.textContent = 'Resume';
-      if (statusEl) statusEl.textContent = 'paused';
-      if (btn) btn.classList.remove('active');
-      break;
-    case 'ended':
-      icon.innerHTML = '&#8635;';  // replay icon
-      label.textContent = 'Replay';
-      if (statusEl) statusEl.textContent = '';
-      if (btn) btn.classList.remove('active');
-      break;
-    case 'error':
-    case 'unavailable':
-      icon.innerHTML = '&#9654;';
-      label.textContent = 'Listen';
-      if (statusEl) statusEl.textContent = 'unavailable';
-      if (btn) btn.classList.remove('active');
-      break;
-    default:
-      icon.innerHTML = '&#9654;';
-      label.textContent = 'Listen';
-      if (statusEl) statusEl.textContent = '';
-      if (btn) btn.classList.remove('active');
-  }
+  const btns = player.querySelectorAll('.narration-play-btn');
+  const bar = player.querySelector('.narration-progress-fill');
+
+  btns.forEach(btn => {
+    const isActive = btn.dataset.lang === state.lang;
+    const icon = btn.querySelector('.narration-icon');
+
+    btn.classList.remove('active');
+    if (icon) icon.innerHTML = '&#9654;';
+
+    if (isActive) {
+      switch (narrationState) {
+        case 'playing':
+          btn.classList.add('active');
+          if (icon) icon.innerHTML = '&#10074;&#10074;';
+          break;
+        case 'paused':
+          if (icon) icon.innerHTML = '&#9654;';
+          break;
+        case 'ended':
+          if (icon) icon.innerHTML = '&#8635;';
+          break;
+      }
+    }
+  });
+
+  if (bar && narrationState === 'idle') bar.style.width = '0%';
 }
