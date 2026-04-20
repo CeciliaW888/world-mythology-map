@@ -263,33 +263,6 @@ body {
   border-radius: 50%; display: inline-block;
 }
 
-/* Language tabs */
-.lang-tabs {
-  display: flex; gap: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 2px solid #f9c846;
-  align-self: flex-start;
-}
-.lang-tab {
-  flex: 1;
-  padding: 5px 16px;
-  border: none;
-  background: #fff;
-  color: #8a7040;
-  font-size: 0.78em;
-  font-weight: 700;
-  cursor: pointer;
-  font-family: 'Nunito', sans-serif;
-  transition: all 0.18s;
-}
-.lang-tab + .lang-tab { border-left: 2px solid #f9c846; }
-.lang-tab.active {
-  background: #f9c846;
-  color: #5a3a00;
-}
-.lang-tab:hover:not(.active) { background: #fffbe8; }
-
 /* Story text */
 .story-panel-text {
   font-size: 0.84em; color: #4a5a6a;
@@ -433,6 +406,20 @@ body {
 }
 .audio-btn:hover { background: #ff7c3a; color: #fff; box-shadow: 0 4px 14px rgba(255,124,58,0.4); }
 .audio-btn.playing { background: #ff7c3a; color: #fff; }
+
+.lang-toggle-btn {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: none;
+  background: #4ecdc4;
+  color: #fff; font-size: 0.82em;
+  cursor: pointer; transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 3px 10px rgba(78,205,196,0.4);
+  font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: -0.5px;
+}
+.lang-toggle-btn:hover { background: #3ab8b0; transform: scale(1.08); }
 .audio-info {
   font-size: 0.74em; color: #1a4a7a;
   font-family: 'Nunito', sans-serif;

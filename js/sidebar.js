@@ -25,19 +25,24 @@ export function initSidebar() {
     });
   }
 
-  // Re-render story cards on filter change
-  on('filterChange', (myths) => {
-    renderStoryCards(myths);
-    updateCountrySection();
-  });
-
-  // Country select updates
+  on('filterChange', (myths) => { renderStoryCards(myths); updateCountrySection(); });
   on('countrySelect', () => updateCountrySection());
   on('countryDeselect', () => updateCountrySection());
+  on('langChange', () => { renderStoryCards(state.filteredMyths); updateCountrySection(); updateSidebarStaticText(); });
 
-  // Initial render
   renderStoryCards(state.filteredMyths);
   updateCountrySection();
+}
+
+function updateSidebarStaticText() {
+  const search = document.querySelector('.sidebar-search');
+  if (search) search.placeholder = state.lang === 'zh' ? '搜索神话...' : 'Search myths...';
+  const backBtn = document.querySelector('.sidebar-back');
+  if (backBtn) backBtn.textContent = state.lang === 'zh' ? '← 全部' : '← All';
+  document.querySelectorAll('.sidebar-stat .label').forEach(el => {
+    if (el.textContent === 'Myths' || el.textContent === '神话') el.textContent = state.lang === 'zh' ? '神话' : 'Myths';
+    if (el.textContent === 'Themes' || el.textContent === '主题') el.textContent = state.lang === 'zh' ? '主题' : 'Themes';
+  });
 }
 
 function updateCountrySection() {
@@ -49,7 +54,7 @@ function updateCountrySection() {
     const country = state.allCountries.find(c => c.name === state.selectedCountry);
     const nameEl = section.querySelector('.sidebar-country-name');
     if (nameEl && country) {
-      nameEl.textContent = `${country.zh} ${country.name}`;
+      nameEl.textContent = state.lang === 'zh' ? country.zh : country.name;
     }
 
     const countryMyths = state.allMyths.filter(m => m.country === state.selectedCountry);

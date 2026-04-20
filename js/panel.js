@@ -29,6 +29,16 @@ export function initPanel() {
     flyTo(myth.lat, myth.lng);
   });
 
+  on('langChange', () => {
+    if (currentMyth) {
+      const textEl = document.querySelector('.story-panel-text');
+      if (textEl) textEl.textContent = state.lang === 'zh' ? currentMyth.zh : currentMyth.en2;
+      emit('narrationStop');
+      narrationState = 'idle';
+      updateNarrationUI();
+    }
+  });
+
   on('narrationStateChange', ({ state: nState }) => {
     narrationState = nState;
     updateNarrationUI();
@@ -74,14 +84,9 @@ function showPanel(myth) {
     tagsEl.innerHTML = tagsHTML;
   }
 
-  // Language selector tabs
-  renderLangTabs(panel, myth);
-
-  // Story text — single language
+  // Story text — follows global language
   const textEl = panel.querySelector('.story-panel-text');
-  if (textEl) {
-    textEl.textContent = state.lang === 'zh' ? myth.zh : myth.en2;
-  }
+  if (textEl) textEl.textContent = state.lang === 'zh' ? myth.zh : myth.en2;
 
   // Narration player
   renderNarrationPlayer(panel, myth);
@@ -89,33 +94,6 @@ function showPanel(myth) {
   panel.classList.add('open');
 }
 
-function renderLangTabs(panel, myth) {
-  let tabs = panel.querySelector('.lang-tabs');
-  if (!tabs) {
-    tabs = document.createElement('div');
-    tabs.className = 'lang-tabs';
-    const textEl = panel.querySelector('.story-panel-text');
-    panel.querySelector('.story-panel-content').insertBefore(tabs, textEl);
-  }
-
-  tabs.innerHTML = `
-    <button class="lang-tab ${state.lang === 'zh' ? 'active' : ''}" data-lang="zh">中文</button>
-    <button class="lang-tab ${state.lang === 'en' ? 'active' : ''}" data-lang="en">English</button>
-  `;
-
-  tabs.querySelectorAll('.lang-tab').forEach(btn => {
-    btn.addEventListener('click', () => {
-      state.lang = btn.dataset.lang;
-      tabs.querySelectorAll('.lang-tab').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const textEl = panel.querySelector('.story-panel-text');
-      if (textEl) textEl.textContent = state.lang === 'zh' ? myth.zh : myth.en2;
-      emit('narrationStop');
-      narrationState = 'idle';
-      updateNarrationUI();
-    });
-  });
-}
 
 function renderNarrationPlayer(panel, myth) {
   let player = panel.querySelector('.narration-player');

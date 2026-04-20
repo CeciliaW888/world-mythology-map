@@ -138,6 +138,19 @@ export async function initApp() {
 
     // Update header stats
     updateHeaderStats();
+    updateHeaderLang();
+
+    // Language toggle button
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) {
+      langBtn.addEventListener('click', () => {
+        state.lang = state.lang === 'zh' ? 'en' : 'zh';
+        langBtn.textContent = state.lang === 'zh' ? '中' : 'EN';
+        updateHeaderLang();
+        updateHeaderStats();
+        emit('langChange', state.lang);
+      });
+    }
 
     // Listen for filter changes to re-render
     on('filterChange', (myths) => {
@@ -150,25 +163,18 @@ export async function initApp() {
     on('countrySelect', (countryName) => {
       state.selectedCountry = countryName;
       applyFilters();
-
-      const display = document.querySelector('.country-display');
-      const country = state.allCountries.find(c => c.name === countryName);
-      if (display && country) {
-        display.textContent = `${country.zh} · ${country.name}`;
-        display.classList.add('visible');
-      }
+      updateCountryDisplay();
     });
 
     // Listen for country deselect
     on('countryDeselect', () => {
       state.selectedCountry = null;
       const display = document.querySelector('.country-display');
-      if (display) {
-        display.textContent = '';
-        display.classList.remove('visible');
-      }
+      if (display) { display.textContent = ''; display.classList.remove('visible'); }
       applyFilters();
     });
+
+    on('langChange', () => updateCountryDisplay());
 
     // Listen for marker clicks on globe
     on('markerClick', ({ mythId, country }) => {
@@ -189,9 +195,26 @@ export async function initApp() {
 
 function updateHeaderStats() {
   const statsEl = document.querySelector('.header .stats');
-  if (statsEl) {
-    const countries = new Set(state.filteredMyths.map(m => m.country)).size;
-    statsEl.textContent = `${state.filteredMyths.length} stories · ${countries} countries`;
+  if (!statsEl) return;
+  const count = state.filteredMyths.length;
+  const countries = new Set(state.filteredMyths.map(m => m.country)).size;
+  statsEl.textContent = state.lang === 'zh'
+    ? `${count} 个故事 · ${countries} 个国家`
+    : `${count} stories · ${countries} countries`;
+}
+
+function updateHeaderLang() {
+  const h1 = document.querySelector('.header h1');
+  if (h1) h1.textContent = state.lang === 'zh' ? '世界神话地图' : 'World Mythology Map';
+}
+
+function updateCountryDisplay() {
+  const display = document.querySelector('.country-display');
+  if (!display || !state.selectedCountry) return;
+  const country = state.allCountries.find(c => c.name === state.selectedCountry);
+  if (country) {
+    display.textContent = state.lang === 'zh' ? country.zh : country.name;
+    display.classList.add('visible');
   }
 }
 
