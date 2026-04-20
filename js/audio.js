@@ -221,80 +221,42 @@ function setupNarrationListeners() {
   });
 }
 
-async function playNarration(myth) {
-  // Stop any existing narration
+function playNarration(myth) {
   stopNarration();
 
   const text = state.lang === 'zh' ? myth.zh : myth.en2;
   if (!text) return;
 
-  // Dim background music during narration
-  if (bgAudio) {
-    fadeInAudio(bgAudio, 0.08, 0.8);
-  }
+  if (bgAudio) fadeInAudio(bgAudio, 0.08, 0.8);
 
-  // Try pre-generated audio first
-  const audioUrl = getNarrationUrl(myth);
-  if (audioUrl) {
-    try {
-      await playNarrationFromFile(audioUrl, myth);
-      return;
-    } catch (err) {
-      console.warn('Pre-generated narration failed, falling back to TTS:', err);
-    }
-  }
-
-  // Fallback: Web Speech API
+  // Start TTS immediately — preserves iOS user-gesture context
   playNarrationWithSpeech(text, myth);
-}
 
-function getNarrationUrl(myth) {
-  // Check for pre-generated audio file
-  // Convention: audio/narration/{id}_{lang}.mp3
+  // Silently try pre-generated MP3 in background.
+  // If it loads, cancel TTS and switch to the higher-quality file.
   const lang = state.lang === 'zh' ? 'zh' : 'en';
   const url = `audio/narration/${myth.id}_${lang}.mp3`;
-
-  // We'll check if it exists by trying to load it
-  // The caller handles the error if it doesn't exist
-  return url;
-}
-
-async function playNarrationFromFile(url, myth) {
-  return new Promise((resolve, reject) => {
-    narrationAudio = new Audio();
-    narrationAudio.src = url;
-
-    narrationAudio.addEventListener('canplaythrough', async () => {
-      try {
-        await narrationAudio.play();
-        isNarrating = true;
-        emit('narrationStateChange', { state: 'playing', myth });
-        startProgressTracking();
-        resolve();
-      } catch (err) {
-        reject(err);
-      }
-    }, { once: true });
-
-    narrationAudio.addEventListener('error', () => {
-      reject(new Error('Audio file not found'));
-    }, { once: true });
-
-    narrationAudio.addEventListener('ended', () => {
-      isNarrating = false;
-      emit('narrationStateChange', { state: 'ended', myth });
-      stopProgressTracking();
-      // Restore background music volume
-      if (bgAudio) fadeInAudio(bgAudio, 0.3, 1.0);
-    });
-
-    narrationAudio.load();
-
-    // Quick timeout — if file doesn't exist, fail fast
-    setTimeout(() => {
-      if (!isNarrating) reject(new Error('Timeout loading audio'));
-    }, 2000);
-  });
+  const probe = new Audio();
+  probe.src = url;
+  probe.addEventListener('canplaythrough', async () => {
+    if (!isNarrating) return; // narration already stopped
+    window.speechSynthesis.cancel();
+    narrationUtterance = null;
+    narrationAudio = probe;
+    try {
+      await probe.play();
+      isNarrating = true;
+      startProgressTracking();
+      emit('narrationStateChange', { state: 'playing', myth });
+      probe.addEventListener('ended', () => {
+        isNarrating = false;
+        emit('narrationStateChange', { state: 'ended', myth });
+        stopProgressTracking();
+        if (bgAudio) fadeInAudio(bgAudio, 0.3, 1.0);
+      }, { once: true });
+    } catch (_) {}
+  }, { once: true });
+  // 404 errors on probe are silently ignored — TTS is already running
 }
 
 function playNarrationWithSpeech(text, myth) {

@@ -26,19 +26,15 @@ export function initGlobe(canvas) {
   renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   renderer.setSize(canvas.clientWidth, canvas.clientHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setClearColor(0xb8dcf0, 1);
+  renderer.setClearColor(0x000000, 0); // transparent — CSS gradient shows through
 
-  // Lighting
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+  // Lighting — soft, no glare
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
   scene.add(ambientLight);
 
-  const sunLight = new THREE.DirectionalLight(0xffffff, 1.2);
+  const sunLight = new THREE.DirectionalLight(0xffeedd, 0.6);
   sunLight.position.set(5, 3, 5);
   scene.add(sunLight);
-
-  const rimLight = new THREE.DirectionalLight(0x88ccff, 0.4);
-  rimLight.position.set(-5, -2, -5);
-  scene.add(rimLight);
 
   // Starfield
   createStarfield();
@@ -103,29 +99,13 @@ function createGlobe() {
   // Earth sphere with a dark, elegant texture
   const geometry = new THREE.SphereGeometry(GLOBE_RADIUS, 64, 64);
 
-  // Ocean-blue globe
-  const material = new THREE.MeshPhongMaterial({
-    color: 0x1a78c2,
-    emissive: 0x0a3a6a,
-    specular: 0x88ccff,
-    shininess: 40,
-    transparent: true,
-    opacity: 0.97,
+  // Flat-shaded globe — no specular glare
+  const material = new THREE.MeshLambertMaterial({
+    color: 0x2a7de1,
   });
 
   globe = new THREE.Mesh(geometry, material);
   scene.add(globe);
-
-  // Atmosphere glow
-  const atmosGeo = new THREE.SphereGeometry(GLOBE_RADIUS * 1.02, 64, 64);
-  const atmosMat = new THREE.MeshBasicMaterial({
-    color: 0x64b5f6,
-    transparent: true,
-    opacity: 0.12,
-    side: THREE.BackSide
-  });
-  const atmosphere = new THREE.Mesh(atmosGeo, atmosMat);
-  scene.add(atmosphere);
 
   // Grid lines (latitude/longitude)
   addGridLines();

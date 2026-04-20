@@ -24,6 +24,7 @@ body {
   height: 100%;
   z-index: 1;
   cursor: grab;
+  background: transparent;
 }
 #globe-canvas:active { cursor: grabbing; }
 
