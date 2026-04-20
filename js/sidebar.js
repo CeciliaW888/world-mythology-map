@@ -4,6 +4,12 @@
 
 import { state, emit, on, applyFilters } from './app.js';
 
+export function updateSidebarLang() {
+  renderStoryCards(state.filteredMyths);
+  updateCountrySection();
+  updateSidebarStaticText();
+}
+
 export function initSidebar() {
   const searchInput = document.querySelector('.sidebar-search');
   const storyGrid = document.querySelector('.story-grid');
@@ -28,7 +34,6 @@ export function initSidebar() {
   on('filterChange', (myths) => { renderStoryCards(myths); updateCountrySection(); });
   on('countrySelect', () => updateCountrySection());
   on('countryDeselect', () => updateCountrySection());
-  on('langChange', () => { renderStoryCards(state.filteredMyths); updateCountrySection(); updateSidebarStaticText(); });
 
   renderStoryCards(state.filteredMyths);
   updateCountrySection();

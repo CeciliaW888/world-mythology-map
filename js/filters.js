@@ -20,7 +20,10 @@ const ERA_LABELS = {
 export function initFilters() {
   renderFilterButtons();
   setupToggles();
-  on('langChange', () => rerenderLabels());
+}
+
+export function updateFilterLang() {
+  rerenderLabels();
 }
 
 function renderFilterButtons() {

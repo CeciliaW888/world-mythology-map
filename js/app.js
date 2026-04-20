@@ -117,9 +117,9 @@ export async function initApp() {
 
     // Import modules dynamically to avoid circular deps
     const { initGlobe, renderMarkers, renderConnections } = await import('./globe.js');
-    const { initSidebar } = await import('./sidebar.js');
+    const { initSidebar, updateSidebarLang } = await import('./sidebar.js');
     const { initPanel } = await import('./panel.js');
-    const { initFilters } = await import('./filters.js');
+    const { initFilters, updateFilterLang } = await import('./filters.js');
     const { initAudio } = await import('./audio.js');
 
     // Init globe
@@ -148,7 +148,9 @@ export async function initApp() {
         langBtn.textContent = state.lang === 'zh' ? '中' : 'EN';
         updateHeaderLang();
         updateHeaderStats();
-        emit('langChange', state.lang);
+        updateFilterLang();
+        updateSidebarLang();
+        emit('langChange', state.lang); // panel + audio listen to this
       });
     }
 
