@@ -7,12 +7,12 @@ import { state, emit } from './app.js';
 let scene, camera, renderer, globe, markers = [], labelSprites = [];
 let raycaster, mouse;
 let isDragging = false, prevMouse = { x: 0, y: 0 };
-let targetRotation = { x: 0, y: 0 };
+let targetRotation = null;
 let autoRotate = true;
 let stars;
 
 const GLOBE_RADIUS = 5;
-const MARKER_SIZE = 0.08;
+const MARKER_SIZE = 0.13;
 
 export function initGlobe(canvas) {
   // Scene
@@ -26,17 +26,17 @@ export function initGlobe(canvas) {
   renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   renderer.setSize(canvas.clientWidth, canvas.clientHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setClearColor(0x080b14, 1);
+  renderer.setClearColor(0xb8dcf0, 1);
 
   // Lighting
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
   scene.add(ambientLight);
 
-  const sunLight = new THREE.DirectionalLight(0xfff4d6, 1.0);
+  const sunLight = new THREE.DirectionalLight(0xffffff, 1.2);
   sunLight.position.set(5, 3, 5);
   scene.add(sunLight);
 
-  const rimLight = new THREE.DirectionalLight(0xd5ab5b, 0.3);
+  const rimLight = new THREE.DirectionalLight(0x88ccff, 0.4);
   rimLight.position.set(-5, -2, -5);
   scene.add(rimLight);
 
@@ -103,14 +103,14 @@ function createGlobe() {
   // Earth sphere with a dark, elegant texture
   const geometry = new THREE.SphereGeometry(GLOBE_RADIUS, 64, 64);
 
-  // Create procedural earth-like material
+  // Ocean-blue globe
   const material = new THREE.MeshPhongMaterial({
-    color: 0x1a1520,
-    emissive: 0x0a0810,
-    specular: 0x222222,
-    shininess: 10,
+    color: 0x1a78c2,
+    emissive: 0x0a3a6a,
+    specular: 0x88ccff,
+    shininess: 40,
     transparent: true,
-    opacity: 0.95,
+    opacity: 0.97,
   });
 
   globe = new THREE.Mesh(geometry, material);
@@ -119,9 +119,9 @@ function createGlobe() {
   // Atmosphere glow
   const atmosGeo = new THREE.SphereGeometry(GLOBE_RADIUS * 1.02, 64, 64);
   const atmosMat = new THREE.MeshBasicMaterial({
-    color: 0xd5ab5b,
+    color: 0x64b5f6,
     transparent: true,
-    opacity: 0.04,
+    opacity: 0.12,
     side: THREE.BackSide
   });
   const atmosphere = new THREE.Mesh(atmosGeo, atmosMat);
@@ -133,9 +133,9 @@ function createGlobe() {
 
 function addGridLines() {
   const lineMaterial = new THREE.LineBasicMaterial({
-    color: 0xd5ab5b,
+    color: 0x88ccff,
     transparent: true,
-    opacity: 0.06
+    opacity: 0.25
   });
 
   // Latitude lines
@@ -280,9 +280,9 @@ export function renderConnections(myths) {
       const points = curve.getPoints(30);
       const geo = new THREE.BufferGeometry().setFromPoints(points);
       const mat = new THREE.LineBasicMaterial({
-        color: 0xd5ab5b,
+        color: 0xffd700,
         transparent: true,
-        opacity: 0.12
+        opacity: 0.5
       });
       const line = new THREE.Line(geo, mat);
       line.userData = { isConnection: true };
@@ -317,6 +317,7 @@ function onMouseMove(e) {
   globe.rotation.x += dy * 0.005;
   globe.rotation.x = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, globe.rotation.x));
   prevMouse = { x: e.clientX, y: e.clientY };
+  targetRotation = null;
 }
 
 function onMouseUp() {
@@ -362,6 +363,7 @@ function onTouchMove(e) {
   globe.rotation.x += dy * 0.005;
   globe.rotation.x = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, globe.rotation.x));
   touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  targetRotation = null;
 }
 function onTouchEnd() {
   isDragging = false;
