@@ -1,11 +1,12 @@
 // ============================================================
-// panel.js — Bottom story detail panel
+// panel.js — Bottom story detail panel + narration controls
 // ============================================================
 
 import { state, emit, on } from './app.js';
 import { flyTo } from './globe.js';
 
 let currentMyth = null;
+let narrationState = 'idle'; // idle | playing | paused | ended
 
 export function initPanel() {
   const panel = document.querySelector('.story-panel');
@@ -14,6 +15,7 @@ export function initPanel() {
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {
       panel.classList.remove('open');
+      emit('narrationStop');
       currentMyth = null;
       state.selectedMyth = null;
     });
@@ -23,8 +25,21 @@ export function initPanel() {
   on('mythSelect', (myth) => {
     currentMyth = myth;
     state.selectedMyth = myth;
+    narrationState = 'idle';
     showPanel(myth);
     flyTo(myth.lat, myth.lng);
+  });
+
+  // Listen for narration state changes
+  on('narrationStateChange', ({ state: nState }) => {
+    narrationState = nState;
+    updateNarrationUI();
+  });
+
+  // Listen for narration progress
+  on('narrationProgress', (pct) => {
+    const bar = document.querySelector('.narration-progress-fill');
+    if (bar) bar.style.width = pct + '%';
   });
 }
 
@@ -54,16 +69,10 @@ function showPanel(myth) {
     const country = state.allCountries.find(c => c.name === myth.country);
     const color = country ? country.color : '#d5ab5b';
     let tagsHTML = `<span class="story-panel-tag"><span class="dot" style="background:${color}"></span>${myth.country}</span>`;
-    if (myth.era) {
-      tagsHTML += `<span class="story-panel-tag">${myth.era}</span>`;
-    }
-    if (myth.type) {
-      tagsHTML += `<span class="story-panel-tag">${myth.type}</span>`;
-    }
+    if (myth.era) tagsHTML += `<span class="story-panel-tag">${myth.era}</span>`;
+    if (myth.type) tagsHTML += `<span class="story-panel-tag">${myth.type}</span>`;
     if (myth.themes) {
-      myth.themes.forEach(t => {
-        tagsHTML += `<span class="story-panel-tag">#${t}</span>`;
-      });
+      myth.themes.forEach(t => { tagsHTML += `<span class="story-panel-tag">#${t}</span>`; });
     }
     tagsEl.innerHTML = tagsHTML;
   }
@@ -74,7 +83,10 @@ function showPanel(myth) {
     textEl.textContent = state.lang === 'zh' ? myth.zh : myth.en2;
   }
 
-  // Language buttons
+  // Narration player
+  renderNarrationPlayer(panel, myth);
+
+  // Language buttons + narration play
   const langsEl = panel.querySelector('.story-panel-langs');
   if (langsEl) {
     langsEl.innerHTML = '';
@@ -91,17 +103,14 @@ function showPanel(myth) {
 
       btn.addEventListener('click', () => {
         state.lang = isZh ? 'zh' : 'en';
-        // Update text
-        if (textEl) {
-          textEl.textContent = state.lang === 'zh' ? myth.zh : myth.en2;
-        }
-        if (titleEl) {
-          titleEl.textContent = `${myth.name} · ${myth.en}`;
-        }
-        // Update active states
+        if (textEl) textEl.textContent = state.lang === 'zh' ? myth.zh : myth.en2;
+        if (titleEl) titleEl.textContent = `${myth.name} · ${myth.en}`;
         langsEl.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        // Refresh sidebar cards with new language
+        // Stop narration on language switch
+        emit('narrationStop');
+        narrationState = 'idle';
+        updateNarrationUI();
         emit('filterChange', state.filteredMyths);
       });
       langsEl.appendChild(btn);
@@ -109,4 +118,83 @@ function showPanel(myth) {
   }
 
   panel.classList.add('open');
+}
+
+function renderNarrationPlayer(panel, myth) {
+  let player = panel.querySelector('.narration-player');
+  if (!player) {
+    // Create the player element if it doesn't exist
+    player = document.createElement('div');
+    player.className = 'narration-player';
+    // Insert before the language buttons
+    const langs = panel.querySelector('.story-panel-langs');
+    if (langs) {
+      langs.parentElement.insertBefore(player, langs);
+    } else {
+      panel.querySelector('.story-panel-content').appendChild(player);
+    }
+  }
+
+  player.innerHTML = `
+    <button class="narration-play-btn" title="Listen to this story">
+      <span class="narration-icon">&#9654;</span>
+      <span class="narration-label">Listen</span>
+    </button>
+    <div class="narration-progress">
+      <div class="narration-progress-fill" style="width:0%"></div>
+    </div>
+    <span class="narration-status"></span>
+  `;
+
+  const playBtn = player.querySelector('.narration-play-btn');
+  playBtn.addEventListener('click', () => {
+    if (narrationState === 'playing') {
+      emit('narrationPause');
+    } else if (narrationState === 'paused') {
+      emit('narrationResume');
+    } else {
+      emit('narrationPlay', currentMyth);
+    }
+  });
+}
+
+function updateNarrationUI() {
+  const icon = document.querySelector('.narration-icon');
+  const label = document.querySelector('.narration-label');
+  const statusEl = document.querySelector('.narration-status');
+  const btn = document.querySelector('.narration-play-btn');
+  if (!icon || !label) return;
+
+  switch (narrationState) {
+    case 'playing':
+      icon.innerHTML = '&#10074;&#10074;';  // pause icon
+      label.textContent = 'Pause';
+      if (statusEl) statusEl.textContent = '';
+      if (btn) btn.classList.add('active');
+      break;
+    case 'paused':
+      icon.innerHTML = '&#9654;';  // play icon
+      label.textContent = 'Resume';
+      if (statusEl) statusEl.textContent = 'paused';
+      if (btn) btn.classList.remove('active');
+      break;
+    case 'ended':
+      icon.innerHTML = '&#8635;';  // replay icon
+      label.textContent = 'Replay';
+      if (statusEl) statusEl.textContent = '';
+      if (btn) btn.classList.remove('active');
+      break;
+    case 'error':
+    case 'unavailable':
+      icon.innerHTML = '&#9654;';
+      label.textContent = 'Listen';
+      if (statusEl) statusEl.textContent = 'unavailable';
+      if (btn) btn.classList.remove('active');
+      break;
+    default:
+      icon.innerHTML = '&#9654;';
+      label.textContent = 'Listen';
+      if (statusEl) statusEl.textContent = '';
+      if (btn) btn.classList.remove('active');
+  }
 }

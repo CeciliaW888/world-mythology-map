@@ -274,6 +274,67 @@ body {
 }
 .story-panel-close:hover { color: #d5ab5b; }
 
+/* === NARRATION PLAYER === */
+.narration-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 4px;
+  padding: 6px 0;
+}
+.narration-play-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(213,171,91,0.25);
+  background: rgba(213,171,91,0.08);
+  color: #c8b898;
+  font-size: 0.75em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: -apple-system, sans-serif;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.narration-play-btn:hover {
+  background: rgba(213,171,91,0.18);
+  border-color: rgba(213,171,91,0.5);
+  color: #f5e6c8;
+}
+.narration-play-btn.active {
+  background: rgba(213,171,91,0.2);
+  border-color: rgba(213,171,91,0.5);
+  color: #d5ab5b;
+}
+.narration-icon {
+  font-size: 0.9em;
+  line-height: 1;
+}
+.narration-progress {
+  flex: 1;
+  height: 3px;
+  background: rgba(213,171,91,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  min-width: 60px;
+}
+.narration-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #d5ab5b, #e8c874);
+  border-radius: 2px;
+  transition: width 0.2s ease;
+  width: 0%;
+}
+.narration-status {
+  font-size: 0.65em;
+  color: #6a5a40;
+  font-family: -apple-system, sans-serif;
+  min-width: 50px;
+  text-align: right;
+}
+
 /* === BOTTOM FILTER BAR === */
 .filter-container {
   position: fixed; bottom: 0; left: 0; right: 300px;
