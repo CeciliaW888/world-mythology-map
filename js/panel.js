@@ -74,30 +74,47 @@ function showPanel(myth) {
     tagsEl.innerHTML = tagsHTML;
   }
 
-  // Bilingual story text — always show both
+  // Language selector tabs
+  renderLangTabs(panel, myth);
+
+  // Story text — single language
   const textEl = panel.querySelector('.story-panel-text');
   if (textEl) {
-    textEl.innerHTML = '';
-
-    if (myth.zh) {
-      const zhBlock = document.createElement('div');
-      zhBlock.className = 'story-text-block story-text-zh';
-      zhBlock.innerHTML = `<span class="story-lang-label">中文</span><p>${myth.zh}</p>`;
-      textEl.appendChild(zhBlock);
-    }
-
-    if (myth.en2) {
-      const enBlock = document.createElement('div');
-      enBlock.className = 'story-text-block story-text-en';
-      enBlock.innerHTML = `<span class="story-lang-label">English</span><p>${myth.en2}</p>`;
-      textEl.appendChild(enBlock);
-    }
+    textEl.textContent = state.lang === 'zh' ? myth.zh : myth.en2;
   }
 
   // Narration player
   renderNarrationPlayer(panel, myth);
 
   panel.classList.add('open');
+}
+
+function renderLangTabs(panel, myth) {
+  let tabs = panel.querySelector('.lang-tabs');
+  if (!tabs) {
+    tabs = document.createElement('div');
+    tabs.className = 'lang-tabs';
+    const textEl = panel.querySelector('.story-panel-text');
+    panel.querySelector('.story-panel-content').insertBefore(tabs, textEl);
+  }
+
+  tabs.innerHTML = `
+    <button class="lang-tab ${state.lang === 'zh' ? 'active' : ''}" data-lang="zh">中文</button>
+    <button class="lang-tab ${state.lang === 'en' ? 'active' : ''}" data-lang="en">English</button>
+  `;
+
+  tabs.querySelectorAll('.lang-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.lang = btn.dataset.lang;
+      tabs.querySelectorAll('.lang-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const textEl = panel.querySelector('.story-panel-text');
+      if (textEl) textEl.textContent = state.lang === 'zh' ? myth.zh : myth.en2;
+      emit('narrationStop');
+      narrationState = 'idle';
+      updateNarrationUI();
+    });
+  });
 }
 
 function renderNarrationPlayer(panel, myth) {
@@ -110,34 +127,24 @@ function renderNarrationPlayer(panel, myth) {
   }
 
   player.innerHTML = `
-    <span class="narration-read-label">Read aloud:</span>
-    <button class="narration-play-btn" data-lang="zh" title="Listen in Chinese">
-      <span class="narration-icon">&#9654;</span> 中文
-    </button>
-    <button class="narration-play-btn" data-lang="en" title="Listen in English">
-      <span class="narration-icon">&#9654;</span> English
+    <button class="narration-play-btn" title="Listen to this story">
+      <span class="narration-icon">&#9654;</span>
+      <span class="narration-label">Listen</span>
     </button>
     <div class="narration-progress">
       <div class="narration-progress-fill" style="width:0%"></div>
     </div>
   `;
 
-  player.querySelectorAll('.narration-play-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const lang = btn.dataset.lang;
-
-      if (narrationState === 'playing' && state.lang === lang) {
-        emit('narrationPause');
-      } else if (narrationState === 'paused' && state.lang === lang) {
-        emit('narrationResume');
-      } else {
-        state.lang = lang;
-        emit('narrationStop');
-        narrationState = 'idle';
-        updateNarrationUI();
-        emit('narrationPlay', currentMyth);
-      }
-    });
+  const playBtn = player.querySelector('.narration-play-btn');
+  playBtn.addEventListener('click', () => {
+    if (narrationState === 'playing') {
+      emit('narrationPause');
+    } else if (narrationState === 'paused') {
+      emit('narrationResume');
+    } else {
+      emit('narrationPlay', currentMyth);
+    }
   });
 }
 
@@ -145,31 +152,29 @@ function updateNarrationUI() {
   const player = document.querySelector('.narration-player');
   if (!player) return;
 
-  const btns = player.querySelectorAll('.narration-play-btn');
-  const bar = player.querySelector('.narration-progress-fill');
+  const icon = document.querySelector('.narration-icon');
+  const label = document.querySelector('.narration-label');
+  const btn = document.querySelector('.narration-play-btn');
 
-  btns.forEach(btn => {
-    const isActive = btn.dataset.lang === state.lang;
-    const icon = btn.querySelector('.narration-icon');
+  if (!icon || !label) return;
 
-    btn.classList.remove('active');
-    if (icon) icon.innerHTML = '&#9654;';
-
-    if (isActive) {
-      switch (narrationState) {
-        case 'playing':
-          btn.classList.add('active');
-          if (icon) icon.innerHTML = '&#10074;&#10074;';
-          break;
-        case 'paused':
-          if (icon) icon.innerHTML = '&#9654;';
-          break;
-        case 'ended':
-          if (icon) icon.innerHTML = '&#8635;';
-          break;
-      }
-    }
-  });
-
-  if (bar && narrationState === 'idle') bar.style.width = '0%';
+  btn.classList.remove('active');
+  switch (narrationState) {
+    case 'playing':
+      icon.innerHTML = '&#10074;&#10074;';
+      label.textContent = 'Pause';
+      btn.classList.add('active');
+      break;
+    case 'paused':
+      icon.innerHTML = '&#9654;';
+      label.textContent = 'Resume';
+      break;
+    case 'ended':
+      icon.innerHTML = '&#8635;';
+      label.textContent = 'Replay';
+      break;
+    default:
+      icon.innerHTML = '&#9654;';
+      label.textContent = 'Listen';
+  }
 }
