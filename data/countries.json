@@ -1,0 +1,21 @@
+[
+  {"name":"China","zh":"中国","lat":35,"lng":105,"color":"#e74c3c","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/8/82/Erta_di_Guqin-Zuiyu_Changwan.ogg","instrument":"Guqin"},
+  {"name":"Greece","zh":"希腊","lat":38,"lng":23.7,"color":"#3498db","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/6/6f/Seikilos_Epitaph.ogg","instrument":"Lyre"},
+  {"name":"Egypt","zh":"埃及","lat":27,"lng":31,"color":"#f39c12","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/b/b1/Rast_Taqsim_Oud.ogg","instrument":"Oud"},
+  {"name":"Japan","zh":"日本","lat":36,"lng":138,"color":"#e84393","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/5/5a/Rokudan_no_Shirabe.ogg","instrument":"Koto"},
+  {"name":"Norway","zh":"挪威","lat":62,"lng":10,"color":"#00b894","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/5/56/Edvard_Grieg_-_Peer_Gynt_-_Morning_Mood.ogg","instrument":"Hardingfele"},
+  {"name":"India","zh":"印度","lat":22,"lng":79,"color":"#fd79a8","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/4/44/Raga_Yaman.ogg","instrument":"Sitar"},
+  {"name":"Iraq","zh":"伊拉克","lat":33,"lng":44,"color":"#a29bfe","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/b/b1/Rast_Taqsim_Oud.ogg","instrument":"Oud"},
+  {"name":"South Korea","zh":"韩国","lat":36.5,"lng":128,"color":"#6c5ce7","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/0/08/Gayageum_Sanjo.ogg","instrument":"Gayageum"},
+  {"name":"Mexico","zh":"墨西哥","lat":20,"lng":-99,"color":"#00cec9","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/4/4c/Son_Jarocho.ogg","instrument":"Jarana"},
+  {"name":"Nigeria","zh":"尼日利亚","lat":9,"lng":7.5,"color":"#fab1a0","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/d/d3/Talking_drum.ogg","instrument":"Talking Drum"},
+  {"name":"Australia","zh":"澳大利亚","lat":-25,"lng":134,"color":"#ffeaa7","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/a/a3/Didgeridoo.ogg","instrument":"Didgeridoo"},
+  {"name":"Brazil","zh":"巴西","lat":-10,"lng":-52,"color":"#55efc4","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/a/a0/Berimbau.ogg","instrument":"Berimbau"},
+  {"name":"Peru","zh":"秘鲁","lat":-14,"lng":-71,"color":"#fdcb6e","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/0/07/El_condor_pasa.ogg","instrument":"Quena"},
+  {"name":"Ireland","zh":"爱尔兰","lat":53,"lng":-7,"color":"#2ecc71","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/3/3f/Irish_fiddle.ogg","instrument":"Fiddle"},
+  {"name":"Russia","zh":"俄罗斯","lat":56,"lng":38,"color":"#74b9ff","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/5/5e/Balalaika.ogg","instrument":"Balalaika"},
+  {"name":"New Zealand","zh":"新西兰","lat":-40,"lng":175,"color":"#dfe6e9","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/7/7d/Taonga_puoro.ogg","instrument":"Taonga Puoro"},
+  {"name":"Turkey","zh":"土耳其","lat":39,"lng":34,"color":"#e17055","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/b/b1/Rast_Taqsim_Oud.ogg","instrument":"Ney"},
+  {"name":"Saudi Arabia","zh":"沙特阿拉伯","lat":24,"lng":45,"color":"#81ecec","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/b/b1/Rast_Taqsim_Oud.ogg","instrument":"Rabab"},
+  {"name":"Italy","zh":"意大利","lat":42,"lng":12.5,"color":"#636e72","musicUrl":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Mandolino.ogg","instrument":"Mandolin"}
+]
