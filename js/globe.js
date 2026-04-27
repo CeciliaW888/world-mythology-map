@@ -1,244 +1,114 @@
 // ============================================================
-// globe.js — Three.js 3D Globe with myth markers
+// globe.js — globe.gl 3D Globe with myth markers
 // ============================================================
 
 import { state, emit } from './app.js';
 
-let scene, camera, renderer, globe, markers = [], labelSprites = [];
-let raycaster, mouse;
-let isDragging = false, prevMouse = { x: 0, y: 0 };
-let targetRotation = null;
-let autoRotate = true;
-let stars;
+let globe = null;
 
-const GLOBE_RADIUS = 5;
-const MARKER_SIZE = 0.13;
-
-export function initGlobe(canvas) {
-  // Scene
-  scene = new THREE.Scene();
-
-  // Camera
-  camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-  camera.position.z = 14;
-
-  // Renderer
-  renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setClearColor(0x000000, 0); // transparent — CSS gradient shows through
-
-  // Lighting — soft, no glare
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
-  scene.add(ambientLight);
-
-  const sunLight = new THREE.DirectionalLight(0xffeedd, 0.6);
-  sunLight.position.set(5, 3, 5);
-  scene.add(sunLight);
-
-  // Starfield
-  createStarfield();
-
-  // Globe
-  createGlobe();
-
-  // Raycaster for click detection
-  raycaster = new THREE.Raycaster();
-  mouse = new THREE.Vector2();
-
-  // Events
-  canvas.addEventListener('mousedown', onMouseDown);
-  canvas.addEventListener('mousemove', onMouseMove);
-  canvas.addEventListener('mouseup', onMouseUp);
-  canvas.addEventListener('wheel', onWheel, { passive: true });
-  canvas.addEventListener('click', onClick);
-
-  // Touch events
-  canvas.addEventListener('touchstart', onTouchStart, { passive: true });
-  canvas.addEventListener('touchmove', onTouchMove, { passive: false });
-  canvas.addEventListener('touchend', onTouchEnd);
-
-  window.addEventListener('resize', onResize);
-
-  // Start render loop
-  animate();
+function tryGlobe(container, rendererConfig) {
+  return Globe({ rendererConfig })(container);
 }
 
-function createStarfield() {
-  const starsGeo = new THREE.BufferGeometry();
-  const positions = new Float32Array(3000 * 3);
-  const sizes = new Float32Array(3000);
-
-  for (let i = 0; i < 3000; i++) {
-    const r = 50 + Math.random() * 100;
-    const theta = Math.random() * Math.PI * 2;
-    const phi = Math.acos(2 * Math.random() - 1);
-
-    positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
-    positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
-    positions[i * 3 + 2] = r * Math.cos(phi);
-    sizes[i] = Math.random() * 2 + 0.5;
+export function initGlobe(container) {
+  // Detect WebGL availability before attempting globe init
+  const probe = document.createElement('canvas');
+  const hasWebGL = !!(probe.getContext('webgl2') || probe.getContext('webgl') || probe.getContext('experimental-webgl'));
+  console.log('[globe] WebGL available:', hasWebGL);
+  if (!hasWebGL) {
+    throw new Error('WebGL unavailable — enable hardware acceleration: chrome://settings/system');
   }
 
-  starsGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  starsGeo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
-
-  const starsMat = new THREE.PointsMaterial({
-    color: 0xf5e6c8,
-    size: 0.15,
-    transparent: true,
-    opacity: 0.6,
-    sizeAttenuation: true
-  });
-
-  stars = new THREE.Points(starsGeo, starsMat);
-  scene.add(stars);
-}
-
-function createGlobe() {
-  // Earth sphere with a dark, elegant texture
-  const geometry = new THREE.SphereGeometry(GLOBE_RADIUS, 64, 64);
-
-  // Flat-shaded globe — no specular glare
-  const material = new THREE.MeshLambertMaterial({
-    color: 0x2a7de1,
-  });
-
-  globe = new THREE.Mesh(geometry, material);
-  scene.add(globe);
-
-  // Grid lines (latitude/longitude)
-  addGridLines();
-}
-
-function addGridLines() {
-  const lineMaterial = new THREE.LineBasicMaterial({
-    color: 0x88ccff,
-    transparent: true,
-    opacity: 0.25
-  });
-
-  // Latitude lines
-  for (let lat = -60; lat <= 60; lat += 30) {
-    const phi = (90 - lat) * Math.PI / 180;
-    const points = [];
-    for (let lng = 0; lng <= 360; lng += 5) {
-      const theta = lng * Math.PI / 180;
-      const r = GLOBE_RADIUS * 1.001;
-      points.push(new THREE.Vector3(
-        r * Math.sin(phi) * Math.cos(theta),
-        r * Math.cos(phi),
-        r * Math.sin(phi) * Math.sin(theta)
-      ));
-    }
-    const geo = new THREE.BufferGeometry().setFromPoints(points);
-    const line = new THREE.Line(geo, lineMaterial);
-    globe.add(line);
+  // Try progressively less-demanding renderer configs to handle Chrome WebGL restrictions
+  const configs = [
+    { antialias: true,  alpha: true, stencil: false },
+    { antialias: false, alpha: true, stencil: false },
+    { antialias: false, alpha: false },
+    {},
+  ];
+  let lastErr = null;
+  for (const cfg of configs) {
+    try { globe = tryGlobe(container, cfg); lastErr = null; break; } catch (e) { lastErr = e; globe = null; }
   }
+  if (!globe) throw lastErr || new Error('Error creating WebGL context.');
 
-  // Longitude lines
-  for (let lng = 0; lng < 360; lng += 30) {
-    const theta = lng * Math.PI / 180;
-    const points = [];
-    for (let lat = -90; lat <= 90; lat += 5) {
-      const phi = (90 - lat) * Math.PI / 180;
-      const r = GLOBE_RADIUS * 1.001;
-      points.push(new THREE.Vector3(
-        r * Math.sin(phi) * Math.cos(theta),
-        r * Math.cos(phi),
-        r * Math.sin(phi) * Math.sin(theta)
-      ));
-    }
-    const geo = new THREE.BufferGeometry().setFromPoints(points);
-    const line = new THREE.Line(geo, lineMaterial);
-    globe.add(line);
-  }
+  globe
+    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-day.jpg')
+    .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+    .backgroundColor('rgba(0,0,0,0)')
+    .atmosphereColor('#d4a96a')
+    .atmosphereAltitude(0.18)
+    .enablePointerInteraction(true)
+    .width(container.clientWidth || window.innerWidth - 300)
+    .height(container.clientHeight || window.innerHeight);
+
+  // Warm antique sepia — matches reference aesthetic
+  globe.renderer().domElement.style.filter =
+    'sepia(0.45) saturate(0.8) brightness(0.97) contrast(1.05)';
+
+  // Orbit controls
+  globe.controls().autoRotate = true;
+  globe.controls().autoRotateSpeed = 0.35;
+  globe.controls().enableZoom = true;
+  globe.controls().minDistance = 180;
+  globe.controls().maxDistance = 500;
+
+  // Start view centered on Asia/Middle East where many myths originate
+  globe.pointOfView({ lat: 25, lng: 60, altitude: 2.2 }, 0);
+
+  window.addEventListener('resize', () => {
+    globe
+      .width(container.clientWidth || window.innerWidth - 300)
+      .height(container.clientHeight || window.innerHeight);
+  });
 }
 
-// Convert lat/lng to 3D position on globe
-export function latLngToVector3(lat, lng, radius) {
-  const r = radius || GLOBE_RADIUS;
-  const phi = (90 - lat) * Math.PI / 180;
-  const theta = (lng + 180) * Math.PI / 180;
-  return new THREE.Vector3(
-    -r * Math.sin(phi) * Math.cos(theta),
-    r * Math.cos(phi),
-    r * Math.sin(phi) * Math.sin(theta)
-  );
-}
-
-// Place myth markers on globe
 export function renderMarkers(myths, countries) {
-  // Clear existing markers
-  markers.forEach(m => globe.remove(m));
-  labelSprites.forEach(l => globe.remove(l));
-  markers = [];
-  labelSprites = [];
+  if (!globe) return;
 
   const countryColorMap = {};
   countries.forEach(c => { countryColorMap[c.name] = c.color; });
 
-  myths.forEach(myth => {
-    const pos = latLngToVector3(myth.lat, myth.lng, GLOBE_RADIUS * 1.005);
-    const color = countryColorMap[myth.country] || '#d5ab5b';
-
-    // Glowing marker dot
-    const geo = new THREE.SphereGeometry(MARKER_SIZE, 12, 12);
-    const mat = new THREE.MeshBasicMaterial({
-      color: new THREE.Color(color),
-      transparent: true,
-      opacity: 0.9
+  globe
+    .pointsData(myths)
+    .pointLat(d => d.lat)
+    .pointLng(d => d.lng)
+    .pointColor(d => countryColorMap[d.country] || '#d5ab5b')
+    .pointRadius(0.35)
+    .pointAltitude(0.01)
+    .pointResolution(12)
+    .onPointClick((point) => {
+      emit('markerClick', { mythId: point.id, country: point.country });
+    })
+    .onPointHover((point) => {
+      // Pause auto-rotate while hovering
+      globe.controls().autoRotate = !point;
     });
-    const marker = new THREE.Mesh(geo, mat);
-    marker.position.copy(pos);
-    marker.userData = { mythId: myth.id, country: myth.country };
-    globe.add(marker);
-    markers.push(marker);
 
-    // Glow ring
-    const ringGeo = new THREE.RingGeometry(MARKER_SIZE * 1.2, MARKER_SIZE * 2, 16);
-    const ringMat = new THREE.MeshBasicMaterial({
-      color: new THREE.Color(color),
-      transparent: true,
-      opacity: 0.2,
-      side: THREE.DoubleSide
-    });
-    const ring = new THREE.Mesh(ringGeo, ringMat);
-    ring.position.copy(pos);
-    ring.lookAt(new THREE.Vector3(0, 0, 0));
-    globe.add(ring);
-    markers.push(ring);
-
-    // Label (if enabled)
-    if (state.showLabels) {
-      const canvas2d = document.createElement('canvas');
-      const ctx = canvas2d.getContext('2d');
-      canvas2d.width = 256;
-      canvas2d.height = 48;
-      ctx.font = '20px Georgia, serif';
-      ctx.fillStyle = 'rgba(245,230,200,0.7)';
-      ctx.textAlign = 'left';
-      ctx.fillText(myth.name, 4, 30);
-
-      const texture = new THREE.CanvasTexture(canvas2d);
-      const spriteMat = new THREE.SpriteMaterial({ map: texture, transparent: true, opacity: 0.6 });
-      const sprite = new THREE.Sprite(spriteMat);
-      const labelPos = latLngToVector3(myth.lat, myth.lng, GLOBE_RADIUS * 1.04);
-      sprite.position.copy(labelPos);
-      sprite.scale.set(1.2, 0.22, 1);
-      globe.add(sprite);
-      labelSprites.push(sprite);
-    }
-  });
+  if (state.showLabels) {
+    globe
+      .labelsData(myths)
+      .labelLat(d => d.lat)
+      .labelLng(d => d.lng)
+      .labelText(d => state.lang === 'zh' ? d.name : (d.en || d.name))
+      .labelSize(0.5)
+      .labelColor(() => 'rgba(245,230,200,0.75)')
+      .labelResolution(2)
+      .labelAltitude(0.02);
+  } else {
+    globe.labelsData([]);
+  }
 }
 
-// Render connection lines between related myths
 export function renderConnections(myths) {
-  // Remove existing
-  globe.children.filter(c => c.userData && c.userData.isConnection).forEach(c => globe.remove(c));
+  if (!globe) return;
 
-  if (!state.showLines) return;
+  if (!state.showLines) {
+    globe.arcsData([]);
+    return;
+  }
 
+  const arcs = [];
   const drawn = new Set();
   myths.forEach(myth => {
     if (!myth.related) return;
@@ -246,143 +116,31 @@ export function renderConnections(myths) {
       const key = [Math.min(myth.id, rid), Math.max(myth.id, rid)].join('-');
       if (drawn.has(key)) return;
       drawn.add(key);
-
       const target = state.allMyths.find(m => m.id === rid);
-      if (!target) return;
-      if (!myths.includes(target)) return;
-
-      // Great circle arc
-      const start = latLngToVector3(myth.lat, myth.lng, GLOBE_RADIUS * 1.003);
-      const end = latLngToVector3(target.lat, target.lng, GLOBE_RADIUS * 1.003);
-      const mid = start.clone().add(end).multiplyScalar(0.5).normalize().multiplyScalar(GLOBE_RADIUS * 1.15);
-
-      const curve = new THREE.QuadraticBezierCurve3(start, mid, end);
-      const points = curve.getPoints(30);
-      const geo = new THREE.BufferGeometry().setFromPoints(points);
-      const mat = new THREE.LineBasicMaterial({
-        color: 0xffd700,
-        transparent: true,
-        opacity: 0.5
+      if (!target || !myths.includes(target)) return;
+      arcs.push({
+        startLat: myth.lat, startLng: myth.lng,
+        endLat: target.lat, endLng: target.lng,
       });
-      const line = new THREE.Line(geo, mat);
-      line.userData = { isConnection: true };
-      globe.add(line);
     });
   });
+
+  globe
+    .arcsData(arcs)
+    .arcStartLat(d => d.startLat)
+    .arcStartLng(d => d.startLng)
+    .arcEndLat(d => d.endLat)
+    .arcEndLng(d => d.endLng)
+    .arcColor(() => ['rgba(255,215,0,0.08)', 'rgba(255,215,0,0.55)'])
+    .arcStroke(0.3)
+    .arcAltitude(0.15)
+    .arcDashLength(0.5)
+    .arcDashGap(0.15)
+    .arcDashAnimateTime(2000);
 }
 
-// Rotate globe to face a specific lat/lng
 export function flyTo(lat, lng) {
-  autoRotate = false;
-  const phi = (90 - lat) * Math.PI / 180;
-  const theta = (lng + 180) * Math.PI / 180;
-  targetRotation = {
-    x: phi - Math.PI / 2,
-    y: -(theta - Math.PI)
-  };
-}
-
-// Mouse interaction
-function onMouseDown(e) {
-  isDragging = true;
-  autoRotate = false;
-  prevMouse = { x: e.clientX, y: e.clientY };
-}
-
-function onMouseMove(e) {
-  if (!isDragging) return;
-  const dx = e.clientX - prevMouse.x;
-  const dy = e.clientY - prevMouse.y;
-  globe.rotation.y += dx * 0.005;
-  globe.rotation.x += dy * 0.005;
-  globe.rotation.x = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, globe.rotation.x));
-  prevMouse = { x: e.clientX, y: e.clientY };
-  targetRotation = null;
-}
-
-function onMouseUp() {
-  isDragging = false;
-}
-
-function onClick(e) {
-  const canvas = renderer.domElement;
-  const rect = canvas.getBoundingClientRect();
-  mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-  mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
-
-  raycaster.setFromCamera(mouse, camera);
-  const intersects = raycaster.intersectObjects(markers.filter(m => m.userData.mythId));
-
-  if (intersects.length > 0) {
-    const mythId = intersects[0].object.userData.mythId;
-    const country = intersects[0].object.userData.country;
-    emit('markerClick', { mythId, country });
-  }
-}
-
-function onWheel(e) {
-  camera.position.z += e.deltaY * 0.005;
-  camera.position.z = Math.max(8, Math.min(25, camera.position.z));
-}
-
-// Touch events
-let touchStart = null;
-function onTouchStart(e) {
-  if (e.touches.length === 1) {
-    isDragging = true;
-    autoRotate = false;
-    touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-  }
-}
-function onTouchMove(e) {
-  if (!isDragging || !touchStart) return;
-  e.preventDefault();
-  const dx = e.touches[0].clientX - touchStart.x;
-  const dy = e.touches[0].clientY - touchStart.y;
-  globe.rotation.y += dx * 0.005;
-  globe.rotation.x += dy * 0.005;
-  globe.rotation.x = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, globe.rotation.x));
-  touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-  targetRotation = null;
-}
-function onTouchEnd() {
-  isDragging = false;
-  touchStart = null;
-}
-
-function onResize() {
-  const canvas = renderer.domElement;
-  const container = canvas.parentElement || document.body;
-  const w = container.clientWidth || (window.innerWidth - 300);
-  const h = container.clientHeight || window.innerHeight;
-  camera.aspect = w / h;
-  camera.updateProjectionMatrix();
-  renderer.setSize(w, h);
-}
-
-// Smooth rotation toward target
-function animate() {
-  requestAnimationFrame(animate);
-
-  if (autoRotate) {
-    globe.rotation.y += 0.001;
-  } else if (targetRotation) {
-    globe.rotation.x += (targetRotation.x - globe.rotation.x) * 0.04;
-    globe.rotation.y += (targetRotation.y - globe.rotation.y) * 0.04;
-  }
-
-  // Subtle star twinkle
-  if (stars) {
-    stars.rotation.y += 0.0001;
-  }
-
-  // Pulse markers
-  const time = Date.now() * 0.002;
-  markers.forEach((m, i) => {
-    if (m.geometry && m.geometry.type === 'RingGeometry') {
-      m.material.opacity = 0.1 + Math.sin(time + i) * 0.08;
-    }
-  });
-
-  renderer.render(scene, camera);
+  if (!globe) return;
+  globe.controls().autoRotate = false;
+  globe.pointOfView({ lat, lng, altitude: 1.8 }, 800);
 }

@@ -110,9 +110,9 @@ export async function initApp() {
     // Load data
     await loadData();
 
-    // Wait for THREE.js to be available (loaded via <script> tag)
-    if (typeof THREE === 'undefined') {
-      throw new Error('Three.js not loaded — check network connection');
+    // Wait for globe.gl to be available (loaded via <script> tag)
+    if (typeof Globe === 'undefined') {
+      throw new Error('globe.gl not loaded — check network connection');
     }
 
     // Import modules dynamically to avoid circular deps

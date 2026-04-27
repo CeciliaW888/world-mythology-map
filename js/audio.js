@@ -38,6 +38,31 @@ const SCALES = {
 export function initAudio() {
   setupMusicControls();
   setupNarrationListeners();
+  setupVolumeToggle();
+}
+
+function setupVolumeToggle() {
+  const btn = document.getElementById('volume-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    isMuted = !isMuted;
+    btn.textContent = isMuted ? '🔇' : '🔊';
+    btn.title = isMuted ? 'Unmute all audio' : 'Mute all audio';
+
+    if (isMuted) {
+      // Mute everything currently playing
+      if (toneGain && audioCtx) toneGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.3);
+      if (bgAudio) bgAudio.volume = 0;
+      if (narrationAudio) narrationAudio.volume = 0;
+      if (window.speechSynthesis) window.speechSynthesis.pause();
+    } else {
+      // Restore audio
+      if (toneGain && audioCtx) toneGain.gain.linearRampToValueAtTime(0.07, audioCtx.currentTime + 0.3);
+      if (bgAudio) fadeInAudio(bgAudio, 0.3, 0.5);
+      if (narrationAudio && !narrationAudio.paused) fadeInAudio(narrationAudio, 1.0, 0.5);
+      if (window.speechSynthesis && window.speechSynthesis.paused) window.speechSynthesis.resume();
+    }
+  });
 }
 
 // ============================================================
@@ -99,7 +124,7 @@ function playAmbientTone(countryName) {
 
     toneGain = audioCtx.createGain();
     toneGain.gain.setValueAtTime(0, audioCtx.currentTime);
-    toneGain.gain.linearRampToValueAtTime(0.07, audioCtx.currentTime + 1.5);
+    if (!isMuted) toneGain.gain.linearRampToValueAtTime(0.07, audioCtx.currentTime + 1.5);
     toneGain.connect(audioCtx.destination);
 
     toneOsc = audioCtx.createOscillator();
@@ -229,34 +254,47 @@ function playNarration(myth) {
 
   if (bgAudio) fadeInAudio(bgAudio, 0.08, 0.8);
 
-  // Start TTS immediately — preserves iOS user-gesture context
-  playNarrationWithSpeech(text, myth);
+  // Show loading state immediately
+  emit('narrationStateChange', { state: 'loading', myth });
 
-  // Silently try pre-generated MP3 in background.
-  // If it loads, cancel TTS and switch to the higher-quality file.
   const lang = state.lang === 'zh' ? 'zh' : 'en';
   const url = `audio/narration/${myth.id}_${lang}.mp3`;
-  const probe = new Audio();
-  probe.src = url;
-  probe.addEventListener('canplaythrough', async () => {
-    if (!isNarrating) return; // narration already stopped
-    window.speechSynthesis.cancel();
-    narrationUtterance = null;
-    narrationAudio = probe;
+  const audio = new Audio();
+  audio.src = url;
+
+  // Timeout: if MP3 hasn't loaded in 4s, fall back to TTS
+  const fallbackTimer = setTimeout(() => {
+    audio.src = '';
+    playNarrationWithSpeech(text, myth);
+  }, 4000);
+
+  audio.addEventListener('canplaythrough', async () => {
+    clearTimeout(fallbackTimer);
+    narrationAudio = audio;
+    if (isMuted) audio.volume = 0;
     try {
-      await probe.play();
+      await audio.play();
       isNarrating = true;
       startProgressTracking();
       emit('narrationStateChange', { state: 'playing', myth });
-      probe.addEventListener('ended', () => {
+      audio.addEventListener('ended', () => {
         isNarrating = false;
         emit('narrationStateChange', { state: 'ended', myth });
         stopProgressTracking();
         if (bgAudio) fadeInAudio(bgAudio, 0.3, 1.0);
       }, { once: true });
-    } catch (_) {}
+    } catch (_) {
+      clearTimeout(fallbackTimer);
+      playNarrationWithSpeech(text, myth);
+    }
   }, { once: true });
-  // 404 errors on probe are silently ignored — TTS is already running
+
+  audio.addEventListener('error', () => {
+    clearTimeout(fallbackTimer);
+    playNarrationWithSpeech(text, myth);
+  }, { once: true });
+
+  audio.load();
 }
 
 function playNarrationWithSpeech(text, myth) {

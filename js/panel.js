@@ -138,21 +138,30 @@ function updateNarrationUI() {
 
   btn.classList.remove('active');
   switch (narrationState) {
+    case 'loading':
+      icon.innerHTML = '⏳';
+      label.textContent = 'Loading…';
+      btn.disabled = true;
+      break;
     case 'playing':
       icon.innerHTML = '&#10074;&#10074;';
       label.textContent = 'Pause';
       btn.classList.add('active');
+      btn.disabled = false;
       break;
     case 'paused':
       icon.innerHTML = '&#9654;';
       label.textContent = 'Resume';
+      btn.disabled = false;
       break;
     case 'ended':
       icon.innerHTML = '&#8635;';
       label.textContent = 'Replay';
+      btn.disabled = false;
       break;
     default:
       icon.innerHTML = '&#9654;';
       label.textContent = 'Listen';
+      btn.disabled = false;
   }
 }

@@ -19,6 +19,7 @@
   <!-- Audio Controls (top-left) -->
   <div class="audio-control">
     <button class="audio-btn" title="Play/Stop Music">♪</button>
+    <button class="volume-btn" id="volume-toggle" title="Mute/Unmute all audio">🔊</button>
     <button class="lang-toggle-btn" id="lang-toggle" title="Switch language">中</button>
     <span class="audio-info"></span>
   </div>
@@ -30,8 +31,8 @@
     <div class="country-display"></div>
   </header>
 
-  <!-- 3D Globe Canvas -->
-  <canvas id="globe-canvas"></canvas>
+  <!-- 3D Globe Container (globe.gl creates its own canvas) -->
+  <div id="globe-canvas"></div>
 
   <!-- Right Sidebar -->
   <aside class="sidebar">
@@ -96,8 +97,25 @@
     </div>
   </div>
 
-  <!-- Three.js from CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Fallback patch: retry WebGL context without antialias if Chrome rejects the initial request -->
+  <script>
+    (function () {
+      const orig = HTMLCanvasElement.prototype.getContext;
+      HTMLCanvasElement.prototype.getContext = function (type, attrs) {
+        if (type === 'webgl' || type === 'webgl2' || type === 'experimental-webgl') {
+          const ctx = orig.call(this, type, attrs);
+          if (!ctx && attrs && (attrs.antialias || attrs.stencil)) {
+            return orig.call(this, type, { ...attrs, antialias: false, stencil: false });
+          }
+          return ctx;
+        }
+        return orig.call(this, type, attrs);
+      };
+    })();
+  </script>
+
+  <!-- globe.gl (bundles its own Three.js) -->
+  <script src="//unpkg.com/globe.gl"></script>
 
   <!-- App entry point (ES module) -->
   <script type="module" src="js/app.js"></script>
