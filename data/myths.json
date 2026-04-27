@@ -1,105 +1,1938 @@
 [
-  {"id":1,"country":"China","lat":35,"lng":105,"name":"女娲补天","en":"Nuwa Mends the Sky","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/N%C3%BCwa_Mending_the_Heavens.jpg/400px-N%C3%BCwa_Mending_the_Heavens.jpg","themes":["fire","flood"],"era":"ancient","type":"创世","zh":"远古时代，水神共工与火神祝融争斗，共工怒触不周山，天柱折断，天空出现大洞。女娲炼五色石补天，斩鳌足立四极，杀黑龙济冀州，积芦灰止淫水。天地终于恢复安宁。","en2":"In ancient times, the water god Gonggong rammed Mount Buzhou in rage, shattering the pillar of heaven. The sky cracked and floods swept the earth. Goddess Nuwa smelted five-colored stones to patch the heavens, cut a giant tortoise's legs to prop up the sky, and piled ash to stop the floods. Order was restored to the world.","langs":["中文","English"],"related":[3,4]},
-  {"id":2,"country":"China","lat":36,"lng":108,"name":"后羿射日","en":"Hou Yi Shoots the Suns","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Hou_Yi_射日.jpg/400px-Hou_Yi_射日.jpg","themes":["sun"],"era":"ancient","type":"英雄","zh":"上古时期，天上十日并出，大地焦灼。帝俊赐神弓于后羿，后羿引弓射落九日，只留一个照耀大地。从此天下重归太平。","en2":"In a golden age turned catastrophe, ten suns rose together and scorched the earth, drying rivers and wilting crops. The divine archer Hou Yi took up his enchanted bow and shot down nine of the ten suns, sparing one to warm the world. The grateful emperor rewarded him with the elixir of immortality.","langs":["中文","English"],"related":[5,10]},
-  {"id":3,"country":"China","lat":33,"lng":103,"name":"大禹治水","en":"Great Yu Controls the Flood","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/King_Yu_of_Xia.jpg/400px-King_Yu_of_Xia.jpg","themes":["flood"],"era":"ancient","type":"英雄","zh":"大禹改堵为疏，历经十三年三过家门而不入，终于将洪水引入大海。天下人皆敬服，舜禅位于禹。","en2":"When floods drowned the ancient world, Emperor Yao sent Gun to stop them, but his dams failed. Yu, Gun's son, spent thirteen years channeling water into rivers and seas, passing his own home three times without stopping. His selfless labor tamed the floods and the emperor passed him the throne.","langs":["中文","English"],"related":[1,29,71]},
-  {"id":4,"country":"China","lat":38,"lng":110,"name":"盘古开天","en":"Pangu Creates the World","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pangu.jpg/400px-Pangu.jpg","themes":["sun","moon"],"era":"ancient","type":"创世","zh":"天地混沌如鸡子，盘古生于其中。万八千岁后，阳清为天，阴浊为地。盘古死后身体化为天地万物。","en2":"Before creation, the universe was a dark, formless egg. For eighteen thousand years, Pangu slept inside. He pushed heaven and earth apart with his immense body. His breath became wind, his voice thunder, his eyes the sun and moon. When he finally died, his body transformed into every mountain, river, and living thing.","langs":["中文","English"],"related":[1]},
-  {"id":5,"country":"China","lat":30,"lng":114,"name":"嫦娥奔月","en":"Chang'e Flies to the Moon","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Moon_Goddess_Chang_E.jpg/400px-The_Moon_Goddess_Chang_E.jpg","themes":["moon","love"],"era":"ancient","type":"爱情","zh":"后羿射日后获不死药，嫦娥情急吞下飞向月宫。从此独守广寒宫，只有玉兔相伴。每年八月十五后羿遥祭月中嫦娥。","en2":"After Hou Yi shot down the nine suns, the emperor gave him an elixir of immortality. His wife Chang'e swallowed it in a moment of temptation and floated up to the moon. There she lives forever in the cold Lunar Palace, accompanied only by a jade rabbit who pounds herbs beneath an osmanthus tree.","langs":["中文","English"],"related":[2]},
-  {"id":6,"country":"China","lat":34,"lng":100,"name":"精卫填海","en":"Jingwei Fills the Sea","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Jingwei_bird.jpg/400px-Jingwei_bird.jpg","themes":["flood"],"era":"ancient","type":"英雄","zh":"炎帝之女溺亡于东海，化为精卫鸟，衔西山木石日复一日誓填东海，永不停息。","en2":"The youngest daughter of Emperor Yan ventured out to sea and drowned. Her spirit transformed into a small speckled bird named Jingwei. Refusing to accept defeat, she flies endlessly from the western mountains, dropping twigs and pebbles into the Eastern Sea, determined to fill it — no matter how long it takes.","langs":["中文","English"]},
-  {"id":7,"country":"China","lat":32,"lng":118,"name":"牛郎织女","en":"The Cowherd and Weaver Girl","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/The_Cowherd_and_the_Weaver_Girl.jpg/400px-The_Cowherd_and_the_Weaver_Girl.jpg","themes":["love","moon"],"era":"ancient","type":"爱情","zh":"牛郎与织女相爱成婚。天帝发怒，王母用银簪划出银河分隔二人。每年七月初七喜鹊搭桥让他们相会。","en2":"The mortal cowherd Niulang and the celestial weaver goddess Zhinu fell in love and married. The Queen Mother of Heaven, furious that a goddess wed a mortal, drew the Milky Way across the sky to separate them. Once a year, on the seventh night of the seventh month, a bridge of magpies forms so the lovers may briefly meet.","langs":["中文","English"],"related":[8,13]},
-  {"id":8,"country":"China","lat":31,"lng":121,"name":"白蛇传","en":"Legend of the White Snake","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/erta_di_una_stampa_cinese_della_leggenda_del_serpente_bianco.jpg/400px-erta_di_una_stampa_cinese_della_leggenda_del_serpente_bianco.jpg","themes":["love"],"era":"classical","type":"爱情","zh":"白素贞是修炼千年的白蛇精，与许仙相恋。法海将她镇压在雷峰塔下，其子孝心感天终获自由。","en2":"The white snake Bai Suzhen had cultivated power for a thousand years. Taking human form, she fell in love with the scholar Xu Xian near West Lake. The monk Fa Hai imprisoned her under Leifeng Pagoda. Decades later, her devoted son earned enough spiritual merit to shatter the pagoda and set her free.","langs":["中文","English"]},
-  {"id":9,"country":"China","lat":28,"lng":106,"name":"黄帝战蚩尤","en":"Yellow Emperor vs Chiyou","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Yellow_Emperor.jpg/400px-Yellow_Emperor.jpg","themes":["dragon"],"era":"ancient","type":"战争","zh":"黄帝与蚩尤大战于涿鹿。蚩尤呼风唤雨，黄帝请来旱魃，最终擒杀蚩尤统一华夏。","en2":"Two titans clashed at the Battle of Zhuolu. Chiyou summoned thick fog and storms to confuse the Yellow Emperor's forces. The Yellow Emperor called upon the drought goddess Ba to burn away the mist, then invented a compass chariot to navigate the chaos. He defeated Chiyou and unified the tribes into one civilization.","langs":["中文","English"]},
-  {"id":10,"country":"China","lat":37,"lng":112,"name":"夸父逐日","en":"Kuafu Chases the Sun","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Kuafu.png/400px-Kuafu.png","themes":["sun"],"era":"ancient","type":"英雄","zh":"夸父与太阳赛跑，渴极饮干黄河渭水仍不够，终渴死。其手杖化为桃林，福泽后人。","en2":"The giant Kuafu decided to race the sun across the sky. He ran with tremendous speed but thirst overwhelmed him. He drank the Yellow River dry, then the Wei River, but it was not enough. He collapsed and died reaching for the northern lake. His wooden staff sprouted into a vast peach forest to shade future travelers.","langs":["中文","English"],"related":[2]},
-  {"id":11,"country":"China","lat":29,"lng":116,"name":"孟姜女哭长城","en":"Lady Meng Jiang","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Erta_di_una_stampa_cinese_di_Meng_Jiang_Nu.jpg/400px-Erta_di_una_stampa_cinese_di_Meng_Jiang_Nu.jpg","themes":["love"],"era":"classical","type":"爱情","zh":"孟姜女万里寻夫到长城，得知丈夫已死。她放声痛哭，哭倒了长城八百里，感天动地。","en2":"When her husband was conscripted to build the Great Wall and never returned, Lady Meng Jiang walked a thousand miles in winter to find him. At the Wall she learned he had died and been buried within. Her grief was so boundless that she wept for days until a great stretch of the Wall crumbled, revealing his bones.","langs":["中文","English"]},
-  {"id":12,"country":"China","lat":40,"lng":116,"name":"哪吒闹海","en":"Nezha Conquers the Sea","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Erta_di_una_stampa_cinese_di_Nezha.jpg/400px-Erta_di_una_stampa_cinese_di_Nezha.jpg","themes":["fire","dragon"],"era":"ancient","type":"英雄","zh":"哪吒在海边打死龙王三太子。龙王兴师问罪，哪吒削骨还父削肉还母。后莲花化身重生。","en2":"The divine child Nezha killed the Dragon King's third son while bathing in the sea. When the Dragon King threatened his family, Nezha sacrificed himself — slicing flesh from bone to return everything to his parents, releasing them from blame. The immortal Taiyi Zhenren rebuilt him from lotus flowers, granting him a second life.","langs":["中文","English"]},
-  {"id":13,"country":"China","lat":26,"lng":107,"name":"梁山伯与祝英台","en":"Butterfly Lovers","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Liang_Shanbo_and_Zhu_Yingtai.jpg/400px-Liang_Shanbo_and_Zhu_Yingtai.jpg","themes":["love"],"era":"classical","type":"爱情","zh":"祝英台女扮男装求学，与梁山伯结为知己。被迫嫁人后梁山伯病死，祝英台投坟殉情，化为蝴蝶双飞。","en2":"Zhu Yingtai disguised herself as a man to attend school, where she and Liang Shanbo became inseparable companions. When her family forced her to marry another, Liang Shanbo died of heartbreak. On her wedding day, Zhu Yingtai threw herself on his grave, and the two were reborn as butterflies dancing together forever.","langs":["中文","English"],"related":[7]},
-  {"id":14,"country":"China","lat":34,"lng":109,"name":"西游记","en":"Journey to the West","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/XiYouJi.jpg/400px-XiYouJi.jpg","themes":["dragon"],"era":"medieval","type":"冒险","zh":"孙悟空大闹天宫后被压五行山下。后保护唐僧西天取经，历经九九八十一难终成正果。","en2":"Sun Wukong, the Monkey King, stormed heaven itself before being imprisoned under Five Elements Mountain by the Buddha. Freed after five centuries, he joined the monk Xuanzang on a pilgrimage to India for sacred scriptures. Together with Pig and Sandy, they survived eighty-one ordeals and achieved enlightenment.","langs":["中文","English"]},
-  {"id":15,"country":"China","lat":25,"lng":102,"name":"伏羲画卦","en":"Fuxi Creates the Trigrams","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Fuxi_and_N%C3%BCwa.jpg/400px-Fuxi_and_N%C3%BCwa.jpg","themes":["sun"],"era":"ancient","type":"创世","zh":"伏羲观天象地理，仰观俯察，画出八卦，教人渔猎嫁娶，开创华夏文明。","en2":"The sage-king Fuxi gazed at the stars, studied the earth, and observed birds and beasts. From these patterns he derived the Eight Trigrams — the foundation of divination, philosophy, and Chinese cosmology. He also taught people to fish with nets, hunt with weapons, and build families through proper rites of marriage.","langs":["中文","English"]},
-
-  {"id":20,"country":"Greece","lat":38,"lng":23.7,"name":"普罗米修斯盗火","en":"Prometheus Brings Fire","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Peter_Paul_Rubens_-_Prometheus_Bound_-_Google_Art_Project.jpg/400px-Peter_Paul_Rubens_-_Prometheus_Bound_-_Google_Art_Project.jpg","themes":["fire"],"era":"ancient","type":"英雄","zh":"普罗米修斯从奥林匹斯山偷取天火赐予人类。宙斯大怒将他锁在高加索山上，每日鹰啄其肝，永无止境。","en2":"The Titan Prometheus defied Zeus and stole fire from Mount Olympus, hiding it in a fennel stalk to bring warmth and civilization to shivering humanity. Zeus took terrible revenge — Prometheus was chained to a peak in the Caucasus where an eagle tore out his liver each day. Each night it regrew, and the torment began again.","langs":["中文","English","Ελληνικά"],"related":[43]},
-  {"id":21,"country":"Greece","lat":37.5,"lng":22,"name":"阿佛洛狄忒诞生","en":"Birth of Aphrodite","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/400px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg","themes":["love"],"era":"ancient","type":"神话","zh":"当克洛诺斯砍伤父亲时，血与神力落入大海，泛起白色泡沫，爱与美的女神阿佛洛狄忒从海面翩然升起。","en2":"When the Titan Kronos wounded his father Ouranos and flung the flesh into the sea, divine foam billowed on the waves off Cyprus. From that radiant foam arose Aphrodite, the goddess of love and beauty, fully formed and carried to shore on a scallop shell. Wherever she walked, flowers bloomed beneath her feet.","langs":["中文","English","Ελληνικά"]},
-  {"id":22,"country":"Greece","lat":39,"lng":22.5,"name":"特洛伊战争","en":"Trojan War","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/The_Burning_of_Troy_%281759%29.jpg/400px-The_Burning_of_Troy_%281759%29.jpg","themes":["love"],"era":"ancient","type":"战争","zh":"帕里斯拐走海伦引发十年战争。希腊联军用木马计攻破特洛伊城，结束了这场史诗般的战争。","en2":"When the Trojan prince Paris abducted the beautiful Helen from Sparta, her husband Menelaus rallied all Greece for war. For ten brutal years, heroes like Achilles and Hector clashed before Troy's walls. The Greeks finally won not by strength but by cunning — hiding warriors inside a giant wooden horse left as a gift.","langs":["中文","English","Ελληνικά"]},
-  {"id":23,"country":"Greece","lat":37.9,"lng":23.9,"name":"奥德修斯历险","en":"The Odyssey","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Odysseus_And_The_Sirens_by_John_William_Waterhouse.jpg/400px-Odysseus_And_The_Sirens_by_John_William_Waterhouse.jpg","themes":["flood"],"era":"ancient","type":"冒险","zh":"奥德修斯在特洛伊战后漂泊十年，历经独眼巨人、女巫、海妖塞壬等险阻终回故乡与妻团聚。","en2":"After the fall of Troy, Odysseus faced ten years of wandering before reaching home. He blinded the Cyclops Polyphemus, escaped the witch Circe, sailed past the deadly Sirens lashed to his mast, and navigated Scylla and Charybdis. Through it all, his wife Penelope waited faithfully, unraveling her weaving each night.","langs":["中文","English","Ελληνικά"]},
-  {"id":24,"country":"Greece","lat":37.4,"lng":24.5,"name":"伊卡洛斯之翼","en":"Icarus and Daedalus","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Jacob_Peter_Gowy%27s_The_Flight_of_Icarus.jpg/400px-Jacob_Peter_Gowy%27s_The_Flight_of_Icarus.jpg","themes":["sun"],"era":"ancient","type":"寓言","zh":"代达罗斯用蜡和羽毛为儿子伊卡洛斯造翅膀逃离克里特。伊卡洛斯飞得太高，蜡被太阳融化坠海而亡。","en2":"To escape King Minos of Crete, the craftsman Daedalus fashioned wings from feathers and wax. He warned his son Icarus: fly neither too high near the sun nor too low near the sea. Icarus, intoxicated by flight, soared ever higher until the sun melted the wax. He tumbled into the sea — the first cautionary tale about hubris.","langs":["中文","English","Ελληνικά"]},
-  {"id":25,"country":"Greece","lat":38.5,"lng":23,"name":"俄耳甫斯冥府寻妻","en":"Orpheus and Eurydice","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Christian_Gottlieb_Kratzenstein-Stub_-_Orpheus_and_Eurydice_-_KMS897_-_Statens_Museum_for_Kunst.jpg/400px-Christian_Gottlieb_Kratzenstein-Stub_-_Orpheus_and_Eurydice_-_KMS897_-_Statens_Museum_for_Kunst.jpg","themes":["love"],"era":"ancient","type":"爱情","zh":"俄耳甫斯为救亡妻入冥府，以琴声感动冥王。但回头一望，妻子永远消失在黑暗中。","en2":"Orpheus, whose music could move stones and rivers, descended into the underworld to reclaim his dead wife Eurydice. He charmed Hades and Persephone with his lyre, and they agreed to release her on one condition — he must not look back. Almost at the surface, overcome by longing, he glanced behind him. She was gone forever.","langs":["中文","English","Ελληνικά"]},
-  {"id":26,"country":"Greece","lat":36.4,"lng":25.4,"name":"忒修斯与弥诺陶洛斯","en":"Theseus and the Minotaur","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Barye_-_Theseus_and_the_Minotaur_-_Walters_2754.jpg/400px-Barye_-_Theseus_and_the_Minotaur_-_Walters_2754.jpg","themes":["dragon"],"era":"ancient","type":"英雄","zh":"忒修斯深入克里特迷宫斩杀牛头怪弥诺陶洛斯，凭阿里阿德涅的线团走出迷宫。","en2":"Every nine years, Athens sent fourteen young people to be devoured by the Minotaur in Crete's labyrinth. The hero Theseus volunteered to go. Princess Ariadne gave him a thread to mark his path. He plunged into the dark labyrinth, slew the Minotaur with his hands, and followed the thread back to freedom.","langs":["中文","English","Ελληνικά"]},
-  {"id":27,"country":"Greece","lat":37.8,"lng":20.9,"name":"潘多拉魔盒","en":"Pandora's Box","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pandora_-_John_William_Waterhouse.jpg/400px-Pandora_-_John_William_Waterhouse.jpg","themes":["fire"],"era":"ancient","type":"寓言","zh":"宙斯为惩罚人类创造潘多拉并赠予魔盒。潘多拉打开盒子释放出所有灾祸，唯有希望留在盒底。","en2":"Zeus had Hephaestus craft Pandora, the first woman, endowing her with beauty, curiosity, and deceit. As a wedding gift, she received a sealed jar containing all the world's evils. Unable to resist, she opened it — disease, war, and misery escaped into the world. Only one thing remained at the bottom: Hope.","langs":["中文","English","Ελληνικά"]},
-  {"id":28,"country":"Greece","lat":38.2,"lng":21.7,"name":"珀尔修斯斩美杜莎","en":"Perseus and Medusa","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Benvenuto_Cellini_-_Perseus_and_Medusa_-_Right_Side.jpg/400px-Benvenuto_Cellini_-_Perseus_and_Medusa_-_Right_Side.jpg","themes":["dragon"],"era":"ancient","type":"英雄","zh":"珀尔修斯用雅典娜的铜盾当镜子，避开美杜莎的石化目光，斩下蛇发女妖头颅。","en2":"The hero Perseus had to slay Medusa, a Gorgon whose gaze turned men to stone. Athena gave him a polished shield as a mirror. Guided by the reflection, Perseus struck off Medusa's head without meeting her eyes. From her blood sprang the winged horse Pegasus. He later used her severed head to rescue princess Andromeda.","langs":["中文","English","Ελληνικά"]},
-  {"id":29,"country":"Greece","lat":37.6,"lng":21.5,"name":"丢卡利翁大洪水","en":"Deucalion's Flood","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Deucalion_and_Pyrrha.jpg/400px-Deucalion_and_Pyrrha.jpg","themes":["flood"],"era":"ancient","type":"创世","zh":"宙斯降大洪水毁灭人类。丢卡利翁与妻子乘方舟存活，投石造人重建世界。","en2":"Zeus, enraged by human wickedness, sent a catastrophic flood to wash away civilization. The Titan Prometheus warned his son Deucalion, who built a chest-boat with his wife Pyrrha. They drifted nine days before landing on Mount Parnassus. An oracle told them to cast stones — each one grew into a new human being.","langs":["中文","English","Ελληνικά"],"related":[3,71]},
-
-  {"id":30,"country":"Egypt","lat":26.8,"lng":30.8,"name":"奥西里斯与伊西斯","en":"Osiris and Isis","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Osiris-tomb-of-Nefertari.jpg/400px-Osiris-tomb-of-Nefertari.jpg","themes":["love","moon"],"era":"ancient","type":"神话","zh":"奥西里斯被弟弟赛特谋害分尸。妻子伊西斯走遍世界收集碎片使其复活，奥西里斯成为冥界之王。","en2":"Osiris, the good king of Egypt, was murdered and dismembered by his jealous brother Set, who scattered the pieces across the land. His devoted wife Isis searched tirelessly, gathering every fragment and using her powerful magic to resurrect him. Though he could not return as king, Osiris became the eternal ruler of the underworld.","langs":["中文","English","العربية"]},
-  {"id":31,"country":"Egypt","lat":30,"lng":31.2,"name":"拉神的太阳船","en":"Ra's Solar Barque","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ra_Barque.jpg/400px-Ra_Barque.jpg","themes":["sun"],"era":"ancient","type":"创世","zh":"太阳神拉每日驾太阳船横渡天空，夜间穿过冥界与巨蛇阿波菲斯战斗，黎明重生。永恒循环。","en2":"The sun god Ra was reborn each morning as Khepri, the scarab pushing the sun above the horizon. He sailed his golden barque across the sky, then descended into the twelve divisions of the underworld at night. There he battled the chaos serpent Apophis, who threatened to swallow the sun and plunge the world into eternal darkness.","langs":["中文","English","العربية"]},
-  {"id":32,"country":"Egypt","lat":25.7,"lng":32.6,"name":"荷鲁斯之眼","en":"Eye of Horus","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Eye_of_Horus_bw.svg/400px-Eye_of_Horus_bw.svg.png","themes":["moon"],"era":"ancient","type":"神话","zh":"荷鲁斯为父报仇与赛特大战失去左眼。托特神治愈了他的眼睛，荷鲁斯之眼成为保护与治愈的象征。","en2":"After Osiris was murdered, Horus battled his uncle Set to reclaim the throne of Egypt. During their fierce struggle, Set tore out Horus's left eye and shattered it. The god Thoth reassembled and healed the eye. This restored 'wedjat' — the Eye of Horus — became Egypt's most powerful symbol of protection and healing.","langs":["中文","English","العربية"]},
-  {"id":33,"country":"Egypt","lat":29.9,"lng":31.1,"name":"阿努比斯称心","en":"Anubis Weighs the Heart","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/BD_Hunefer.jpg/400px-BD_Hunefer.jpg","themes":["moon"],"era":"ancient","type":"神话","zh":"死者在冥界接受审判。阿努比斯将死者心脏放在天平上与真理之羽比重，心重者被怪兽吞噬。","en2":"In Egyptian belief, death was not the end but a judgment. Anubis, the jackal-headed god, led the deceased to the Hall of Two Truths, where the heart was weighed against the Feather of Ma'at — truth and justice. A light heart meant eternal paradise in the Field of Reeds. A heavy heart was devoured by the beast Ammit.","langs":["中文","English","العربية"]},
-  {"id":34,"country":"Egypt","lat":28,"lng":30.9,"name":"斯芬克斯之谜","en":"Riddle of the Sphinx","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Great_Sphinx_of_Giza_-_20080716a.jpg/400px-Great_Sphinx_of_Giza_-_20080716a.jpg","themes":["dragon"],"era":"ancient","type":"寓言","zh":"斯芬克斯出谜题：什么生物早上四条腿中午两条腿晚上三条腿？俄狄浦斯答出是人，斯芬克斯自毁。","en2":"Outside Thebes, the Sphinx — lion-bodied, woman-headed — devoured every traveler who failed her riddle: 'What walks on four legs at dawn, two at noon, three at dusk?' When the wandering Oedipus answered 'Man — who crawls, walks, then uses a staff,' the Sphinx was so undone she hurled herself from her cliff to her death.","langs":["中文","English","العربية"]},
-  {"id":35,"country":"Egypt","lat":27,"lng":31,"name":"赛特与混沌","en":"Set God of Chaos","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Set.svg/400px-Set.svg.png","themes":["fire"],"era":"ancient","type":"神话","zh":"赛特是混沌与沙漠之神，杀死兄弟奥西里斯夺取王位，最终被荷鲁斯击败流放。","en2":"Set was the god of deserts, storms, and chaos — powerful but feared. Jealous of his brother Osiris's kingship, Set tricked him into a coffin, drowned him, then dismembered him and scattered the pieces. He ruled Egypt until Horus, Osiris's avening son, challenged him in an eighty-year battle and finally defeated him.","langs":["中文","English","العربية"]},
-
-  {"id":40,"country":"Japan","lat":35.7,"lng":139.7,"name":"天照大神","en":"Amaterasu","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Amaterasu_cave_crop.jpg/400px-Amaterasu_cave_crop.jpg","themes":["sun"],"era":"ancient","type":"创世","zh":"天照大神因弟弟暴行而躲入天岩户，世界陷入黑暗。众神设宴歌舞将她引出，光明重返人间。","en2":"Susanoo, god of storms, went on a destructive rampage — breaking irrigation ditches and defiling his sister Amaterasu's sacred weaving hall. Horrified, Amaterasu sealed herself in a cave, plunging the world into darkness. The eight million gods celebrated noisily outside until curiosity drew her out, restoring light to all creation.","langs":["中文","English","日本語"]},
-  {"id":41,"country":"Japan","lat":36,"lng":140,"name":"伊邪那岐与伊邪那美","en":"Izanagi and Izanami","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Kobayashi_Izanami_and_izanagi.jpg/400px-Kobayashi_Izanami_and_izanagi.jpg","themes":["flood","love"],"era":"ancient","type":"创世","zh":"伊邪那岐与伊邪那美用天沼矛搅动海水创造日本列岛。伊邪那美死后入黄泉，伊邪那岐追去却恐惧逃回。","en2":"The creator gods Izanagi and Izanami stood on the Floating Bridge of Heaven and stirred the primordial ocean, forming the islands of Japan. They married and bore the gods of nature. But Izanami died in childbirth. Izanagi descended to Yomi, the underworld, found her rotting, and fled in terror — sealing the entrance forever.","langs":["中文","English","日本語"],"related":[29]},
-  {"id":42,"country":"Japan","lat":34.7,"lng":135.5,"name":"桃太郎","en":"Momotaro","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Momotaro_by_Ogata_Gekko.jpg/400px-Momotaro_by_Ogata_Gekko.jpg","themes":["dragon"],"era":"medieval","type":"童话","zh":"老夫妇在桃中发现男孩。桃太郎长大后率领狗、猴、鸡前往鬼岛讨伐恶鬼，凯旋归来。","en2":"An old childless couple discovered a giant peach floating down the river. Inside was a baby boy — Momotaro, Peach Boy — born to be a hero. He grew up strong and brave, and with gifts of millet dumplings he befriended a dog, a monkey, and a pheasant, then sailed to Onigashima Island to defeat the demons terrorizing the land.","langs":["中文","English","日本語"]},
-  {"id":43,"country":"Japan","lat":33,"lng":131,"name":"八岐大蛇","en":"Yamata no Orochi","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Kuniteru_Yamata_Orochi.jpg/400px-Kuniteru_Yamata_Orochi.jpg","themes":["dragon"],"era":"ancient","type":"英雄","zh":"须佐之男用八桶酒醉倒八头大蛇八岐大蛇并将其斩杀，从蛇尾获得神剑天丛云。","en2":"The storm god Susanoo discovered a weeping family whose daughters were being devoured one by one by the eight-headed serpent Yamata no Orochi. He tricked the beast into drinking eight vats of strong sake, then slew it while it slept. In the creature's tail he found Kusanagi — the legendary divine sword of Japan.","langs":["中文","English","日本語"],"related":[20]},
-  {"id":44,"country":"Japan","lat":35,"lng":136,"name":"竹取物语","en":"The Tale of the Bamboo Cutter","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Taketori_Monogatari_2.jpg/400px-Taketori_Monogatari_2.jpg","themes":["moon","princess"],"era":"classical","type":"童话","zh":"老翁在竹中发现女婴辉夜姬。她长成绝世美女后拒绝所有求婚者，最终返回月宫，留下不死药。","en2":"A bamboo cutter found a luminous baby girl inside a glowing stalk. Named Kaguya-hime, she grew into a woman of unsurpassing beauty, drawing suitors including the emperor himself. But she was no mortal — she was from the Moon Kingdom. When her people came for her, she returned to the heavens, leaving behind only grief.","langs":["中文","English","日本語"]},
-  {"id":45,"country":"Japan","lat":34.4,"lng":132.5,"name":"浦岛太郎","en":"Urashima Taro","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Urashima_Taro.jpg/400px-Urashima_Taro.jpg","themes":["love"],"era":"medieval","type":"童话","zh":"渔夫浦岛太郎救了海龟被带去龙宫。住了三天回来发现已过三百年，打开宝盒瞬间白发苍苍。","en2":"The young fisherman Urashima Taro rescued a sea turtle and was brought to Ryugu-jo, the Dragon Palace beneath the waves. There he spent what felt like three joyful days as the sea princess's guest. Returning home, he found three hundred years had passed. He opened a forbidden box — and instantly aged to dust.","langs":["中文","English","日本語"]},
-  {"id":46,"country":"Japan","lat":38,"lng":140,"name":"雪女","en":"Yuki-onna","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Suuhi_Yuki-onna.jpg/400px-Suuhi_Yuki-onna.jpg","themes":["love"],"era":"medieval","type":"妖怪","zh":"暴风雪中出现的美丽雪女，用冰冷呼吸夺人性命。她爱上一个年轻樵夫，但秘密被发现后消失。","en2":"On a blinding snowstorm night, the Snow Woman appeared before two woodcutters. She breathed her icy breath on the elder, freezing him to death, then spared the younger on the condition he never speak of her. Years later, he recognized his wife as the Snow Woman and broke his vow. She vanished in a flurry of snow forever.","langs":["中文","English","日本語"]},
-  {"id":47,"country":"Japan","lat":35.3,"lng":138.7,"name":"富士山传说","en":"Legend of Mount Fuji","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Katsushika_Hokusai_-_Thirty-Six_Views_of_Mount_Fuji-_The_Great_Wave_Off_the_Coast_of_Kanagawa_-_Google_Art_Project.jpg/400px-Katsushika_Hokusai_-_Thirty-Six_Views_of_Mount_Fuji-_The_Great_Wave_Off_the_Coast_of_Kanagawa_-_Google_Art_Project.jpg","themes":["fire"],"era":"ancient","type":"传说","zh":"辉夜姬返回月宫前留下不死药。天皇命人在最高山焚烧此药，山因此永远冒烟，名为不死山。","en2":"When Kaguya-hime was taken back to the moon, she left the emperor a vial of the elixir of immortality. Heartbroken at losing her, he saw no reason to live forever. He ordered soldiers to take it to the summit of the highest mountain and burn it. The smoke has risen from that peak ever since, giving the mountain its eternal soul.","langs":["中文","English","日本語"]},
-
-  {"id":50,"country":"Norway","lat":60,"lng":10,"name":"诸神黄昏","en":"Ragnarok","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Battle_of_the_Doomed_Gods.jpg/400px-Battle_of_the_Doomed_Gods.jpg","themes":["fire","flood"],"era":"ancient","type":"末世","zh":"世界末日之战。巨狼吞噬太阳，世界之蛇升起。诸神与巨人同归于尽，世界在火与洪水中毁灭后重生。","en2":"Ragnarok — the Doom of the Gods — was foretold from the beginning. Three winters without summer would come; brothers would kill brothers. The wolf Fenrir and the Midgard Serpent would break free. Thor and the Serpent would slay each other. Odin would be swallowed whole. But from the ashes, a green world would be reborn.","langs":["中文","English","Norsk"],"related":[51,52]},
-  {"id":51,"country":"Norway","lat":61,"lng":9,"name":"世界树","en":"Yggdrasil","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Yggdrasil.jpg/400px-Yggdrasil.jpg","themes":["sun"],"era":"ancient","type":"创世","zh":"世界树尤克特拉希尔连接九大世界。鹰栖于顶端，恶龙尼德霍格啃噬根部，松鼠传递纷争。","en2":"The cosmic ash tree Yggdrasil spans all nine worlds of Norse mythology, from Asgard above to Niflheim below. A wise eagle sits at its crown while the dragon Nidhogg endlessly gnaws its roots. The squirrel Ratatoskr scurries between them carrying insults, embodying the eternal tension between order and chaos.","langs":["中文","English","Norsk"]},
-  {"id":52,"country":"Norway","lat":59,"lng":11,"name":"托尔战巨蛇","en":"Thor vs Jormungandr","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Thor_and_the_Midgard_Serpent.jpg/400px-Thor_and_the_Midgard_Serpent.jpg","themes":["dragon","flood"],"era":"ancient","type":"英雄","zh":"雷神托尔多次与环绕世界的巨蛇耶梦加得交锋。在诸神黄昏中两者同归于尽。","en2":"The thunder god Thor and the Midgard Serpent Jormungandr were destined enemies from birth. Thor nearly caught the serpent on a fishing trip, dragging it to the surface with an ox-head hook. At Ragnarok they finally met in their last battle. Thor slew the great serpent but staggered nine steps before falling, poisoned by its venom.","langs":["中文","English","Norsk"]},
-  {"id":53,"country":"Norway","lat":63,"lng":10,"name":"洛基的诡计","en":"Loki the Trickster","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Processed_SAM_loki.jpg/400px-Processed_SAM_loki.jpg","themes":["fire"],"era":"ancient","type":"神话","zh":"洛基是诡计之神。他导致光明之神巴德尔之死，最终被锁在岩石上受蛇毒滴面之苦。","en2":"Loki, the shape-shifting trickster of Asgard, arranged the death of Baldur — the beloved, near-invulnerable god of light — by tricking the blind god Hodr into throwing a mistletoe dart. As punishment, the gods bound Loki to a rock with the entrails of his own son. A serpent drips venom on his face; his writhing causes earthquakes.","langs":["中文","English","Norsk"]},
-  {"id":54,"country":"Norway","lat":62,"lng":8,"name":"奥丁求智慧","en":"Odin's Quest for Wisdom","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Georg_von_Rosen_-_Oden_som_vandringsman%2C_1886_%28Odin%2C_the_Wanderer%29.jpg/400px-Georg_von_Rosen_-_Oden_som_vandringsman%2C_1886_%28Odin%2C_the_Wanderer%29.jpg","themes":["moon"],"era":"ancient","type":"神话","zh":"奥丁为获得智慧，将自己倒挂在世界树上九天九夜，并挖出一只眼睛投入智慧之泉。","en2":"Odin, king of Asgard, was not content with power — he craved wisdom. He hung upside-down from Yggdrasil for nine days and nine nights, fasting, pierced by his own spear. In that ordeal, the secret of the runes revealed itself to him. He also sacrificed one eye to drink from Mimir's well of cosmic knowledge.","langs":["中文","English","Norsk"]},
-  {"id":55,"country":"Norway","lat":64,"lng":12,"name":"芬里尔巨狼","en":"Fenrir the Wolf","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/The_binding_of_Fenrir.jpg/400px-The_binding_of_Fenrir.jpg","themes":["sun"],"era":"ancient","type":"末世","zh":"巨狼芬里尔是洛基之子。诸神用矮人锻造的魔锁束缚他。诸神黄昏时他挣脱束缚吞噬奥丁。","en2":"When the gods foresaw Fenrir would cause destruction, they tried to bind him with iron chains, but he snapped them easily. Only Gleipnir — a magical ribbon forged by dwarves from impossible things like the sound of a cat's footstep and the roots of a mountain — could hold him. At Ragnarok he breaks free and swallows Odin whole.","langs":["中文","English","Norsk"]},
-
-  {"id":60,"country":"India","lat":20.6,"lng":79,"name":"搅拌乳海","en":"Churning of the Ocean","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Kurma_avatar_of_Vishnu.jpg/400px-Kurma_avatar_of_Vishnu.jpg","themes":["flood","dragon"],"era":"ancient","type":"创世","zh":"天神与阿修罗合力搅拌乳海以获取不死甘露。巨蛇为绳，曼陀罗山为杵，搅出毒药、宝物和甘露。","en2":"In the distant age of gods and demons, both sides agreed to churn the cosmic milk ocean together — using Mount Mandara as the rod and the great serpent Vasuki as the rope. From the churning emerged the wish-granting cow, divine nymphs, Lakshmi the goddess of fortune, and finally Amrita — the nectar of immortality.","langs":["中文","English","हिन्दी"],"related":[3]},
-  {"id":61,"country":"India","lat":27,"lng":81,"name":"罗摩衍那","en":"Ramayana","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ravana_cut_painting.jpg/400px-Ravana_cut_painting.jpg","themes":["love","dragon"],"era":"ancient","type":"史诗","zh":"罗摩王子被流放，妻子悉多被魔王劫走。罗摩率猴王哈努曼大军攻打楞伽岛，战胜魔王救回妻子。","en2":"Prince Rama of Ayodhya was exiled to the forest for fourteen years by palace intrigue. While there, the ten-headed demon king Ravana kidnapped his beloved wife Sita. Rama forged an alliance with Hanuman and an army of monkeys, crossed the ocean to Lanka, and waged an epic war to rescue Sita and reclaim his kingdom.","langs":["中文","English","हिन्दी"]},
-  {"id":62,"country":"India","lat":19,"lng":73,"name":"象头神迦尼萨","en":"Ganesha","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Ganesha_Basohli_miniature_circa_1730_Smithsonian_Institution.jpg/400px-Ganesha_Basohli_miniature_circa_1730_Smithsonian_Institution.jpg","themes":["moon"],"era":"ancient","type":"神话","zh":"湿婆砍下误认的儿子头颅后悔恨不已，用大象头颅替换。迦尼萨成为智慧与好运之神。","en2":"The goddess Parvati formed a boy from clay to guard her door while she bathed. When Shiva returned and the boy blocked his entry, Shiva beheaded him in a rage. Horrified at the mistake, Parvati demanded he be restored to life. Shiva sent servants to bring the head of the first creature found — an elephant — giving birth to Ganesha.","langs":["中文","English","हिन्दी"]},
-  {"id":63,"country":"India","lat":25,"lng":85,"name":"摩诃婆罗多","en":"Mahabharata","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kurukshetra.jpg/400px-Kurukshetra.jpg","themes":["fire","dragon"],"era":"ancient","type":"史诗","zh":"般度族与俱卢族为王位在俱卢之野展开大战。克里希纳向阿周那传授薄伽梵歌的智慧。","en2":"Two cousin clans, the Pandavas and Kauravas, could not share a kingdom. Their conflict led to the catastrophic Battle of Kurukshetra. Before the battle, the god Krishna counseled the warrior Arjuna, who was paralyzed seeing relatives on both sides. Their dialogue on duty, soul, and dharma became the Bhagavad Gita.","langs":["中文","English","हिन्दी"]},
-  {"id":64,"country":"India","lat":23,"lng":77,"name":"毗湿奴十化身","en":"Avatars of Vishnu","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Dashavatara.jpg/400px-Dashavatara.jpg","themes":["flood"],"era":"ancient","type":"神话","zh":"毗湿奴有十大化身保护世界：鱼救大洪水，龟托起乳海，野猪救大地，人狮杀魔王。","en2":"Vishnu, the preserver of the cosmos, took ten avatars to save the world at its darkest moments. As Matsya the fish he warned of the great flood; as Kurma the tortoise he supported Mount Mandara; as Varaha the boar he lifted the earth from the cosmic sea; as Narasimha the man-lion he slew the demon Hiranyakashipu.","langs":["中文","English","हिन्दी"]},
-  {"id":65,"country":"India","lat":12.9,"lng":77.6,"name":"哈努曼飞跃大海","en":"Hanuman Leaps the Ocean","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Hanuman_in_Ramayana.jpg/400px-Hanuman_in_Ramayana.jpg","themes":["dragon"],"era":"ancient","type":"英雄","zh":"猴神哈努曼纵身飞跃大海前往楞伽岛。一路战胜海中妖怪，找到悉多传达罗摩讯息。","en2":"To rescue Sita from Lanka, Hanuman made an impossible leap across the ocean. He fought the demoness Surasa and the shadow-grasper Chhaya along the way. He found Sita imprisoned in the Ashoka garden, delivered Rama's ring as proof of hope, and then burned Lanka with fire that Ravana's soldiers had set on his own tail.","langs":["中文","English","हिन्दी"]},
-
-  {"id":70,"country":"Iraq","lat":33,"lng":44.4,"name":"吉尔伽美什","en":"Epic of Gilgamesh","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Gilgamesh_statue.jpg/400px-Gilgamesh_statue.jpg","themes":["flood","love"],"era":"ancient","type":"史诗","zh":"乌鲁克王吉尔伽美什与恩奇都结为挚友。恩奇都死后，吉尔伽美什寻求永生，最终接受人终有一死。","en2":"Gilgamesh, the mighty king of Uruk, met his match in Enkidu, a wild man of the forest. They wrestled, then became brothers. When the gods killed Enkidu, Gilgamesh was shattered. He searched the world's ends for the secret of immortality, found it, and lost it to a serpent — learning at last that glory, not endless life, is a hero's true legacy.","langs":["中文","English","العربية"],"related":[29]},
-  {"id":71,"country":"Iraq","lat":31,"lng":47,"name":"苏美尔大洪水","en":"Sumerian Flood","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/GilgachFlworktab.jpg/400px-GilgachFlworktab.jpg","themes":["flood"],"era":"ancient","type":"创世","zh":"神灵降大洪水灭世。智慧神恩基警告祭司王造方舟，渡过七日七夜大水，方舟载生灵存续。","en2":"The gods, weary of humanity's noise, decreed a great flood to destroy them. But the wise god Enki whispered a warning through a wall to the pious king Ziusudra: build a great boat. For seven days and nights the deluge raged. When the storm subsided, Ziusudra released birds to find dry land and made offerings to the grateful gods.","langs":["中文","English","العربية"],"related":[29,3]},
-  {"id":72,"country":"Iraq","lat":32,"lng":45,"name":"伊南娜下冥界","en":"Inanna's Descent","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ishtar_on_an_Akkadian_Empire_seal.jpg/400px-Ishtar_on_an_Akkadian_Empire_seal.jpg","themes":["love","moon"],"era":"ancient","type":"神话","zh":"女神伊南娜下冥界拜访姐姐。经七道门每道门脱去一件衣物，赤裸死去。后被救活须找替身。","en2":"The queen of heaven, Inanna, descended to the Great Below to attend her sister's husband's funeral. At each of the seven gates, the gatekeepers stripped away one of her divine powers and garments. She arrived naked and was killed. The world above withered without her — until the gods negotiated her release at a terrible price.","langs":["中文","English","العربية"]},
-  {"id":73,"country":"Iraq","lat":34,"lng":43,"name":"提亚马特","en":"Tiamat the Dragon","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Chaos_Monster_and_Sun_God.png/400px-Chaos_Monster_and_Sun_God.png","themes":["dragon","flood"],"era":"ancient","type":"创世","zh":"原初之龙提亚马特代表混沌之海。马杜克斩杀提亚马特，用她的身体创造天地万物。","en2":"In the beginning, primordial saltwater Tiamat and freshwater Apsu mingled, generating the first gods. When the gods grew noisy, Apsu planned to destroy them but was killed first. Enraged, Tiamat raised an army of monsters. The young god Marduk challenged her to single combat, slew her, and split her body to form heaven and earth.","langs":["中文","English","العربية"]},
-
-  {"id":75,"country":"South Korea","lat":37.5,"lng":127,"name":"檀君神话","en":"Dangun","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Dangun_Wanggeom.jpg/400px-Dangun_Wanggeom.jpg","themes":["sun"],"era":"ancient","type":"创世","zh":"天神之子桓雄下凡。一只熊吃蒜和艾草百日后化为女人，与桓雄生下檀君，建立古朝鲜。","en2":"The god Hwanin sent his son Hwanung to earth on the peak of Mount Taebaek. A tiger and a bear both prayed to become human. Hwanung gave them mugwort and garlic and told them to endure a cave for one hundred days. The bear persevered and became a woman. She and Hwanung had a son — Dangun, who founded the kingdom of Gojoseon in 2333 BCE.","langs":["中文","English","한국어"]},
-  {"id":76,"country":"South Korea","lat":35.5,"lng":129,"name":"春香传","en":"Chunhyangjeon","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Chunhyangjeon.jpg/400px-Chunhyangjeon.jpg","themes":["love","princess"],"era":"classical","type":"爱情","zh":"春香与贵公子李梦龙相爱。春香被投狱，李梦龙高中后救出春香终得团圆。","en2":"Chunhyang, daughter of a courtesan, and Yi Mongryong, son of a magistrate, fell deeply in love. When Yi left for the capital to take the civil examination, a corrupt new governor tried to force Chunhyang into his service. She refused and was beaten and imprisoned. Yi returned as a royal inspector and freed her.","langs":["中文","English","한국어"]},
-  {"id":77,"country":"South Korea","lat":36.5,"lng":128,"name":"九尾狐","en":"Kumiho","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Gumiho.jpg/400px-Gumiho.jpg","themes":["love"],"era":"medieval","type":"妖怪","zh":"九尾狐化为美女引诱男子。有些版本中她渴望成为真正的人类，若能忍住百日便可化人。","en2":"A fox that lives for a thousand years gains the power to transform into a beautiful woman. The gumiho seduces men and consumes their livers. In gentler tales, she yearns to become truly human, needing one hundred days of her secret remaining undiscovered. A rare few stories end with her transformation — and redemption.","langs":["中文","English","한국어"]},
-
-  {"id":80,"country":"Mexico","lat":19.4,"lng":-99.1,"name":"羽蛇神","en":"Quetzalcoatl","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Quetzalcoatl_telleriano.jpg/400px-Quetzalcoatl_telleriano.jpg","themes":["dragon","sun"],"era":"ancient","type":"创世","zh":"羽蛇神是智慧与风之神，创造了人类并教授文明。他承诺有一天会从东方归来。","en2":"The Feathered Serpent was worshipped across ancient Mexico as god of wind, learning, and civilization. He taught humanity agriculture, the calendar, and the arts. Shamed by a rival god into exile, he departed on a raft of serpents, promising to return from the east. When Cortés arrived centuries later, some believed the prophecy fulfilled.","langs":["中文","English","Español"]},
-  {"id":81,"country":"Mexico","lat":20,"lng":-98,"name":"五个太阳","en":"Five Suns","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sunstone.jpg/400px-Sunstone.jpg","themes":["sun","flood"],"era":"ancient","type":"创世","zh":"阿兹特克人相信世界经历五个太阳纪。前四个被风、火、雨、洪水毁灭。我们活在第五个太阳纪。","en2":"Aztec cosmology held that the world had been created and destroyed four times. The First Sun was devoured by jaguars, the Second swept away by wind, the Third consumed by raining fire, the Fourth drowned in flood. Our age — the Fifth Sun — was born at Teotihuacan when the gods sacrificed themselves to become the sun and moon.","langs":["中文","English","Español"]},
-  {"id":82,"country":"Mexico","lat":21,"lng":-100,"name":"双胞胎英雄","en":"Hero Twins","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Hero_Twins_Hunahpu_Xbalanque.jpg/400px-Hero_Twins_Hunahpu_Xbalanque.jpg","themes":["moon","sun"],"era":"ancient","type":"英雄","zh":"玛雅双胞胎英雄前往冥界与死神球赛，用智慧战胜死亡之主，最终化为太阳和月亮。","en2":"In the Mayan Popol Vuh, the Hero Twins Hunahpu and Xbalanque were summoned to Xibalba, the underworld, to play the sacred ball game against the lords of death. Through wit, deception, and courage they defeated the death lords one by one. Killed and resurrected, they were finally transformed into the sun and moon.","langs":["中文","English","Español"]},
-
-  {"id":85,"country":"Nigeria","lat":9.1,"lng":7.5,"name":"奥巴塔拉创世","en":"Obatala Creates the World","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Yoruba-bronze-head.jpg/400px-Yoruba-bronze-head.jpg","themes":["flood"],"era":"ancient","type":"创世","zh":"至高神命奥巴塔拉从天降下，用沙土铺在原初之水上创造大地，放鸡刨出陆地。","en2":"The supreme god Olodumare commissioned the orisha Obatala to descend from heaven and create solid land. Obatala slid down an iron chain from the sky, carrying a snail shell full of sand and a five-toed hen. The hen scratched and spread the sand across the primordial waters, forming the first earth at Ile-Ife, the sacred center of the world.","langs":["中文","English"]},
-  {"id":86,"country":"Nigeria","lat":7,"lng":3.4,"name":"尚戈雷神","en":"Shango God of Thunder","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Brooklyn_Museum_1992.133_Figure_of_Shango_on_Horseback.jpg/400px-Brooklyn_Museum_1992.133_Figure_of_Shango_on_Horseback.jpg","themes":["fire"],"era":"ancient","type":"神话","zh":"尚戈是约鲁巴的雷电之神，曾是奥约帝国第三任国王。他口吐雷火，死后化为风暴之神。","en2":"Shango was once the third Alaafin — king — of the Oyo Empire, renowned for his fierce temper and ability to breathe fire. When he accidentally destroyed his own palace with lightning, he was overcome with shame and hanged himself. He ascended as an orisha — the thunder deity — and now every thunderstrike is said to be Shango dancing.","langs":["中文","English"]},
-  {"id":87,"country":"Nigeria","lat":10,"lng":8,"name":"阿南西蜘蛛","en":"Anansi the Spider","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Asante_gold_weight_depicting_Anansi.jpg/400px-Asante_gold_weight_depicting_Anansi.jpg","themes":["moon"],"era":"ancient","type":"寓言","zh":"蜘蛛阿南西用诡计战胜比他强大的对手，收集了世界上所有的故事。","en2":"Anansi the spider bargained with Nyame, the sky god, to purchase all the world's stories. Nyame demanded Anansi capture four impossible things: a swarm of hornets, a python, a leopard, and a fairy. Through cleverness and cunning, Anansi delivered them all. The sky god kept his word — and that is why all stories belong to the spider.","langs":["中文","English"]},
-
-  {"id":88,"country":"Australia","lat":-25,"lng":134,"name":"彩虹蛇","en":"Rainbow Serpent","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Rainbow_Serpent.jpg/400px-Rainbow_Serpent.jpg","themes":["flood","dragon"],"era":"ancient","type":"创世","zh":"彩虹蛇是梦幻时代最重要的神灵。它在大地上移动时创造了河流、山谷和湖泊。","en2":"The Rainbow Serpent is among the world's oldest continuing religious beliefs. During the Dreamtime, this immense being traveled across the bare landscape, carving rivers, gorges, and waterholes as it moved. It brought rain and life but also destruction when offended. It rests still beneath permanent waterholes, alive and watchful.","langs":["中文","English"]},
-  {"id":89,"country":"Australia","lat":-28,"lng":140,"name":"梦幻时代","en":"The Dreamtime","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Aboriginal_Art_Australia.jpg/400px-Aboriginal_Art_Australia.jpg","themes":["sun"],"era":"ancient","type":"创世","zh":"梦幻时代是万物被创造的永恒时期。祖先灵魂在大地上旅行，歌唱世界使之成形。","en2":"The Dreamtime is not a distant past but an ever-present spiritual reality in Aboriginal culture. Ancestral beings of great power traveled the bare continent, and their songs called mountains, rivers, and living things into existence. These creation paths — songlines — can still be walked and sung across Australia today.","langs":["中文","English"]},
-
-  {"id":90,"country":"Brazil","lat":-15.8,"lng":-47.9,"name":"图皮大洪水","en":"Tupi Flood","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Albert_Eckhout_-_Tapuia.jpg/400px-Albert_Eckhout_-_Tapuia.jpg","themes":["flood"],"era":"ancient","type":"创世","zh":"创世神因人类堕落而降大洪水。一对兄妹爬上棕榈树幸存，重新繁衍人类。","en2":"The Tupi people of Brazil tell of a time when the creator god grew angry at humanity's corruption and sent a great deluge to wash the world clean. Only two siblings survived by climbing to the crown of a tall palm tree and clinging there until the waters receded. They descended and became the parents of a new human race.","langs":["中文","English","Português"],"related":[29]},
-  {"id":91,"country":"Brazil","lat":-3,"lng":-60,"name":"粉红海豚","en":"Boto Encantado","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Amazon_river_dolphin.jpg/400px-Amazon_river_dolphin.jpg","themes":["love"],"era":"modern","type":"传说","zh":"亚马逊河的粉红海豚在满月之夜变成英俊白衣男子，来到河边村庄引诱年轻女子。","en2":"In the Amazon basin, locals have long told of the Boto — the pink river dolphin — that transforms into a handsome, white-suited man on moonlit festival nights. He appears among the crowd, seduces young women, and returns to the river before dawn. An unexplained pregnancy is traditionally attributed to the Boto Encantado.","langs":["中文","English","Português"]},
-
-  {"id":92,"country":"Peru","lat":-13.5,"lng":-72,"name":"印提太阳神","en":"Inti the Sun God","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Inti_Raymi.jpg/400px-Inti_Raymi.jpg","themes":["sun"],"era":"ancient","type":"创世","zh":"印加太阳神印提派儿女建立库斯科，开创印加帝国。太阳节至今仍是秘鲁最盛大的庆典。","en2":"Inti, the radiant sun god, was the supreme deity of the Inca Empire and the divine ancestor of the royal dynasty. He sent his children — Manco Cápac and Mama Ocllo — from Lake Titicaca to found Cusco, capital of Tawantinsuyu. Inti Raymi, the Festival of the Sun held each June solstice, was the empire's most sacred celebration.","langs":["中文","English","Español"]},
-  {"id":93,"country":"Peru","lat":-15.5,"lng":-70,"name":"维拉科查创世","en":"Viracocha","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Viracocha.jpg/400px-Viracocha.jpg","themes":["flood","sun"],"era":"ancient","type":"创世","zh":"维拉科查从的的喀喀湖中升起，创造太阳月亮星辰。用泥土造人，不满意的用洪水毁灭后重新创造。","en2":"Viracocha, the Andean creator god, rose from the depths of Lake Titicaca in primordial darkness. He first created giants but sent a flood to destroy them. From clay he fashioned new humans and sent them underground to emerge at sacred sites across the land. Then he walked westward across the Pacific and vanished into the sea.","langs":["中文","English","Español"]},
-
-  {"id":94,"country":"Ireland","lat":53.3,"lng":-6.3,"name":"图安麦卡里尔","en":"Tuan mac Cairill","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tuatha_D%C3%A9_Danann.jpg/400px-Tuatha_D%C3%A9_Danann.jpg","themes":["flood"],"era":"ancient","type":"传说","zh":"图安经历多次转世——从人变鹿变鹰变鱼再变人，见证了爱尔兰所有入侵。","en2":"Tuan mac Cairill survived every invasion of Ireland across thousands of years by transforming his shape. He lived as a man, then a stag, then a wild boar, an eagle, and finally a salmon — swallowed by a queen and reborn as a man. He lived long enough to tell the Christian monks the complete ancient history of Ireland.","langs":["中文","English"]},
-  {"id":95,"country":"Ireland","lat":53,"lng":-8,"name":"库丘林","en":"Cu Chulainn","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Cu_Chulainn_Reins_His_Chariot.jpg/400px-Cu_Chulainn_Reins_His_Chariot.jpg","themes":["dragon","fire"],"era":"ancient","type":"英雄","zh":"库丘林是爱尔兰最伟大的英雄。七岁杀死猛犬，战斗时变身狂暴形态，以一人之力守卫阿尔斯特。","en2":"Born Setanta, he earned the name Cu Chulainn after killing a blacksmith's fierce guard dog at age seven. Trained by the warrior goddess Scathach, he mastered the deadly Gáe Bulg spear. In battle he underwent a terrifying transformation — the ríastrad — becoming monstrous and unstoppable, defending Ulster single-handedly against Connacht.","langs":["中文","English"]},
-  {"id":96,"country":"Ireland","lat":52,"lng":-7,"name":"利尔的孩子们","en":"Children of Lir","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Children_of_Lir.jpg/400px-Children_of_Lir.jpg","themes":["love","princess"],"era":"ancient","type":"童话","zh":"国王利尔的四个孩子被继母诅咒变成天鹅九百年。漂泊三处湖泊后恢复人形时已白发苍苍。","en2":"The sea god Lir's four beloved children were transformed into swans by their jealous stepmother Aoife for nine hundred years. They drifted through three great Irish lakes, singing heartbreaking songs to all who heard them. When church bells finally broke the spell, they were revealed as ancient, white-haired people who died soon after.","langs":["中文","English"]},
-
-  {"id":97,"country":"Russia","lat":55.8,"lng":37.6,"name":"芭芭雅嘎","en":"Baba Yaga","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Baba_Yaga_-_Bilibin.jpg/400px-Baba_Yaga_-_Bilibin.jpg","themes":["fire","princess"],"era":"medieval","type":"童话","zh":"芭芭雅嘎住在鸡腿上的小屋里，是可怕的老巫婆。但她有时也帮助勇敢善良的年轻人。","en2":"Baba Yaga is the great witch of Russian folklore — bony-legged, iron-toothed, flying through the forest in a mortar and pestle. She lives in a hut that stands on chicken legs and can turn to face any direction. Those who seek her must complete impossible tasks with courage. The cowardly she devours; the brave she sometimes helps.","langs":["中文","English","Русский"]},
-  {"id":98,"country":"Russia","lat":59.9,"lng":30.3,"name":"火鸟","en":"The Firebird","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Ivan_Bilibin_062.jpg/400px-Ivan_Bilibin_062.jpg","themes":["fire","princess"],"era":"medieval","type":"童话","zh":"火鸟是光芒四射的魔法鸟。伊万王子捡到金羽踏上旅途，最终赢得公主和王国。","en2":"The Firebird blazes like a living flame, its feathers glowing gold and scarlet, its eyes glittering like crystal. Tsars command heroes to capture it. Prince Ivan found a single fallen feather that drew him into a chain of impossible quests — capturing the Firebird, fetching a faraway bride — until the Firebird helped him win a kingdom.","langs":["中文","English","Русский"]},
-  {"id":99,"country":"Russia","lat":56,"lng":44,"name":"瓦西丽莎","en":"Vasilisa the Beautiful","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Vasilisa.jpg/400px-Vasilisa.jpg","themes":["princess","fire"],"era":"medieval","type":"童话","zh":"瓦西丽莎被赶去芭芭雅嘎处取火。靠母亲留下的魔法娃娃完成任务，带回魔火烧死恶人。","en2":"Vasilisa's dying mother left her a magical carved doll that could help in times of need. When her stepmother sent her into the dark forest to fetch fire from the fearsome Baba Yaga, the doll guided her safely and did the impossible chores on her behalf. She earned a skull lantern with eyes of living fire — which burned her enemies to ash.","langs":["中文","English","Русский"]},
-
-  {"id":100,"country":"New Zealand","lat":-41,"lng":174.8,"name":"毛伊钓岛","en":"Maui Fishes Up the North Island","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gottfried_Lindauer_-_Tamati_Waka_Nene.jpg/400px-Gottfried_Lindauer_-_Tamati_Waka_Nene.jpg","themes":["flood"],"era":"ancient","type":"英雄","zh":"半神毛伊用祖母的魔法鱼钩从海底钓起一条巨鱼——那就是新西兰北岛。","en2":"The demigod Maui was the great trickster and hero of Polynesian legend. He fished the North Island of New Zealand up from the ocean using his grandmother Murirangawhenua's enchanted jawbone hook. He also lassoed the sun to slow it down and lengthen the day, and stole fire from the underworld for humanity.","langs":["中文","English"]},
-  {"id":101,"country":"New Zealand","lat":-38,"lng":176,"name":"朗伊与帕帕","en":"Rangi and Papa","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Rangi_and_Papa.jpg/400px-Rangi_and_Papa.jpg","themes":["love","sun"],"era":"ancient","type":"创世","zh":"天父朗伊与地母帕帕紧紧相拥，孩子们困在黑暗中。森林之神塔尼将他们分开，光明照进世界。","en2":"In Maori creation, Ranginui the Sky Father and Papatuanuku the Earth Mother held each other in an eternal embrace, leaving their children trapped in cramped darkness between them. The god of forests, Tane, lay on his back and pushed them apart with great force. Light flooded the world for the first time. Rangi's tears of separation fall as rain.","langs":["中文","English"]},
-
-  {"id":102,"country":"Turkey","lat":39.9,"lng":32.9,"name":"伊鲁扬卡斯","en":"Illuyanka Dragon","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Museum_of_Anatolian_Civilizations.jpg/400px-Museum_of_Anatolian_Civilizations.jpg","themes":["dragon"],"era":"ancient","type":"英雄","zh":"赫梯风暴之神与巨龙伊鲁扬卡斯战斗。第一次败北，第二次在人类帮助下终于战胜巨龙。","en2":"In Hittite mythology, the storm god fought the great dragon Illuyanka and was badly defeated in their first battle. He sought human help to devise a trap — luring the dragon to a great feast where it ate and drank until it could not move. He slew it then. In a second version, the cost of victory was the storm god's own son.","langs":["中文","English","Türkçe"]},
-  {"id":103,"country":"Turkey","lat":38,"lng":35,"name":"戈尔迪之结","en":"Gordian Knot","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Jean-Simon_B%C3%A9rth%C3%A9lemy_-_Alexander_Cuts_the_Gordian_Knot.jpg/400px-Jean-Simon_B%C3%A9rth%C3%A9lemy_-_Alexander_Cuts_the_Gordian_Knot.jpg","themes":["sun"],"era":"classical","type":"传说","zh":"无人能解的戈尔迪之结——谁解开谁统治亚洲。亚历山大大帝一剑斩断。","en2":"In the ancient Phrygian capital of Gordium, a wagon was tied to a post with an impossibly tangled knot of cornel bark. An oracle decreed that whoever untied it would rule all of Asia. Generations of men attempted and failed. Alexander the Great arrived in 333 BCE, examined the knot briefly, then drew his sword and sliced through it.","langs":["中文","English","Türkçe"]},
-
-  {"id":104,"country":"Saudi Arabia","lat":24.7,"lng":46.7,"name":"阿拉丁与神灯","en":"Aladdin","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Aladdin_by_Errol_Le_Cain.jpg/400px-Aladdin_by_Errol_Le_Cain.jpg","themes":["princess","love"],"era":"medieval","type":"童话","zh":"穷少年阿拉丁进入魔窟取灯。灯中精灵助他赢得公主，魔法师夺灯后阿拉丁凭智慧夺回。","en2":"Aladdin was a poor young man tricked by a sorcerer into retrieving a magic lamp from a sealed cave. He accidentally rubbed the lamp, releasing a djinn of immense power who granted his wishes. He won a princess and a palace. When the sorcerer later stole the lamp, Aladdin used wits rather than wishes to outsmart him and reclaim everything.","langs":["中文","English","العربية"]},
-  {"id":105,"country":"Saudi Arabia","lat":21.4,"lng":39.8,"name":"辛巴达航海","en":"Sinbad the Sailor","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Sinbad_the_Sailor.jpg/400px-Sinbad_the_Sailor.jpg","themes":["dragon","flood"],"era":"medieval","type":"冒险","zh":"辛巴达七次远航，遭遇巨鸟洛克、独眼巨人、磁力山、钻石谷等奇遇。","en2":"Sinbad the Sailor made seven extraordinary voyages into unknown seas from Basra. He rode the monstrous Roc bird, blinded a one-eyed giant, escaped from the Old Man of the Sea who clung to his shoulders, navigated the Magnetic Mountain that pulled ships apart, and traversed valleys carpeted with diamonds guarded by giant serpents.","langs":["中文","English","العربية"]},
-  {"id":106,"country":"Saudi Arabia","lat":26,"lng":44,"name":"一千零一夜","en":"One Thousand and One Nights","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Scheherazade.jpg/400px-Scheherazade.jpg","themes":["moon","love","princess"],"era":"medieval","type":"童话","zh":"谢赫拉扎德每夜讲一个故事留悬念。一千零一夜后国王爱上了她，她用故事拯救了自己的生命。","en2":"King Shahryar, betrayed by his queen, married a new woman each night and had her executed by morning. The vizier's daughter Scheherazade volunteered to be his bride. She told him a story each night, always pausing at the most suspenseful moment at dawn. The king kept her alive night after night — for one thousand and one nights.","langs":["中文","English","العربية"]},
-
-  {"id":107,"country":"Italy","lat":41.9,"lng":12.5,"name":"罗慕路斯与雷慕斯","en":"Romulus and Remus","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/She-wolf_suckles_Romulus_and_Remus.jpg/400px-She-wolf_suckles_Romulus_and_Remus.jpg","themes":["sun"],"era":"ancient","type":"传说","zh":"双胞胎被遗弃在台伯河边，被母狼喂养长大。罗慕路斯杀死弟弟后建立了罗马城。","en2":"The twin sons of Mars and the princess Rhea Silvia were thrown into the Tiber to drown. They washed ashore and were nursed by a she-wolf on the Palatine Hill. Raised by a shepherd, they grew into leaders. When Romulus and Remus quarreled over their city's site, Romulus killed his brother and founded Rome alone — naming it for himself.","langs":["中文","English","Italiano"]},
-  {"id":108,"country":"Italy","lat":43.7,"lng":11.3,"name":"匹诺曹","en":"Pinocchio","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pinocchio.jpg/400px-Pinocchio.jpg","themes":["love"],"era":"modern","type":"童话","zh":"老木匠造了木偶匹诺曹。他渴望成为真正的孩子，经历冒险后学会诚实善良，仙女将他变成真人。","en2":"Geppetto carved a puppet from enchanted wood that immediately came alive. Pinocchio's nose grew with every lie, and his adventures — running away, falling into the clutches of a fox and cat, becoming a donkey in the Land of Toys — were all consequences of his own dishonesty. Only by choosing truth and self-sacrifice was he made a real boy.","langs":["中文","English","Italiano"]}
+  {
+    "id": 1,
+    "country": "China",
+    "lat": 35,
+    "lng": 105,
+    "name": "女娲补天",
+    "en": "Nuwa Mends the Sky",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/N%C3%BCwa_Mending_the_Heavens.jpg/400px-N%C3%BCwa_Mending_the_Heavens.jpg",
+    "themes": [
+      "fire",
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "很久很久以前，水神共工和火神祝融打架。共工输了，气得用头去撞不周山。不周山被撞断了，天上裂开一个大洞，地上也出现了大裂缝。大火烧毁了森林，洪水淹没了大地，凶猛的野兽到处吃人，天下乱成一片。这时候，善良的女娲娘娘站了出来。她跑遍五湖四海，找来红、黄、青、白、黑五种颜色的石头，把石头炼成了五色神石。然后她用神石一块一块地补天空，把那个大洞补好了。她还砍下一只大乌龟的四条腿，用来撑住天的四角；又赶走了害人的野兽，赶跑了洪水。从此，天又变得又高又蓝，大地恢复了平静。",
+    "en2": "In ancient times, the water god Gonggong rammed Mount Buzhou in rage, shattering the pillar of heaven. The sky cracked and floods swept the earth. Goddess Nuwa smelted five-colored stones to patch the heavens, cut a giant tortoise's legs to prop up the sky, and piled ash to stop the floods. Order was restored to the world.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "related": [
+      3,
+      4
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/N%C3%BCwa"
+  },
+  {
+    "id": 2,
+    "country": "China",
+    "lat": 36,
+    "lng": 108,
+    "name": "后羿射日",
+    "en": "Hou Yi Shoots the Suns",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Hou_Yi_射日.jpg/400px-Hou_Yi_射日.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "很久以前，天上本来只有一个太阳。可是有一天，天上忽然出现了十个太阳！它们一起照在大地上，把河水都晒干了，把庄稼都烤焦了，人们热得受不了。这时候，天帝把一张神弓和十支神箭赐给了一位叫后羿的英雄。后羿是天下最厉害的射手。他爬到一座最高的山上，张开神弓，对准天上的太阳，「嗖——」一箭射出去，第一个太阳就掉下来了！他接着一箭一箭地射，连续射下了九个太阳。他正想把最后一个也射下来时，人们求他留一个，照亮大地。从此，天上又只有一个温暖的太阳了。",
+    "en2": "In a golden age turned catastrophe, ten suns rose together and scorched the earth, drying rivers and wilting crops. The divine archer Hou Yi took up his enchanted bow and shot down nine of the ten suns, sparing one to warm the world. The grateful emperor rewarded him with the elixir of immortality.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "related": [
+      5,
+      10
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Hou_Yi"
+  },
+  {
+    "id": 3,
+    "country": "China",
+    "lat": 33,
+    "lng": 103,
+    "name": "大禹治水",
+    "en": "Great Yu Controls the Flood",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/King_Yu_of_Xia.jpg/400px-King_Yu_of_Xia.jpg",
+    "themes": [
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "很久很久以前，大地上发了一场超大的洪水，到处都是水，房子被淹了，田地不见了，人们没地方住，没饭吃，非常痛苦。舜皇帝派一个叫大禹的年轻人去治水。大禹的爸爸鲧也治过水，他用堵的办法，结果洪水越堵越凶。大禹想了又想，决定换一种办法——疏通！他带着大家挖开河道，把洪水一步一步引到大海里。大禹治水非常辛苦，整整十三年都在外面，三次路过自己家门口都没进去看一眼，连刚出生的儿子都没抱过。最后，洪水终于被治好了，大地恢复了平安，人们重新过上了好日子。大禹也成为了新的皇帝。",
+    "en2": "When floods drowned the ancient world, Emperor Yao sent Gun to stop them, but his dams failed. Yu, Gun's son, spent thirteen years channeling water into rivers and seas, passing his own home three times without stopping. His selfless labor tamed the floods and the emperor passed him the throne.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "related": [
+      1,
+      29,
+      71
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Yu_the_Great"
+  },
+  {
+    "id": 4,
+    "country": "China",
+    "lat": 38,
+    "lng": 110,
+    "name": "盘古开天",
+    "en": "Pangu Creates the World",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pangu.jpg/400px-Pangu.jpg",
+    "themes": [
+      "sun",
+      "moon"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "很久很久以前，天和地还没有分开，整个宇宙就像一个又大又黑的鸡蛋，巨人盘古一直睡在里面。他睡了整整一万八千年。有一天，盘古终于醒来了，他觉得里面又闷又黑，就拿起一把大斧头用力一挥——只听「轰隆」一声，鸡蛋裂开了！轻的、清的东西慢慢升上去，变成了天空；重的、浊的东西沉下来，变成了大地。盘古怕天和地再合起来，就用头顶着天，用脚踩着地，一站就是一万八千年。最后他累得倒下了。他的呼吸变成了风，声音变成了雷电，左眼变成太阳，右眼变成月亮，身体变成了大山，血液变成了江河。",
+    "en2": "Before creation, the universe was a dark, formless egg. For eighteen thousand years, Pangu slept inside. He pushed heaven and earth apart with his immense body. His breath became wind, his voice thunder, his eyes the sun and moon. When he finally died, his body transformed into every mountain, river, and living thing.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "related": [
+      1
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Pangu"
+  },
+  {
+    "id": 5,
+    "country": "China",
+    "lat": 30,
+    "lng": 114,
+    "name": "嫦娥奔月",
+    "en": "Chang'e Flies to the Moon",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Moon_Goddess_Chang_E.jpg/400px-The_Moon_Goddess_Chang_E.jpg",
+    "themes": [
+      "moon",
+      "love"
+    ],
+    "era": "ancient",
+    "type": "爱情",
+    "zh": "后羿射下九个太阳后，西王母奖励了他一颗神奇的不死药——只要吃下去，就能飞到天上变成神仙。后羿舍不得离开妻子嫦娥，就把不死药交给嫦娥保管。这件事被一个坏人逄蒙知道了。有一天，趁后羿不在家，逄蒙拿着剑闯进来，要抢不死药。嫦娥不肯给坏人，情急之下把不死药一口吞了下去！她的身体变得越来越轻，慢慢飞了起来，一直飞向月亮。从此嫦娥就住在月亮上的广寒宫里，只有一只可爱的小玉兔陪着她。每年八月十五的晚上，月亮又圆又亮，人们就抬头看着月亮，想念美丽的嫦娥。",
+    "en2": "After Hou Yi shot down the nine suns, the emperor gave him an elixir of immortality. His wife Chang'e swallowed it in a moment of temptation and floated up to the moon. There she lives forever in the cold Lunar Palace, accompanied only by a jade rabbit who pounds herbs beneath an osmanthus tree.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "related": [
+      2
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Chang'e"
+  },
+  {
+    "id": 6,
+    "country": "China",
+    "lat": 34,
+    "lng": 100,
+    "name": "精卫填海",
+    "en": "Jingwei Fills the Sea",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Jingwei_bird.jpg/400px-Jingwei_bird.jpg",
+    "themes": [
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "古时候，炎帝有一个可爱的小女儿，名字叫女娃。有一天，女娃一个人跑到东海边玩。她坐着小船在海上游玩，没想到突然刮起大风浪，把她的小船打翻了，女娃就这样掉进大海，再也没有回来。可是女娃的灵魂没有消失。她变成了一只小小的鸟儿，长着花脑袋、白嘴巴、红爪子，叫起来「精卫、精卫」，所以人们叫她精卫鸟。精卫鸟非常恨大海夺走了她的生命。她每天从西边的山上叼起一根小树枝，或者一颗小石子，飞到东海上空把它扔下去，发誓要把大海填平！她飞啊飞，一天又一天，从来没有停下来过。",
+    "en2": "The youngest daughter of Emperor Yan ventured out to sea and drowned. Her spirit transformed into a small speckled bird named Jingwei. Refusing to accept defeat, she flies endlessly from the western mountains, dropping twigs and pebbles into the Eastern Sea, determined to fill it — no matter how long it takes.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Jingwei"
+  },
+  {
+    "id": 7,
+    "country": "China",
+    "lat": 32,
+    "lng": 118,
+    "name": "牛郎织女",
+    "en": "The Cowherd and Weaver Girl",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/The_Cowherd_and_the_Weaver_Girl.jpg/400px-The_Cowherd_and_the_Weaver_Girl.jpg",
+    "themes": [
+      "love",
+      "moon"
+    ],
+    "era": "ancient",
+    "type": "爱情",
+    "zh": "很久很久以前，天上有一位美丽的织女，每天为天帝织彩色的云霞。地上有一个穷小子叫牛郎，他每天放牛，孤孤单单。有一天，织女偷偷下凡来玩，遇到了善良的牛郎，两人一见钟情，结了婚，还生了一个男孩、一个女孩，过着幸福的日子。可是天帝知道后非常生气，让王母娘娘把织女抓回了天上。牛郎披上神牛的皮，挑着两个孩子追上天去。眼看就要追上时，王母娘娘拔出金簪一划，天空出现一条又宽又急的银河，把他们隔开了。后来天帝心软了，允许他们每年七月初七见一次面。这一天，喜鹊会飞到天上搭成一座桥，让牛郎织女走过银河相会。",
+    "en2": "The mortal cowherd Niulang and the celestial weaver goddess Zhinu fell in love and married. The Queen Mother of Heaven, furious that a goddess wed a mortal, drew the Milky Way across the sky to separate them. Once a year, on the seventh night of the seventh month, a bridge of magpies forms so the lovers may briefly meet.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "related": [
+      8,
+      13
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Cowherd_and_the_Weaver_Girl"
+  },
+  {
+    "id": 8,
+    "country": "China",
+    "lat": 31,
+    "lng": 121,
+    "name": "白蛇传",
+    "en": "Legend of the White Snake",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/erta_di_una_stampa_cinese_della_leggenda_del_serpente_bianco.jpg/400px-erta_di_una_stampa_cinese_della_leggenda_del_serpente_bianco.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "classical",
+    "type": "爱情",
+    "zh": "很久以前，西湖边有一条修炼了一千年的白蛇，她变成了美丽的姑娘，名叫白素贞。她跟一个善良的青年许仙在断桥边相遇，下起雨来，许仙借伞给她，两人慢慢相爱，结了婚，过着幸福的日子，还生了一个儿子。可是有一个叫法海的和尚不喜欢人和妖怪在一起，他用法术把白素贞抓住，关进了西湖边的雷峰塔里。许仙伤心极了，每天到塔下哭。多年以后，他们的儿子长大了，考上了状元，专门来雷峰塔前祭拜母亲。他的孝心感动了天地，雷峰塔倒了，白素贞终于和家人团聚。",
+    "en2": "The white snake Bai Suzhen had cultivated power for a thousand years. Taking human form, she fell in love with the scholar Xu Xian near West Lake. The monk Fa Hai imprisoned her under Leifeng Pagoda. Decades later, her devoted son earned enough spiritual merit to shatter the pagoda and set her free.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Legend_of_the_White_Snake"
+  },
+  {
+    "id": 9,
+    "country": "China",
+    "lat": 28,
+    "lng": 106,
+    "name": "黄帝战蚩尤",
+    "en": "Yellow Emperor vs Chiyou",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Yellow_Emperor.jpg/400px-Yellow_Emperor.jpg",
+    "themes": [
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "战争",
+    "zh": "很久很久以前，黄帝是中原一带各部落的领袖。南边有一个叫蚩尤的将军，长得很凶猛，传说他有铜头铁额，会七十二般变化，还带着八十一个兄弟一起作乱。黄帝带着军队和蚩尤在涿鹿这个地方打了一场大仗。蚩尤会呼风唤雨，他施法术让天地之间起了一场大雾，黄帝的士兵都迷路了。黄帝赶紧请来旱神女魃，把大雾烤干；他又发明了一辆指南车，无论怎么转，车上的小人都指着南方，让士兵分清方向。最后黄帝终于打败了蚩尤，统一了中原的各个部落，被尊称为中华民族的祖先。",
+    "en2": "Two titans clashed at the Battle of Zhuolu. Chiyou summoned thick fog and storms to confuse the Yellow Emperor's forces. The Yellow Emperor called upon the drought goddess Ba to burn away the mist, then invented a compass chariot to navigate the chaos. He defeated Chiyou and unified the tribes into one civilization.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Battle_of_Zhuolu"
+  },
+  {
+    "id": 10,
+    "country": "China",
+    "lat": 37,
+    "lng": 112,
+    "name": "夸父逐日",
+    "en": "Kuafu Chases the Sun",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Kuafu.png/400px-Kuafu.png",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "很久很久以前，有一个叫夸父的巨人，他个子高高的，力气大得不得了。有一天，他抬头看见太阳从东边升起，又从西边落下，心想：我要追上太阳，把它抓住，让它一直照亮大地！于是夸父迈开大步，向着太阳跑去。他越跑越近，越跑越热，渐渐感到口渴。他低头喝光了黄河里的水，又喝光了渭河里的水，可还是不够喝。他又想去喝北边大泽里的水，可是没走到，就累得倒下了。夸父死前把手里的大木杖一甩，木杖落在地上，化成了一片绿油油的桃树林，结满又大又甜的桃子，让后来赶路的人都能停下来歇一歇。",
+    "en2": "The giant Kuafu decided to race the sun across the sky. He ran with tremendous speed but thirst overwhelmed him. He drank the Yellow River dry, then the Wei River, but it was not enough. He collapsed and died reaching for the northern lake. His wooden staff sprouted into a vast peach forest to shade future travelers.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "related": [
+      2
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Kuafu"
+  },
+  {
+    "id": 11,
+    "country": "China",
+    "lat": 29,
+    "lng": 116,
+    "name": "孟姜女哭长城",
+    "en": "Lady Meng Jiang",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Erta_di_una_stampa_cinese_di_Meng_Jiang_Nu.jpg/400px-Erta_di_una_stampa_cinese_di_Meng_Jiang_Nu.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "classical",
+    "type": "爱情",
+    "zh": "秦朝的时候，秦始皇下令修建万里长城，从全国抓走了好多年轻人去做苦工。有一个姑娘叫孟姜女，她的丈夫范喜良刚结婚没几天，就被官兵抓走去修长城了。冬天到了，孟姜女担心丈夫挨冷，就背上厚厚的棉衣，一个人走啊走，走了几千里路，翻山越岭去找丈夫。等她终于走到长城脚下，却听到一个可怕的消息：丈夫早就累死了，尸骨被埋在长城下面。孟姜女伤心极了，靠着长城放声大哭。她哭啊哭，哭了三天三夜，哭得天昏地暗。突然「轰隆」一声，长城被她哭倒了八百里，露出了丈夫的骨头。",
+    "en2": "When her husband was conscripted to build the Great Wall and never returned, Lady Meng Jiang walked a thousand miles in winter to find him. At the Wall she learned he had died and been buried within. Her grief was so boundless that she wept for days until a great stretch of the Wall crumbled, revealing his bones.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Lady_Meng_Jiang"
+  },
+  {
+    "id": 12,
+    "country": "China",
+    "lat": 40,
+    "lng": 116,
+    "name": "哪吒闹海",
+    "en": "Nezha Conquers the Sea",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Erta_di_una_stampa_cinese_di_Nezha.jpg/400px-Erta_di_una_stampa_cinese_di_Nezha.jpg",
+    "themes": [
+      "fire",
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "很久以前，陈塘关有一个小男孩叫哪吒，他生下来就力气惊人，是天上的神童转世。有一天，七岁的哪吒到东海边洗澡，搅得海水翻腾。东海龙王的三太子敖丙以为有妖怪，跑出来兴师问罪。两人打了起来，哪吒用乾坤圈打死了三太子，还抽了他的龙筋。东海龙王气坏了，要去天庭告状，还带兵围攻陈塘关，要哪吒爸爸妈妈赔命。哪吒不忍心连累父母，对爸爸说：「是孩儿闯的祸，不用爸爸妈妈担心。」说完他拿起剑，把自己的骨头还给了爸爸，肉还给了妈妈。后来太乙真人用莲花和荷叶给哪吒重新塑了身体，让他复活了。",
+    "en2": "The divine child Nezha killed the Dragon King's third son while bathing in the sea. When the Dragon King threatened his family, Nezha sacrificed himself — slicing flesh from bone to return everything to his parents, releasing them from blame. The immortal Taiyi Zhenren rebuilt him from lotus flowers, granting him a second life.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Nezha"
+  },
+  {
+    "id": 13,
+    "country": "China",
+    "lat": 26,
+    "lng": 107,
+    "name": "梁山伯与祝英台",
+    "en": "Butterfly Lovers",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Liang_Shanbo_and_Zhu_Yingtai.jpg/400px-Liang_Shanbo_and_Zhu_Yingtai.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "classical",
+    "type": "爱情",
+    "zh": "古时候，有一个聪明的姑娘叫祝英台，她非常想读书。可是那时候不让女孩子上学，她就女扮男装，跑到很远的学校里去念书。在学校里，她认识了一个叫梁山伯的男同学，两个人很合得来，整天一起读书一起玩，结成了最好的朋友。三年过去了，祝英台要回家了，临走时偷偷暗示梁山伯，自己其实是女孩子，希望他来提亲。等梁山伯反应过来，赶到祝家提亲时，祝英台已经被父母许配给了别人。梁山伯伤心得病死了。出嫁那天，祝英台经过梁山伯的坟墓，她跳下花轿，扑到坟前痛哭。突然，坟墓裂开，祝英台跳了进去。两个人变成了一对蝴蝶，飞到了一起。",
+    "en2": "Zhu Yingtai disguised herself as a man to attend school, where she and Liang Shanbo became inseparable companions. When her family forced her to marry another, Liang Shanbo died of heartbreak. On her wedding day, Zhu Yingtai threw herself on his grave, and the two were reborn as butterflies dancing together forever.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "related": [
+      7
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Butterfly_Lovers"
+  },
+  {
+    "id": 14,
+    "country": "China",
+    "lat": 34,
+    "lng": 109,
+    "name": "西游记",
+    "en": "Journey to the West",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/XiYouJi.jpg/400px-XiYouJi.jpg",
+    "themes": [
+      "dragon"
+    ],
+    "era": "medieval",
+    "type": "冒险",
+    "zh": "很久以前，有一只石头里蹦出来的猴子，叫孙悟空。他学会了七十二变和筋斗云，还从龙宫拿到了金箍棒。孙悟空非常调皮，跑到天上大闹天宫，把神仙们打得鸡飞狗跳。最后玉皇大帝请来如来佛祖，把他压在五行山下五百年。后来，唐朝有个和尚叫唐僧，要去西天取经。他经过五行山，救下了孙悟空，孙悟空感谢他，就拜他为师。一路上，他们又收了猪八戒和沙和尚做徒弟。师徒四人骑着白龙马，走过茫茫沙漠和高山大河，遇到了九九八十一种妖怪，孙悟空都打败了它们。最后他们终于到了西天，取回了真经。",
+    "en2": "Sun Wukong, the Monkey King, stormed heaven itself before being imprisoned under Five Elements Mountain by the Buddha. Freed after five centuries, he joined the monk Xuanzang on a pilgrimage to India for sacred scriptures. Together with Pig and Sandy, they survived eighty-one ordeals and achieved enlightenment.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Journey_to_the_West"
+  },
+  {
+    "id": 15,
+    "country": "China",
+    "lat": 25,
+    "lng": 102,
+    "name": "伏羲画卦",
+    "en": "Fuxi Creates the Trigrams",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Fuxi_and_N%C3%BCwa.jpg/400px-Fuxi_and_N%C3%BCwa.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "很久很久以前，有一位特别聪明的大领袖，名叫伏羲。他白天看天上的太阳、月亮、星星，看天上飞过的鸟、地上跑过的兽，晚上看夜空里的云彩和闪电。他想啊想，发现万物都是有规律的。于是他用一根根长短不一的小木棍，画出了八种神奇的图案，叫做「八卦」。八卦代表天、地、水、火、山、雷、风、泽这八种东西，可以帮助人们了解世界。除了画八卦，伏羲还教大家很多本领：他教大家用绳子打结来记事，发明了渔网，教人们捕鱼；又教人们用陷阱抓野兽。他还规定了婚姻制度，让一家人能幸福地生活。伏羲是中华文明最早的一位老祖宗。",
+    "en2": "The sage-king Fuxi gazed at the stars, studied the earth, and observed birds and beasts. From these patterns he derived the Eight Trigrams — the foundation of divination, philosophy, and Chinese cosmology. He also taught people to fish with nets, hunt with weapons, and build families through proper rites of marriage.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Fuxi"
+  },
+  {
+    "id": 20,
+    "country": "Greece",
+    "lat": 38,
+    "lng": 23.7,
+    "name": "普罗米修斯盗火",
+    "en": "Prometheus Brings Fire",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Peter_Paul_Rubens_-_Prometheus_Bound_-_Google_Art_Project.jpg/400px-Peter_Paul_Rubens_-_Prometheus_Bound_-_Google_Art_Project.jpg",
+    "themes": [
+      "fire"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "很久很久以前，希腊神话里有一位叫普罗米修斯的神。他非常喜欢人类，看到人们生活得很苦——没有火，吃的是生肉，冬天冷得发抖，他特别难过。可是天上的众神之王宙斯不让人类用火，怕人们变得太聪明。普罗米修斯想了个办法：他偷偷跑到太阳神的火炉旁，把一根空心的茴香枝伸进火苗里，藏了一点点火种，然后跑回人间，把火种交给人们。从此人类有了火，可以煮熟食物、取暖、做工具。宙斯知道后非常生气，把普罗米修斯锁在高高的山上，每天派一只大老鹰来啄食他的肝脏。可是他的肝脏每天晚上又会重新长出来，让他承受永远的痛苦。",
+    "en2": "The Titan Prometheus defied Zeus and stole fire from Mount Olympus, hiding it in a fennel stalk to bring warmth and civilization to shivering humanity. Zeus took terrible revenge — Prometheus was chained to a peak in the Caucasus where an eagle tore out his liver each day. Each night it regrew, and the torment began again.",
+    "langs": [
+      "中文",
+      "English",
+      "Ελληνικά"
+    ],
+    "related": [
+      43
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Prometheus"
+  },
+  {
+    "id": 21,
+    "country": "Greece",
+    "lat": 37.5,
+    "lng": 22,
+    "name": "阿佛洛狄忒诞生",
+    "en": "Birth of Aphrodite",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/400px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "古希腊神话里有一位最美丽的女神，名叫阿佛洛狄忒，她是爱与美的女神。她的诞生非常神奇。古时候，天神乌拉诺斯被儿子克洛诺斯打伤了。乌拉诺斯的血和神力流进了大海，海水里翻起一团白白的泡沫。这团泡沫越变越大，最后从海面上慢慢升起了一位姑娘——她身穿洁白的长裙，金色的头发又长又亮，眼睛像星星一样闪闪发光。这就是阿佛洛狄忒。海风把她轻轻吹到塞浦路斯岛的海岸上，她踩着一只大贝壳走上岸。每走一步，地上就开出美丽的花朵；每微笑一次，世界就变得更加温暖。从此，她住在奥林匹斯山上，给人间带来爱与美。",
+    "en2": "When the Titan Kronos wounded his father Ouranos and flung the flesh into the sea, divine foam billowed on the waves off Cyprus. From that radiant foam arose Aphrodite, the goddess of love and beauty, fully formed and carried to shore on a scallop shell. Wherever she walked, flowers bloomed beneath her feet.",
+    "langs": [
+      "中文",
+      "English",
+      "Ελληνικά"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Aphrodite"
+  },
+  {
+    "id": 22,
+    "country": "Greece",
+    "lat": 39,
+    "lng": 22.5,
+    "name": "特洛伊战争",
+    "en": "Trojan War",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/The_Burning_of_Troy_%281759%29.jpg/400px-The_Burning_of_Troy_%281759%29.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "ancient",
+    "type": "战争",
+    "zh": "古希腊有一位叫帕里斯的特洛伊王子，他到希腊做客时，把美丽的王后海伦带回了特洛伊。海伦的丈夫——希腊的国王墨涅拉俄斯非常生气，叫上他的兄弟还有许多希腊将军，组成一支大军，渡过大海，攻打特洛伊城。这场战争打了整整十年。希腊有最厉害的勇士阿喀琉斯，特洛伊有最勇敢的英雄赫克托耳，他们在城外打了一场又一场惨烈的仗，可是特洛伊城又高又厚，一直打不下来。最后聪明的奥德修斯想了个办法：希腊人造了一匹巨大的木马，把士兵藏在里面，假装送给特洛伊。特洛伊人把木马拉进城。半夜，士兵从马里爬出来，打开城门，攻下了特洛伊。",
+    "en2": "When the Trojan prince Paris abducted the beautiful Helen from Sparta, her husband Menelaus rallied all Greece for war. For ten brutal years, heroes like Achilles and Hector clashed before Troy's walls. The Greeks finally won not by strength but by cunning — hiding warriors inside a giant wooden horse left as a gift.",
+    "langs": [
+      "中文",
+      "English",
+      "Ελληνικά"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Trojan_War"
+  },
+  {
+    "id": 23,
+    "country": "Greece",
+    "lat": 37.9,
+    "lng": 23.9,
+    "name": "奥德修斯历险",
+    "en": "The Odyssey",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Odysseus_And_The_Sirens_by_John_William_Waterhouse.jpg/400px-Odysseus_And_The_Sirens_by_John_William_Waterhouse.jpg",
+    "themes": [
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "冒险",
+    "zh": "特洛伊战争胜利后，希腊将军奥德修斯带着他的伙伴们坐船回家。可是海神波塞冬不喜欢他，让他在海上漂流了整整十年，遇到了一个又一个奇怪又可怕的事情。他们漂到一个海岛，遇到了一个独眼巨人，这个巨人吃掉了好几个伙伴。奥德修斯用木棍刺瞎了巨人的独眼，才带着大家逃了出来。他们又遇到了女巫喀耳刻，她把奥德修斯的伙伴变成了猪。他们还经过塞壬海妖的地盘，海妖唱起美妙的歌想引诱水手撞船。奥德修斯让伙伴们用蜡堵住耳朵，把自己绑在桅杆上才安全经过。最后奥德修斯终于回到家，妻子佩涅洛佩还在等他，一家人团圆了。",
+    "en2": "After the fall of Troy, Odysseus faced ten years of wandering before reaching home. He blinded the Cyclops Polyphemus, escaped the witch Circe, sailed past the deadly Sirens lashed to his mast, and navigated Scylla and Charybdis. Through it all, his wife Penelope waited faithfully, unraveling her weaving each night.",
+    "langs": [
+      "中文",
+      "English",
+      "Ελληνικά"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Odyssey"
+  },
+  {
+    "id": 24,
+    "country": "Greece",
+    "lat": 37.4,
+    "lng": 24.5,
+    "name": "伊卡洛斯之翼",
+    "en": "Icarus and Daedalus",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Jacob_Peter_Gowy%27s_The_Flight_of_Icarus.jpg/400px-Jacob_Peter_Gowy%27s_The_Flight_of_Icarus.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "寓言",
+    "zh": "在古希腊，有一位非常聪明的工匠叫代达罗斯，他被克里特岛的国王米诺斯关在一座高塔里，怎么也逃不出去。代达罗斯想啊想，终于想出一个办法——他用蜂蜡把许多鸟羽毛粘在一起，做成两对像鸟一样的大翅膀，一对给自己，一对给儿子伊卡洛斯。代达罗斯把翅膀绑在儿子的肩膀上，叮嘱说：「飞的时候不要太低，海水会打湿翅膀；也不要太高，太阳会把蜂蜡晒化。一定要跟着我飞中间。」父子俩从塔上飞了出去。可是伊卡洛斯第一次飞，太开心了，越飞越高，越飞越靠近太阳。结果蜂蜡被晒化了，羽毛一片一片掉下来，伊卡洛斯就这样掉进了大海。",
+    "en2": "To escape King Minos of Crete, the craftsman Daedalus fashioned wings from feathers and wax. He warned his son Icarus: fly neither too high near the sun nor too low near the sea. Icarus, intoxicated by flight, soared ever higher until the sun melted the wax. He tumbled into the sea — the first cautionary tale about hubris.",
+    "langs": [
+      "中文",
+      "English",
+      "Ελληνικά"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Icarus"
+  },
+  {
+    "id": 25,
+    "country": "Greece",
+    "lat": 38.5,
+    "lng": 23,
+    "name": "俄耳甫斯冥府寻妻",
+    "en": "Orpheus and Eurydice",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Christian_Gottlieb_Kratzenstein-Stub_-_Orpheus_and_Eurydice_-_KMS897_-_Statens_Museum_for_Kunst.jpg/400px-Christian_Gottlieb_Kratzenstein-Stub_-_Orpheus_and_Eurydice_-_KMS897_-_Statens_Museum_for_Kunst.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "ancient",
+    "type": "爱情",
+    "zh": "古希腊有一个叫俄耳甫斯的年轻人，他弹琴弹得最美，琴声能让石头流泪、让野兽安静。他和欧律狄刻结了婚，可是结婚没多久，妻子就被毒蛇咬死了。俄耳甫斯太伤心了，决定到冥界把妻子救回来。他抱着竖琴，走过黑暗的冥河，琴声那么动听，连冥王和冥后都被打动了。冥王说：「你可以带她回去，但是有一个条件——出冥界之前，你不能回头看她。如果回头一次，她就永远回不来了。」俄耳甫斯答应了，开始往回走。妻子的脚步声跟在他身后。眼看就要走出冥界了，他实在忍不住，转身看了一眼。就在这一瞬间，妻子又一次消失在黑暗中，永远离开了。",
+    "en2": "Orpheus, whose music could move stones and rivers, descended into the underworld to reclaim his dead wife Eurydice. He charmed Hades and Persephone with his lyre, and they agreed to release her on one condition — he must not look back. Almost at the surface, overcome by longing, he glanced behind him. She was gone forever.",
+    "langs": [
+      "中文",
+      "English",
+      "Ελληνικά"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Orpheus"
+  },
+  {
+    "id": 26,
+    "country": "Greece",
+    "lat": 36.4,
+    "lng": 25.4,
+    "name": "忒修斯与弥诺陶洛斯",
+    "en": "Theseus and the Minotaur",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Barye_-_Theseus_and_the_Minotaur_-_Walters_2754.jpg/400px-Barye_-_Theseus_and_the_Minotaur_-_Walters_2754.jpg",
+    "themes": [
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "很久以前，希腊的雅典城每九年都要送十四个少男少女到克里特岛去，喂给一个可怕的怪兽——牛头怪弥诺陶洛斯。这个怪兽住在一个又大又乱的迷宫里，谁也走不出来。雅典王子忒修斯不忍心同胞们再被吃掉，主动报名前去。临走时，他向父亲承诺：胜利就把船帆换成白色，失败就用黑帆。到了克里特岛，公主阿里阿德涅一见忒修斯就喜欢上了他，偷偷送给他一个线团和一把剑。忒修斯走进迷宫，把线团一头系在门口，一边走一边放线。在迷宫深处，他和牛头怪展开了搏斗，最后赤手把怪兽打死了。然后他顺着线，又一步一步走出了迷宫。",
+    "en2": "Every nine years, Athens sent fourteen young people to be devoured by the Minotaur in Crete's labyrinth. The hero Theseus volunteered to go. Princess Ariadne gave him a thread to mark his path. He plunged into the dark labyrinth, slew the Minotaur with his hands, and followed the thread back to freedom.",
+    "langs": [
+      "中文",
+      "English",
+      "Ελληνικά"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Theseus"
+  },
+  {
+    "id": 27,
+    "country": "Greece",
+    "lat": 37.8,
+    "lng": 20.9,
+    "name": "潘多拉魔盒",
+    "en": "Pandora's Box",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pandora_-_John_William_Waterhouse.jpg/400px-Pandora_-_John_William_Waterhouse.jpg",
+    "themes": [
+      "fire"
+    ],
+    "era": "ancient",
+    "type": "寓言",
+    "zh": "普罗米修斯偷火给人类后，宙斯非常生气，决定报复人类。他让工匠之神造出世界上第一个女人，叫潘多拉。每位神都送给她一份礼物：美丽、聪明、好奇心、说话动听……所以「潘多拉」的意思就是「被赋予一切的人」。宙斯还给了她一个神奇的盒子，叮嘱说：「千万不能打开！」潘多拉嫁给人类后，每天看着盒子，心里越来越好奇。终于有一天，她忍不住打开了盖子。「轰」的一声，里面飞出来好多坏东西——疾病、战争、痛苦、嫉妒，全都跑到了世界上。潘多拉吓坏了赶紧盖上盖子，这时她听到盒子里还有一个温柔的声音：「让我出来吧，我是希望！」潘多拉把盒子打开一条缝，希望也飞了出来。从此世界上虽然有许多苦难，但人们心里永远有希望。",
+    "en2": "Zeus had Hephaestus craft Pandora, the first woman, endowing her with beauty, curiosity, and deceit. As a wedding gift, she received a sealed jar containing all the world's evils. Unable to resist, she opened it — disease, war, and misery escaped into the world. Only one thing remained at the bottom: Hope.",
+    "langs": [
+      "中文",
+      "English",
+      "Ελληνικά"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Pandora's_box"
+  },
+  {
+    "id": 28,
+    "country": "Greece",
+    "lat": 38.2,
+    "lng": 21.7,
+    "name": "珀尔修斯斩美杜莎",
+    "en": "Perseus and Medusa",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Benvenuto_Cellini_-_Perseus_and_Medusa_-_Right_Side.jpg/400px-Benvenuto_Cellini_-_Perseus_and_Medusa_-_Right_Side.jpg",
+    "themes": [
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "在古希腊，有一个可怕的女妖叫美杜莎，她头发是一条条扭动的毒蛇，谁要是看了她的眼睛，立刻就会变成石头。年轻的英雄珀尔修斯接到任务，要去取美杜莎的头。智慧女神雅典娜送给他一面亮亮的青铜盾牌，太阳神送他一双有翅膀的飞鞋，神使赫尔墨斯送他一把锋利的弯刀。珀尔修斯穿上飞鞋，飞到了女妖住的山洞。他不敢直接看美杜莎，而是举起盾牌，从盾牌的镜面里看着她的影子。美杜莎正在睡觉。珀尔修斯瞄准了，「咔嚓」一刀就把她的头砍了下来。从美杜莎流出的鲜血里，跳出来一匹长着翅膀的飞马帕加索斯。珀尔修斯把美杜莎的头装进袋子，飞回家去了。",
+    "en2": "The hero Perseus had to slay Medusa, a Gorgon whose gaze turned men to stone. Athena gave him a polished shield as a mirror. Guided by the reflection, Perseus struck off Medusa's head without meeting her eyes. From her blood sprang the winged horse Pegasus. He later used her severed head to rescue princess Andromeda.",
+    "langs": [
+      "中文",
+      "English",
+      "Ελληνικά"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Perseus"
+  },
+  {
+    "id": 29,
+    "country": "Greece",
+    "lat": 37.6,
+    "lng": 21.5,
+    "name": "丢卡利翁大洪水",
+    "en": "Deucalion's Flood",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Deucalion_and_Pyrrha.jpg/400px-Deucalion_and_Pyrrha.jpg",
+    "themes": [
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "很久很久以前，希腊神话中的人们做了很多坏事，宙斯非常生气，决定降下一场大洪水把世界淹没。普罗米修斯知道这个消息后，赶紧告诉自己的儿子丢卡利翁和儿媳皮拉，让他们造一艘大箱子般的方舟。果然，洪水来了，下了九天九夜的大雨，整个世界都被淹没，所有的人和动物都死了，只有丢卡利翁夫妻俩漂在方舟里活了下来。雨终于停了，方舟停在了帕尔纳索斯山顶。他们走下山，可是世界上没有一个人了。他们求神帮忙。神告诉他们：「把母亲的骨头扔到身后。」两人想了想，明白「母亲」指的是大地，骨头就是石头。他们捡起石头往身后扔——丢卡利翁扔的石头变成了男人，皮拉扔的石头变成了女人，世界又有了新的人类。",
+    "en2": "Zeus, enraged by human wickedness, sent a catastrophic flood to wash away civilization. The Titan Prometheus warned his son Deucalion, who built a chest-boat with his wife Pyrrha. They drifted nine days before landing on Mount Parnassus. An oracle told them to cast stones — each one grew into a new human being.",
+    "langs": [
+      "中文",
+      "English",
+      "Ελληνικά"
+    ],
+    "related": [
+      3,
+      71
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Deucalion"
+  },
+  {
+    "id": 30,
+    "country": "Egypt",
+    "lat": 26.8,
+    "lng": 30.8,
+    "name": "奥西里斯与伊西斯",
+    "en": "Osiris and Isis",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Osiris-tomb-of-Nefertari.jpg/400px-Osiris-tomb-of-Nefertari.jpg",
+    "themes": [
+      "love",
+      "moon"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "古埃及有一位仁慈的国王，名字叫奥西里斯，他和美丽的妻子伊西斯一起治理着埃及，让百姓过上了好日子。可是奥西里斯的弟弟赛特嫉妒他，想要抢走王位。赛特做了一个非常漂亮的箱子，骗哥哥躺进去看看大小。奥西里斯刚一躺下，赛特就把箱子盖死，扔进了尼罗河。伊西斯知道后伤心欲绝，跑遍埃及到处寻找。她终于找到了箱子，但赛特又把奥西里斯的身体砍成了十四块，分散到全国各地。伊西斯不放弃，她变成一只小鸟，飞遍埃及，把丈夫的每一块身体都找了回来。她用魔法把丈夫复活了。奥西里斯虽然不能再做人间的国王，但成为了冥界永远的王。",
+    "en2": "Osiris, the good king of Egypt, was murdered and dismembered by his jealous brother Set, who scattered the pieces across the land. His devoted wife Isis searched tirelessly, gathering every fragment and using her powerful magic to resurrect him. Though he could not return as king, Osiris became the eternal ruler of the underworld.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Osiris_myth"
+  },
+  {
+    "id": 31,
+    "country": "Egypt",
+    "lat": 30,
+    "lng": 31.2,
+    "name": "拉神的太阳船",
+    "en": "Ra's Solar Barque",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ra_Barque.jpg/400px-Ra_Barque.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "在古埃及神话里，太阳神拉是世界上最伟大的神。每天早晨，他会变成一只圣甲虫，把红红的太阳推过地平线；中午，他在天空中乘着金光闪闪的太阳船航行；傍晚，他变成一位老人，太阳船慢慢沉入西方的地平线。可是拉的工作还没结束。每天晚上，他要乘着船，穿过黑暗的冥界，那里有一条巨大的毒蛇阿波菲斯——它代表混乱和黑暗，每天晚上都想吞掉太阳船，让世界永远陷入黑暗。拉神和其他神一起，每天晚上都要和阿波菲斯展开激烈的战斗。每次都是拉神获胜，第二天清晨，太阳又会从东方升起，照亮整个世界。这场战斗从来没有结束，永远在循环。",
+    "en2": "The sun god Ra was reborn each morning as Khepri, the scarab pushing the sun above the horizon. He sailed his golden barque across the sky, then descended into the twelve divisions of the underworld at night. There he battled the chaos serpent Apophis, who threatened to swallow the sun and plunge the world into eternal darkness.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Ra"
+  },
+  {
+    "id": 32,
+    "country": "Egypt",
+    "lat": 25.7,
+    "lng": 32.6,
+    "name": "荷鲁斯之眼",
+    "en": "Eye of Horus",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Eye_of_Horus_bw.svg/400px-Eye_of_Horus_bw.svg.png",
+    "themes": [
+      "moon"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "奥西里斯被弟弟赛特害死后，他的儿子荷鲁斯长大成人。荷鲁斯发誓要为爸爸报仇，从坏叔叔赛特手里夺回王位。他和赛特展开了一场又一场惊心动魄的战斗，他们变成各种各样的样子互相打斗——变成河马、变成鹰、变成野兽。在一次激烈的战斗中，赛特一只爪子伸向荷鲁斯的脸，把荷鲁斯的左眼挖了出来，撕成了好多碎片。智慧之神托特看到后，心疼地把碎片一片一片捡起来，用魔法重新拼好，治好了荷鲁斯的眼睛。这只重新被治愈的眼睛，就叫「荷鲁斯之眼」，从此成为古埃及最有力量的护身符——它代表保护、治愈、健康，能给佩戴它的人带来平安和好运。",
+    "en2": "After Osiris was murdered, Horus battled his uncle Set to reclaim the throne of Egypt. During their fierce struggle, Set tore out Horus's left eye and shattered it. The god Thoth reassembled and healed the eye. This restored 'wedjat' — the Eye of Horus — became Egypt's most powerful symbol of protection and healing.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Eye_of_Horus"
+  },
+  {
+    "id": 33,
+    "country": "Egypt",
+    "lat": 29.9,
+    "lng": 31.1,
+    "name": "阿努比斯称心",
+    "en": "Anubis Weighs the Heart",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/BD_Hunefer.jpg/400px-BD_Hunefer.jpg",
+    "themes": [
+      "moon"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "古埃及人相信，人死了不是结束，而是要去另一个世界接受审判。负责接待死者的是一位长着豺狼头的神，名叫阿努比斯。他会牵着死者的手，带着他们走进一个特别的房间——「真理大厅」。在大厅中央有一个金色的天平。阿努比斯把死者的心脏轻轻放在天平的一边，另一边放着一根小小的、白白的真理之羽。然后他仔细看天平。如果死者一生善良，从来没做过坏事，心就会和羽毛一样轻，天平保持平衡。这样的人能去美丽的「芦苇之原」——一个永远阳光明媚、庄稼满地的天堂。可是如果死者做过很多坏事，心就会变得很重。这时一只长着鳄鱼头的怪兽阿米特就会扑过来，一口把心吞掉。",
+    "en2": "In Egyptian belief, death was not the end but a judgment. Anubis, the jackal-headed god, led the deceased to the Hall of Two Truths, where the heart was weighed against the Feather of Ma'at — truth and justice. A light heart meant eternal paradise in the Field of Reeds. A heavy heart was devoured by the beast Ammit.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Anubis"
+  },
+  {
+    "id": 34,
+    "country": "Egypt",
+    "lat": 28,
+    "lng": 30.9,
+    "name": "斯芬克斯之谜",
+    "en": "Riddle of the Sphinx",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Great_Sphinx_of_Giza_-_20080716a.jpg/400px-Great_Sphinx_of_Giza_-_20080716a.jpg",
+    "themes": [
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "寓言",
+    "zh": "古希腊有一个叫底比斯的城市，城外的山上住着一只可怕的怪兽——斯芬克斯。它有狮子的身体、女人的脸，还长着一对大翅膀。每个想进城或者出城的人，都要先回答它出的谜语。答错了，就会被它吃掉。一年又一年，许多人死在它的爪子下，谁也不敢经过。有一天，一个流浪的年轻人俄狄浦斯来到了这里。斯芬克斯拦住他，问出了它最难的谜语：「世界上有一种动物，早上用四条腿走路，中午用两条腿，晚上用三条腿，它是什么？」俄狄浦斯想了一会儿，笑着说：「是人啊！小时候手脚并用爬着走，长大后用两条腿走，老了拄着拐杖，就是三条腿。」斯芬克斯听了又惊又怒，从悬崖上跳下去摔死了。",
+    "en2": "Outside Thebes, the Sphinx — lion-bodied, woman-headed — devoured every traveler who failed her riddle: 'What walks on four legs at dawn, two at noon, three at dusk?' When the wandering Oedipus answered 'Man — who crawls, walks, then uses a staff,' the Sphinx was so undone she hurled herself from her cliff to her death.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Sphinx"
+  },
+  {
+    "id": 35,
+    "country": "Egypt",
+    "lat": 27,
+    "lng": 31,
+    "name": "赛特与混沌",
+    "en": "Set God of Chaos",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Set.svg/400px-Set.svg.png",
+    "themes": [
+      "fire"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "在古埃及神话里，赛特是沙漠和风暴之神，他的样子很奇怪——长着一张谁也认不出来的怪兽脸，红红的头发，身体瘦瘦的。赛特力气很大，但脾气也很坏，他代表着混乱、干旱和破坏。赛特的哥哥奥西里斯是埃及温柔的国王，受到所有人的爱戴。赛特心里特别嫉妒：为什么哥哥可以做国王，自己却只能管沙漠？于是他做了一个漂亮的箱子，骗奥西里斯进去试躺，然后把箱子盖上钉死，扔进尼罗河，自己当上了埃及的国王。可是奥西里斯的儿子荷鲁斯长大后，回来为父亲报仇。荷鲁斯和赛特打了八十年，最后终于打败了赛特，把他赶到了沙漠深处，让他永远不能再回到人间作恶。",
+    "en2": "Set was the god of deserts, storms, and chaos — powerful but feared. Jealous of his brother Osiris's kingship, Set tricked him into a coffin, drowned him, then dismembered him and scattered the pieces. He ruled Egypt until Horus, Osiris's avening son, challenged him in an eighty-year battle and finally defeated him.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Set_(deity)"
+  },
+  {
+    "id": 40,
+    "country": "Japan",
+    "lat": 35.7,
+    "lng": 139.7,
+    "name": "天照大神",
+    "en": "Amaterasu",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Amaterasu_cave_crop.jpg/400px-Amaterasu_cave_crop.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "日本神话里有一位太阳女神，名字叫天照大神。她有一个调皮的弟弟须佐之男，是风暴之神。有一天，须佐之男闹脾气，把天照精心照管的稻田都踩坏了，还把脏东西扔进她织布的房间，吓死了她的女仆。天照又生气又害怕，躲进了一个山洞里，用大石头把洞口堵得严严实实。从此世界陷入了一片黑暗——太阳不见了，庄稼长不出来，到处冷冰冰的。八百万位神仙都急坏了。他们在山洞外想出一个办法：在洞口挂上一面亮亮的大铜镜，又请来一位舞蹈女神，跳起欢快的舞，引得众神大笑。天照躲在洞里听见外面热闹得不得了，忍不住推开石头看看。她一看到镜子里自己闪闪发光的样子，惊讶得走出了山洞。这时一位大力神迅速把石头封住，把光明带回了世界。",
+    "en2": "Susanoo, god of storms, went on a destructive rampage — breaking irrigation ditches and defiling his sister Amaterasu's sacred weaving hall. Horrified, Amaterasu sealed herself in a cave, plunging the world into darkness. The eight million gods celebrated noisily outside until curiosity drew her out, restoring light to all creation.",
+    "langs": [
+      "中文",
+      "English",
+      "日本語"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Amaterasu"
+  },
+  {
+    "id": 41,
+    "country": "Japan",
+    "lat": 36,
+    "lng": 140,
+    "name": "伊邪那岐与伊邪那美",
+    "en": "Izanagi and Izanami",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Kobayashi_Izanami_and_izanagi.jpg/400px-Kobayashi_Izanami_and_izanagi.jpg",
+    "themes": [
+      "flood",
+      "love"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "很久很久以前，日本还没有成形，只有一片混沌的大海。两位神——伊邪那岐和伊邪那美，站在天空的桥上，把一根带着宝石的长矛伸进大海里搅啊搅。当他们把矛拉起来的时候，矛尖上滴下来的水珠，落进海里变成了一座座岛屿，这就是今天的日本。两位神结成了夫妻，又生下了山、河、风、火等各种各样的神。可是伊邪那美在生火神的时候被烧伤死了，去了黄泉。伊邪那岐太想念妻子，跟着追到黄泉国。他答应不偷看妻子的样子。可是他实在忍不住，点亮一根头发当火把一看——妻子早就变成了腐烂可怕的样子。伊邪那美又羞又怒，追着伊邪那岐跑。伊邪那岐拼命逃出黄泉，用一块大石头把入口永远封住了。",
+    "en2": "The creator gods Izanagi and Izanami stood on the Floating Bridge of Heaven and stirred the primordial ocean, forming the islands of Japan. They married and bore the gods of nature. But Izanami died in childbirth. Izanagi descended to Yomi, the underworld, found her rotting, and fled in terror — sealing the entrance forever.",
+    "langs": [
+      "中文",
+      "English",
+      "日本語"
+    ],
+    "related": [
+      29
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Izanagi"
+  },
+  {
+    "id": 42,
+    "country": "Japan",
+    "lat": 34.7,
+    "lng": 135.5,
+    "name": "桃太郎",
+    "en": "Momotaro",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Momotaro_by_Ogata_Gekko.jpg/400px-Momotaro_by_Ogata_Gekko.jpg",
+    "themes": [
+      "dragon"
+    ],
+    "era": "medieval",
+    "type": "童话",
+    "zh": "很久很久以前，日本一个小村子里住着一对没有孩子的老爷爷和老奶奶。有一天，老奶奶到河边洗衣服，看到一个又大又圆的桃子顺着水漂过来。她把桃子捞回家。老爷爷举起刀准备切，桃子「啪」的一声自己裂开了，里面跳出一个胖嘟嘟的男婴！老两口高兴坏了，给他取名叫桃太郎。桃太郎长得又快又壮，几年就长成了一个英俊勇敢的少年。那时候，海上的鬼岛常常有恶鬼来欺负村民。桃太郎决定去打鬼。老奶奶给他做了好吃的小米团子带在路上。一路上，他用小米团子招待了一只小狗、一只猴子和一只野鸡，它们都愿意跟着他去打鬼。四个伙伴坐船来到鬼岛，齐心协力打败了恶鬼，带着金银财宝凯旋而归。",
+    "en2": "An old childless couple discovered a giant peach floating down the river. Inside was a baby boy — Momotaro, Peach Boy — born to be a hero. He grew up strong and brave, and with gifts of millet dumplings he befriended a dog, a monkey, and a pheasant, then sailed to Onigashima Island to defeat the demons terrorizing the land.",
+    "langs": [
+      "中文",
+      "English",
+      "日本語"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Momotar%C5%8D"
+  },
+  {
+    "id": 43,
+    "country": "Japan",
+    "lat": 33,
+    "lng": 131,
+    "name": "八岐大蛇",
+    "en": "Yamata no Orochi",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Kuniteru_Yamata_Orochi.jpg/400px-Kuniteru_Yamata_Orochi.jpg",
+    "themes": [
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "日本神话里有一只可怕的大蛇，名叫八岐大蛇——它有八个头、八条尾巴，每个头都喷着火，全身像山一样大。它每年都到一个村子里，吃掉一个少女。有一年，村子里只剩下最后一个少女了，全家人正抱头痛哭。这时风暴之神须佐之男路过，听说了这件事，决定为大家除掉这只怪兽。他想了个聪明的办法。他让村民准备了八大桶最香最浓的米酒，又造了一道有八个洞的栅栏，每个洞前都放上一桶酒。八岐大蛇来了，闻到酒香忍不住，每个头都伸进一个洞里大口喝酒。喝得醉醺醺的，八个头一个接一个倒下睡着了。须佐之男拔出宝剑，把每个头都砍了下来。他在大蛇的尾巴里发现了一把神剑，叫「草薙剑」，这成了日本的镇国之宝。",
+    "en2": "The storm god Susanoo discovered a weeping family whose daughters were being devoured one by one by the eight-headed serpent Yamata no Orochi. He tricked the beast into drinking eight vats of strong sake, then slew it while it slept. In the creature's tail he found Kusanagi — the legendary divine sword of Japan.",
+    "langs": [
+      "中文",
+      "English",
+      "日本語"
+    ],
+    "related": [
+      20
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Yamata_no_Orochi"
+  },
+  {
+    "id": 44,
+    "country": "Japan",
+    "lat": 35,
+    "lng": 136,
+    "name": "竹取物语",
+    "en": "The Tale of the Bamboo Cutter",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Taketori_Monogatari_2.jpg/400px-Taketori_Monogatari_2.jpg",
+    "themes": [
+      "moon",
+      "princess"
+    ],
+    "era": "classical",
+    "type": "童话",
+    "zh": "很久很久以前，日本有一个善良的伐竹老爷爷。有一天他到竹林里砍竹子，突然看到一根竹子里发出耀眼的光。他小心地把竹子劈开，里面睡着一个只有手掌那么大的可爱小女孩。老爷爷把她带回家，和老奶奶一起把她当亲生女儿养大，给她取名叫「辉夜姬」，意思是「闪闪发光的公主」。辉夜姬长得又快又漂亮，没几个月就出落成一位绝世美人，全国的男子都来求婚。她出了五个不可能完成的难题，把求婚者们都难倒了。连皇帝也喜欢上了她，但她始终拒绝。原来，辉夜姬不是地球上的人——她是月宫的公主，因为犯了错被罚下凡。八月十五的夜里，月宫派人来接她回去。她依依不舍地告别了爷爷奶奶，飘上了月亮。",
+    "en2": "A bamboo cutter found a luminous baby girl inside a glowing stalk. Named Kaguya-hime, she grew into a woman of unsurpassing beauty, drawing suitors including the emperor himself. But she was no mortal — she was from the Moon Kingdom. When her people came for her, she returned to the heavens, leaving behind only grief.",
+    "langs": [
+      "中文",
+      "English",
+      "日本語"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Tale_of_the_Bamboo_Cutter"
+  },
+  {
+    "id": 45,
+    "country": "Japan",
+    "lat": 34.4,
+    "lng": 132.5,
+    "name": "浦岛太郎",
+    "en": "Urashima Taro",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Urashima_Taro.jpg/400px-Urashima_Taro.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "medieval",
+    "type": "童话",
+    "zh": "很久很久以前，日本海边住着一位年轻的渔夫，名字叫浦岛太郎。有一天，他在海边看到几个孩子在欺负一只小海龟。浦岛太郎心疼小海龟，把它从孩子手里救下来，放回了大海。第二天，浦岛太郎在海上打鱼，那只海龟突然冒出水面，对他说：「为了感谢你救命之恩，我带你去海底的龙宫玩玩吧！」浦岛太郎骑上海龟，一直潜到深深的海底。龙宫又大又漂亮，到处是珊瑚和珍珠。美丽的龙宫公主乙姬热情地招待他，给他吃山珍海味。浦岛太郎玩了三天，开始想家了。公主送给他一个金色的盒子，叮嘱说：「千万不能打开。」浦岛太郎回到岸上，发现村子全变了——已经过去了三百年。他忍不住打开了盒子，「嗖」地冒出一股白烟，他瞬间变成了白发苍苍的老人。",
+    "en2": "The young fisherman Urashima Taro rescued a sea turtle and was brought to Ryugu-jo, the Dragon Palace beneath the waves. There he spent what felt like three joyful days as the sea princess's guest. Returning home, he found three hundred years had passed. He opened a forbidden box — and instantly aged to dust.",
+    "langs": [
+      "中文",
+      "English",
+      "日本語"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Urashima_Tar%C5%8D"
+  },
+  {
+    "id": 46,
+    "country": "Japan",
+    "lat": 38,
+    "lng": 140,
+    "name": "雪女",
+    "en": "Yuki-onna",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Suuhi_Yuki-onna.jpg/400px-Suuhi_Yuki-onna.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "medieval",
+    "type": "妖怪",
+    "zh": "很久很久以前，日本的一个冬夜，两个樵夫在森林里遇到了暴风雪，被困在了一间小木屋里。半夜，老樵夫被一阵冷风惊醒。他睁眼一看，吓坏了——一个穿着白衣服、皮肤雪白的美丽女子站在小屋里，对着他的脸吹了一口冷气。老樵夫立刻冻成了冰。年轻樵夫巳之吉吓得一动不敢动。雪女走到他面前，看着他英俊的脸说：「你还小，我就饶你一命。但是今晚的事，你不能告诉任何人，否则我就来取你的命！」巳之吉拼命点头。多年以后，巳之吉娶了一位美丽的妻子，他们生了几个孩子，过着幸福的日子。一个雪夜，他坐在妻子身边，忍不住讲起了多年前的事。妻子站起来，眼里闪着泪光说：「那个雪女就是我啊。」她变成一团白雾，消失在飞舞的雪花中，再也没有回来。",
+    "en2": "On a blinding snowstorm night, the Snow Woman appeared before two woodcutters. She breathed her icy breath on the elder, freezing him to death, then spared the younger on the condition he never speak of her. Years later, he recognized his wife as the Snow Woman and broke his vow. She vanished in a flurry of snow forever.",
+    "langs": [
+      "中文",
+      "English",
+      "日本語"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Yuki-onna"
+  },
+  {
+    "id": 47,
+    "country": "Japan",
+    "lat": 35.3,
+    "lng": 138.7,
+    "name": "富士山传说",
+    "en": "Legend of Mount Fuji",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Katsushika_Hokusai_-_Thirty-Six_Views_of_Mount_Fuji-_The_Great_Wave_Off_the_Coast_of_Kanagawa_-_Google_Art_Project.jpg/400px-Katsushika_Hokusai_-_Thirty-Six_Views_of_Mount_Fuji-_The_Great_Wave_Off_the_Coast_of_Kanagawa_-_Google_Art_Project.jpg",
+    "themes": [
+      "fire"
+    ],
+    "era": "ancient",
+    "type": "传说",
+    "zh": "辉夜姬要回月宫前，给皇帝留下了一封信和一瓶不死药——只要喝下，就能永远活着。皇帝拿到不死药，心里却一点也不开心——他最爱的辉夜姬已经回了月宫，永远见不到了，活那么长有什么意思呢？皇帝想了又想，最后下了一道命令：「把这瓶不死药送到日本最高的山上，烧掉它！」大臣们带着不死药和信，爬上了那座高高的雪山。他们在山顶点起一堆大火，把不死药和皇帝写给辉夜姬的信都投了进去。神奇的事发生了——那座山从此一直冒着白白的烟，烟雾袅袅升上天空，好像永远在向月亮诉说思念。这座山就被叫做「不死山」，后来慢慢变成了「富士山」。直到今天，富士山有时候还会冒出一股股淡淡的烟。",
+    "en2": "When Kaguya-hime was taken back to the moon, she left the emperor a vial of the elixir of immortality. Heartbroken at losing her, he saw no reason to live forever. He ordered soldiers to take it to the summit of the highest mountain and burn it. The smoke has risen from that peak ever since, giving the mountain its eternal soul.",
+    "langs": [
+      "中文",
+      "English",
+      "日本語"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Mount_Fuji"
+  },
+  {
+    "id": 50,
+    "country": "Norway",
+    "lat": 60,
+    "lng": 10,
+    "name": "诸神黄昏",
+    "en": "Ragnarok",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Battle_of_the_Doomed_Gods.jpg/400px-Battle_of_the_Doomed_Gods.jpg",
+    "themes": [
+      "fire",
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "末世",
+    "zh": "北欧神话里有一个最可怕的预言，叫「诸神黄昏」——意思是世界末日的大决战。那一天到来之前，世界先会经历三个没有夏天、只有寒冬的「魔之冬」。亲兄弟之间会自相残杀，到处是混乱。然后，被锁了好久的大狼芬里尔挣脱铁链，张开血盆大口；中庭巨蛇从大海里钻出来，全身的毒液淹没大地；带着死人军团的死神冥神也来了。诸神和巨人在战场上展开最后的决战。雷神托尔和巨蛇互相杀死了对方；众神之王奥丁被大狼芬里尔一口吞掉；火神苏尔特纵起冲天大火，把整个世界都烧成灰烬。但是这不是真正的结束。一切都被烧光以后，新的大地从大海中冒出来，绿油油的，又一批新的神和人类住了进去，世界重新开始。",
+    "en2": "Ragnarok — the Doom of the Gods — was foretold from the beginning. Three winters without summer would come; brothers would kill brothers. The wolf Fenrir and the Midgard Serpent would break free. Thor and the Serpent would slay each other. Odin would be swallowed whole. But from the ashes, a green world would be reborn.",
+    "langs": [
+      "中文",
+      "English",
+      "Norsk"
+    ],
+    "related": [
+      51,
+      52
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Ragnar%C3%B6k"
+  },
+  {
+    "id": 51,
+    "country": "Norway",
+    "lat": 61,
+    "lng": 9,
+    "name": "世界树",
+    "en": "Yggdrasil",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Yggdrasil.jpg/400px-Yggdrasil.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "北欧神话里有一棵巨大的树，叫「世界树」，名字是尤克特拉希尔。它实在太大了，把九个不同的世界连在一起。最上面一层是众神居住的阿斯加德，中间是人类住的中庭，最下面是亡灵的世界。树的三条粗壮的根，一条延伸到神的世界，一条到巨人的国度，一条到死亡之国。一只非常聪明的大鹰住在树的最顶端，它什么都看得见。一只可怕的恶龙叫尼德霍格，住在树根下面，每天啃咬大树的根，想把世界树咬倒。在树干上，有一只调皮的小松鼠拉塔托斯克，它整天上下来回跑，把鹰说的坏话告诉龙，又把龙说的坏话告诉鹰，让它们一直吵架。世界树就这样在吵闹中支撑着九个世界。",
+    "en2": "The cosmic ash tree Yggdrasil spans all nine worlds of Norse mythology, from Asgard above to Niflheim below. A wise eagle sits at its crown while the dragon Nidhogg endlessly gnaws its roots. The squirrel Ratatoskr scurries between them carrying insults, embodying the eternal tension between order and chaos.",
+    "langs": [
+      "中文",
+      "English",
+      "Norsk"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Yggdrasil"
+  },
+  {
+    "id": 52,
+    "country": "Norway",
+    "lat": 59,
+    "lng": 11,
+    "name": "托尔战巨蛇",
+    "en": "Thor vs Jormungandr",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Thor_and_the_Midgard_Serpent.jpg/400px-Thor_and_the_Midgard_Serpent.jpg",
+    "themes": [
+      "dragon",
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "北欧神话里，雷神托尔的最大对手是中庭巨蛇耶梦加得。它是邪神洛基的儿子，被众神扔进大海后，越长越大，最后大到能围绕整个世界一圈，把自己的尾巴咬在嘴里。托尔有一次和一位巨人去钓鱼，他用一颗大牛头当鱼饵。巨蛇上钩了，托尔拼命往上拽，眼看就要把巨蛇拉出水面了，巨人吓坏了，赶紧砍断了钓鱼线，巨蛇又沉回了海底。等到诸神黄昏那一天，巨蛇真的从大海里钻了出来，毒水流得到处都是。托尔挥起雷神之锤，重重砸在巨蛇头上，把巨蛇打死了。可是巨蛇临死前，喷出了大口毒液，托尔走出九步之后，也中毒倒下了。这对老对手就这样同归于尽。",
+    "en2": "The thunder god Thor and the Midgard Serpent Jormungandr were destined enemies from birth. Thor nearly caught the serpent on a fishing trip, dragging it to the surface with an ox-head hook. At Ragnarok they finally met in their last battle. Thor slew the great serpent but staggered nine steps before falling, poisoned by its venom.",
+    "langs": [
+      "中文",
+      "English",
+      "Norsk"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/J%C3%B6rmungandr"
+  },
+  {
+    "id": 53,
+    "country": "Norway",
+    "lat": 63,
+    "lng": 10,
+    "name": "洛基的诡计",
+    "en": "Loki the Trickster",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Processed_SAM_loki.jpg/400px-Processed_SAM_loki.jpg",
+    "themes": [
+      "fire"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "北欧神话里有一位最调皮、最爱搞恶作剧的神，叫洛基。他会变成各种样子，有时变成马，有时变成鱼，整天捉弄其他神仙。可是有一天，他做了一件最坏的事。光明之神巴德尔是众神最喜爱的神，长得又英俊又善良。他妈妈让万物都发誓不伤害他，只忘了一种小植物——槲寄生。洛基知道后，偷偷把一根槲寄生的小树枝交给瞎眼神霍德，骗他说：「来玩个游戏，朝你哥哥扔这个吧。」霍德毫无防备地扔了出去，结果一下扎死了巴德尔。众神发现后愤怒极了，把洛基抓住，绑在一块大石头上，又在他头上挂了一条毒蛇，让毒液一滴一滴滴在他脸上，疼得他不停地翻滚。每次他翻滚一下，地上就会发生一次大地震。",
+    "en2": "Loki, the shape-shifting trickster of Asgard, arranged the death of Baldur — the beloved, near-invulnerable god of light — by tricking the blind god Hodr into throwing a mistletoe dart. As punishment, the gods bound Loki to a rock with the entrails of his own son. A serpent drips venom on his face; his writhing causes earthquakes.",
+    "langs": [
+      "中文",
+      "English",
+      "Norsk"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Loki"
+  },
+  {
+    "id": 54,
+    "country": "Norway",
+    "lat": 62,
+    "lng": 8,
+    "name": "奥丁求智慧",
+    "en": "Odin's Quest for Wisdom",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Georg_von_Rosen_-_Oden_som_vandringsman%2C_1886_%28Odin%2C_the_Wanderer%29.jpg/400px-Georg_von_Rosen_-_Oden_som_vandringsman%2C_1886_%28Odin%2C_the_Wanderer%29.jpg",
+    "themes": [
+      "moon"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "北欧的众神之王奥丁，是一位渴望智慧的神。他有了所有的力量和财富，可还是不满足——他想要全世界的智慧。他听说世界树下有一口「智慧之泉」，喝了泉水的人就能拥有伟大的智慧。可是看守泉水的智者密米尔说：「想喝这泉水可以，但你必须用一只眼睛来换。」奥丁想了想，毫不犹豫地挖出自己的一只眼睛丢进泉水里，喝下了一口智慧之泉。从此奥丁就是一只眼。可奥丁还想要更深的智慧——掌握神秘的「如尼字符」。他把自己倒挂在世界树上，整整九天九夜不吃不喝，还用自己的长矛刺穿了胸口。在最痛苦的时候，那些神秘的字符突然在他眼前一一出现，他终于得到了天地间最深的奥秘。",
+    "en2": "Odin, king of Asgard, was not content with power — he craved wisdom. He hung upside-down from Yggdrasil for nine days and nine nights, fasting, pierced by his own spear. In that ordeal, the secret of the runes revealed itself to him. He also sacrificed one eye to drink from Mimir's well of cosmic knowledge.",
+    "langs": [
+      "中文",
+      "English",
+      "Norsk"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Odin"
+  },
+  {
+    "id": 55,
+    "country": "Norway",
+    "lat": 64,
+    "lng": 12,
+    "name": "芬里尔巨狼",
+    "en": "Fenrir the Wolf",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/The_binding_of_Fenrir.jpg/400px-The_binding_of_Fenrir.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "末世",
+    "zh": "北欧神话里，邪神洛基有三个孩子，其中一个就是巨狼芬里尔。它刚出生还是只小狼崽，可越长越大、越长越凶猛。预言说，将来芬里尔会吞掉众神之王奥丁。众神决定把它锁起来。第一次用粗铁链，被它一甩就断了。第二次用更粗的铁链，还是不行。最后众神请矮人帮忙，矮人用六种不可能的东西做出了神奇丝带「格莱普尼尔」——猫咪的脚步声、女人的胡须、山的根……又轻又细。芬里尔起了疑心，要求一位神把手伸进它嘴里作担保。勇敢的提尔神伸了手。结果丝带越拉越紧，芬里尔挣不脱，提尔的手也被咬掉了。直到诸神黄昏那一天，芬里尔挣脱锁链，张开大嘴吞掉了奥丁。",
+    "en2": "When the gods foresaw Fenrir would cause destruction, they tried to bind him with iron chains, but he snapped them easily. Only Gleipnir — a magical ribbon forged by dwarves from impossible things like the sound of a cat's footstep and the roots of a mountain — could hold him. At Ragnarok he breaks free and swallows Odin whole.",
+    "langs": [
+      "中文",
+      "English",
+      "Norsk"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Fenrir"
+  },
+  {
+    "id": 60,
+    "country": "India",
+    "lat": 20.6,
+    "lng": 79,
+    "name": "搅拌乳海",
+    "en": "Churning of the Ocean",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Kurma_avatar_of_Vishnu.jpg/400px-Kurma_avatar_of_Vishnu.jpg",
+    "themes": [
+      "flood",
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "很久很久以前，印度神话里的天神和阿修罗都想得到一种宝物——长生不老的甘露。他们决定一起合作，搅拌一片白色的乳海。神和阿修罗用一座大山曼陀罗山当搅棒，又把宇宙巨蛇婆苏吉缠在山腰当绳子。阿修罗拉蛇头，神拉蛇尾，开始用力搅拌。海水翻腾，搅啊搅，搅出来许多神奇的宝物：先是一头能满足愿望的神牛，然后是天上的仙女、神奇的宝石、月亮，还有美丽的财富女神拉克什米。不过也搅出了可怕的毒药，毒药的烟雾让所有人都中毒了——好心的湿婆神一口把毒药吞下去，救了所有人，他的脖子也因此变成了蓝色。最后，搅啊搅，终于搅出了那瓶宝贵的甘露。",
+    "en2": "In the distant age of gods and demons, both sides agreed to churn the cosmic milk ocean together — using Mount Mandara as the rod and the great serpent Vasuki as the rope. From the churning emerged the wish-granting cow, divine nymphs, Lakshmi the goddess of fortune, and finally Amrita — the nectar of immortality.",
+    "langs": [
+      "中文",
+      "English",
+      "हिन्दी"
+    ],
+    "related": [
+      3
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Samudra_manthan"
+  },
+  {
+    "id": 61,
+    "country": "India",
+    "lat": 27,
+    "lng": 81,
+    "name": "罗摩衍那",
+    "en": "Ramayana",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ravana_cut_painting.jpg/400px-Ravana_cut_painting.jpg",
+    "themes": [
+      "love",
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "史诗",
+    "zh": "印度有一位英俊勇敢的王子，名叫罗摩。他是毗湿奴神的化身。他和美丽的妻子悉多深深相爱。可是因为宫廷阴谋，罗摩被父王下令流放到森林里十四年。罗摩、妻子悉多和弟弟一起来到密林中生活。这时，十个头、二十只手的恶魔王罗波那看上了悉多的美貌，他变成一只金色的鹿，把悉多骗走，关进了自己的楞伽岛王宫里。罗摩心急如焚，到处寻找妻子。他遇到了猴神哈努曼。哈努曼带着猴子大军，帮罗摩在大海上造了一座桥，跨过大海来到楞伽岛。罗摩和恶魔王展开了一场惊天动地的大战。最后，罗摩用神箭射死了罗波那，救出了妻子悉多，凯旋回到自己的国家做了国王。",
+    "en2": "Prince Rama of Ayodhya was exiled to the forest for fourteen years by palace intrigue. While there, the ten-headed demon king Ravana kidnapped his beloved wife Sita. Rama forged an alliance with Hanuman and an army of monkeys, crossed the ocean to Lanka, and waged an epic war to rescue Sita and reclaim his kingdom.",
+    "langs": [
+      "中文",
+      "English",
+      "हिन्दी"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Ramayana"
+  },
+  {
+    "id": 62,
+    "country": "India",
+    "lat": 19,
+    "lng": 73,
+    "name": "象头神迦尼萨",
+    "en": "Ganesha",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Ganesha_Basohli_miniature_circa_1730_Smithsonian_Institution.jpg/400px-Ganesha_Basohli_miniature_circa_1730_Smithsonian_Institution.jpg",
+    "themes": [
+      "moon"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "印度神话里，迦尼萨是最受人喜爱的神之一——他长着大象的头、人的身子，胖胖的肚子，骑着一只小老鼠。可他怎么会有大象的头呢？迦尼萨的妈妈帕尔瓦蒂女神有一天要洗澡，没人帮她看门，就用香膏捏出一个小男孩，给他施了魔法让他活过来，叮嘱说：「不要让任何人进来。」湿婆神回家时看到陌生小男孩拦门，不知道这是儿子，两人吵了起来，湿婆一气之下挥剑砍下了男孩的头。帕尔瓦蒂赶回来伤心欲绝。湿婆后悔极了，赶紧让仆人去找新的头。仆人路上遇到一头大象，把象头带回。湿婆把象头接到孩子身上，让他活了过来。从此迦尼萨成为智慧和好运之神。印度人做大事前都会先拜他。",
+    "en2": "The goddess Parvati formed a boy from clay to guard her door while she bathed. When Shiva returned and the boy blocked his entry, Shiva beheaded him in a rage. Horrified at the mistake, Parvati demanded he be restored to life. Shiva sent servants to bring the head of the first creature found — an elephant — giving birth to Ganesha.",
+    "langs": [
+      "中文",
+      "English",
+      "हिन्दी"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Ganesha"
+  },
+  {
+    "id": 63,
+    "country": "India",
+    "lat": 25,
+    "lng": 85,
+    "name": "摩诃婆罗多",
+    "en": "Mahabharata",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kurukshetra.jpg/400px-Kurukshetra.jpg",
+    "themes": [
+      "fire",
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "史诗",
+    "zh": "印度有两支堂兄弟，一个叫般度族，一个叫俱卢族，他们为了争夺王位继承权吵了又吵，最后变成了一场大战，叫「俱卢之战」。两军在战场上摆开阵势。可是般度族最厉害的勇士阿周那一看对面都是自己的堂兄弟、老师、亲戚，心一下子软了，把弓箭扔在地上：「我打不下去，杀亲人有什么好处？」这时他的车夫——其实是大神黑天克里希纳的化身——开始耐心开导他：「这是你作为战士的责任。生死只是身体的变化，灵魂永远不死。」黑天还教了阿周那许多人生道理。这段对话被记录下来，叫做《薄伽梵歌》，是印度最有名的经典之一。听完后，阿周那重新拿起弓箭，般度族最终赢得了战争。",
+    "en2": "Two cousin clans, the Pandavas and Kauravas, could not share a kingdom. Their conflict led to the catastrophic Battle of Kurukshetra. Before the battle, the god Krishna counseled the warrior Arjuna, who was paralyzed seeing relatives on both sides. Their dialogue on duty, soul, and dharma became the Bhagavad Gita.",
+    "langs": [
+      "中文",
+      "English",
+      "हिन्दी"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Mahabharata"
+  },
+  {
+    "id": 64,
+    "country": "India",
+    "lat": 23,
+    "lng": 77,
+    "name": "毗湿奴十化身",
+    "en": "Avatars of Vishnu",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Dashavatara.jpg/400px-Dashavatara.jpg",
+    "themes": [
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "印度神话里，毗湿奴是宇宙的守护神。每当世界陷入危险，他就会变成不同的样子下凡来拯救——这一共有十次，叫做「十大化身」。第一次他变成大鱼「摩磋」，警告人类有大洪水要来，让人造船保命。第二次他变成大乌龟「俱利摩」，背着曼陀罗山，让神仙们可以搅拌乳海。第三次他变成野猪「筏罗诃」，用獠牙把被怪兽拖到海底的大地顶起来。第四次他变成狮人「那罗辛诃」——上半身是狮子、下半身是人，杀死了一个谁也杀不了的恶魔。后来他还变成了侏儒、勇士、英雄王子罗摩、智慧的克里希纳，以及佛陀。第十次化身将在世界末日时降临，骑着白马来打败邪恶，开始一个新世界。",
+    "en2": "Vishnu, the preserver of the cosmos, took ten avatars to save the world at its darkest moments. As Matsya the fish he warned of the great flood; as Kurma the tortoise he supported Mount Mandara; as Varaha the boar he lifted the earth from the cosmic sea; as Narasimha the man-lion he slew the demon Hiranyakashipu.",
+    "langs": [
+      "中文",
+      "English",
+      "हिन्दी"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Dashavatara"
+  },
+  {
+    "id": 65,
+    "country": "India",
+    "lat": 12.9,
+    "lng": 77.6,
+    "name": "哈努曼飞跃大海",
+    "en": "Hanuman Leaps the Ocean",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Hanuman_in_Ramayana.jpg/400px-Hanuman_in_Ramayana.jpg",
+    "themes": [
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "在《罗摩衍那》的故事里，罗摩王子的妻子悉多被恶魔王罗波那抢到了楞伽岛上。猴神哈努曼自告奋勇说：「让我去找悉多吧！」哈努曼有神奇的力量，他纵身一跳，跳上了大海。一路上，海里的女妖苏罗萨张开大嘴想吞掉他——哈努曼把自己变得很大，又突然缩得很小，钻进她嘴里又飞出来。还有一个会捉影子的妖怪想抓他——哈努曼一拳打死了它。终于飞过大海到了楞伽岛。他在悉多被关的花园里找到了她，把罗摩王子的戒指交给悉多作信物，告诉她：「王子很快就会来救你。」临走前，哈努曼被罗波那的士兵抓住，他们在他尾巴上点火想烧他。哈努曼挣脱后，反而用尾巴上的火把整个楞伽城都烧成一片火海，然后毫发无伤地飞回去了。",
+    "en2": "To rescue Sita from Lanka, Hanuman made an impossible leap across the ocean. He fought the demoness Surasa and the shadow-grasper Chhaya along the way. He found Sita imprisoned in the Ashoka garden, delivered Rama's ring as proof of hope, and then burned Lanka with fire that Ravana's soldiers had set on his own tail.",
+    "langs": [
+      "中文",
+      "English",
+      "हिन्दी"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Hanuman"
+  },
+  {
+    "id": 70,
+    "country": "Iraq",
+    "lat": 33,
+    "lng": 44.4,
+    "name": "吉尔伽美什",
+    "en": "Epic of Gilgamesh",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Gilgamesh_statue.jpg/400px-Gilgamesh_statue.jpg",
+    "themes": [
+      "flood",
+      "love"
+    ],
+    "era": "ancient",
+    "type": "史诗",
+    "zh": "很久很久以前，美索不达米亚有一座叫乌鲁克的城市，国王叫吉尔伽美什。他三分之二是神，一分是人，力气大得不得了，可有时很骄傲。神造了一个野人恩奇都，让他到乌鲁克挑战吉尔伽美什。两人打了起来不分胜负，反而互相佩服，结成了最好的朋友。他们一起冒险，杀了森林里的怪兽芬巴巴，又杀了天上的公牛。可是众神生气了，让恩奇都生病死了。吉尔伽美什太伤心了，又害怕自己也会死，就出发去寻找永生的秘密。他经过千辛万苦，终于找到一棵能让人长生不老的草，可是在回家路上被一条蛇偷走吃了。最后吉尔伽美什明白：每个人都会死，留下伟大的事迹比永生更重要。",
+    "en2": "Gilgamesh, the mighty king of Uruk, met his match in Enkidu, a wild man of the forest. They wrestled, then became brothers. When the gods killed Enkidu, Gilgamesh was shattered. He searched the world's ends for the secret of immortality, found it, and lost it to a serpent — learning at last that glory, not endless life, is a hero's true legacy.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "related": [
+      29
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh"
+  },
+  {
+    "id": 71,
+    "country": "Iraq",
+    "lat": 31,
+    "lng": 47,
+    "name": "苏美尔大洪水",
+    "en": "Sumerian Flood",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/GilgachFlworktab.jpg/400px-GilgachFlworktab.jpg",
+    "themes": [
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "很久很久以前，苏美尔的众神觉得人类太吵闹了，决定降下一场大洪水，把所有人都淹死。水神恩基不忍心，他想了一个办法——他不能直接告诉人类，但他可以对墙说话。他对一座小屋的墙说：「墙啊墙，请告诉里面的人——快造一艘大船吧，七天七夜的大洪水就要来了！把家人和各种动物都带上船。」虔诚的国王祖修德拉听到了，赶紧造了一艘巨大的方舟，带上家人和所有动物。果然，大洪水来了，整整下了七天七夜，整个世界都被淹没。雨停后，方舟停在了高山顶上。祖修德拉先放出一只鸟去找陆地，鸟没回来——这说明陆地出现了。他走出方舟，向天上的众神献上了祭品。",
+    "en2": "The gods, weary of humanity's noise, decreed a great flood to destroy them. But the wise god Enki whispered a warning through a wall to the pious king Ziusudra: build a great boat. For seven days and nights the deluge raged. When the storm subsided, Ziusudra released birds to find dry land and made offerings to the grateful gods.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "related": [
+      29,
+      3
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Eridu_Genesis"
+  },
+  {
+    "id": 72,
+    "country": "Iraq",
+    "lat": 32,
+    "lng": 45,
+    "name": "伊南娜下冥界",
+    "en": "Inanna's Descent",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ishtar_on_an_Akkadian_Empire_seal.jpg/400px-Ishtar_on_an_Akkadian_Empire_seal.jpg",
+    "themes": [
+      "love",
+      "moon"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "美索不达米亚的天后伊南娜，是世界上最美丽、最有力量的女神。她拥有许多神奇的宝物——王冠、长袍、项链、戒指、神圣的法杖。可是有一天，她决定去冥界看看自己的姐姐。冥界一共有七道大门。在第一道门，看门人摘下了她金光闪闪的王冠；第二道门，他们脱下了她美丽的长袍；第三道门、第四道门……每经过一道门，她都要被脱掉一件法宝。等她走到冥界中心，已经赤身裸体、毫无力量了。冥界的女王也是她的姐姐，并不欢迎她，让人把她杀死，挂在墙上。地上的世界因为伊南娜不在了，所有的花朵都枯萎，所有的动物都不再生育。聪明的水神恩基派出两个小精灵去救她，把生命水洒在她身上。伊南娜活了过来，但要走出冥界，必须找一个替身留下。",
+    "en2": "The queen of heaven, Inanna, descended to the Great Below to attend her sister's husband's funeral. At each of the seven gates, the gatekeepers stripped away one of her divine powers and garments. She arrived naked and was killed. The world above withered without her — until the gods negotiated her release at a terrible price.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Inanna"
+  },
+  {
+    "id": 73,
+    "country": "Iraq",
+    "lat": 34,
+    "lng": 43,
+    "name": "提亚马特",
+    "en": "Tiamat the Dragon",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Chaos_Monster_and_Sun_God.png/400px-Chaos_Monster_and_Sun_God.png",
+    "themes": [
+      "dragon",
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "在美索不达米亚最古老的传说里，世界还没有形成时，只有两片大水——咸的海水叫提亚马特，淡的河水叫阿普苏。这两片水互相缠绕，生出了第一批神。这些年轻的神又生出更多神，一代又一代越来越吵闹。阿普苏被吵得睡不着，决定杀死所有孩子。可是计划被聪明的神知道了，他们抢先杀死了阿普苏。提亚马特听到丈夫被杀，怒火中烧，变成了一条巨大的龙，召集了一支怪兽军队要为丈夫报仇。年轻勇敢的神马杜克站了出来。他穿上铠甲，带着风、雷、闪电，骑着战车冲向提亚马特。两人单挑，马杜克张开大网网住巨龙，一箭射穿了她的心脏。然后他把提亚马特的身体劈成两半，一半变成了天空，一半变成了大地。",
+    "en2": "In the beginning, primordial saltwater Tiamat and freshwater Apsu mingled, generating the first gods. When the gods grew noisy, Apsu planned to destroy them but was killed first. Enraged, Tiamat raised an army of monsters. The young god Marduk challenged her to single combat, slew her, and split her body to form heaven and earth.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Tiamat"
+  },
+  {
+    "id": 75,
+    "country": "South Korea",
+    "lat": 37.5,
+    "lng": 127,
+    "name": "檀君神话",
+    "en": "Dangun",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Dangun_Wanggeom.jpg/400px-Dangun_Wanggeom.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "很久很久以前，天神桓因有一个儿子叫桓雄。桓雄一直想下到人间帮助人类。爸爸答应了，让他带着风伯、雨师、云师三位大臣，从天上降到太白山顶。在山下，住着一只老虎和一只大熊。它们都好想变成人。桓雄给了它们二十瓣大蒜和一把艾草，告诉它们：「吃下这些，到山洞里待一百天，不能见到太阳，就能变成人。」老虎实在受不了，几天就跑出洞了。可是大熊忍住了所有的痛苦，整整一百天没出洞。当它走出山洞时，它真的变成了一位漂亮的女人，叫做「熊女」。桓雄被她的诚心感动，娶她为妻，生下了一个儿子，名叫檀君。檀君长大后，建立了朝鲜半岛上第一个国家——古朝鲜，那是公元前2333年的事情。",
+    "en2": "The god Hwanin sent his son Hwanung to earth on the peak of Mount Taebaek. A tiger and a bear both prayed to become human. Hwanung gave them mugwort and garlic and told them to endure a cave for one hundred days. The bear persevered and became a woman. She and Hwanung had a son — Dangun, who founded the kingdom of Gojoseon in 2333 BCE.",
+    "langs": [
+      "中文",
+      "English",
+      "한국어"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Dangun"
+  },
+  {
+    "id": 76,
+    "country": "South Korea",
+    "lat": 35.5,
+    "lng": 129,
+    "name": "春香传",
+    "en": "Chunhyangjeon",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Chunhyangjeon.jpg/400px-Chunhyangjeon.jpg",
+    "themes": [
+      "love",
+      "princess"
+    ],
+    "era": "classical",
+    "type": "爱情",
+    "zh": "古时候朝鲜有一位姑娘叫春香，她虽然是歌妓的女儿，却聪明美丽。一个春天，南原城官员的儿子李梦龙在湖边遇到了春香，两人一见钟情。他们偷偷结为夫妻，发誓永远在一起。可是不久，李梦龙的父亲被调到京城做官，李梦龙不得不跟着父亲离开，他对春香说：「等我考上状元，我一定回来娶你！」春香等啊等。这时候新来的县官非常坏，看上了春香的美貌，要她做小妾。春香坚决不肯，被县官打了又关进大牢。眼看春香就要被处死了。这时候，李梦龙考上了状元，被皇帝任命为微服私访的御史大夫，正好回到南原城。他抓住了坏县官，救出了春香。两人终于团聚，过上了幸福的日子。",
+    "en2": "Chunhyang, daughter of a courtesan, and Yi Mongryong, son of a magistrate, fell deeply in love. When Yi left for the capital to take the civil examination, a corrupt new governor tried to force Chunhyang into his service. She refused and was beaten and imprisoned. Yi returned as a royal inspector and freed her.",
+    "langs": [
+      "中文",
+      "English",
+      "한국어"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Tale_of_Chunhyang"
+  },
+  {
+    "id": 77,
+    "country": "South Korea",
+    "lat": 36.5,
+    "lng": 128,
+    "name": "九尾狐",
+    "en": "Kumiho",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Gumiho.jpg/400px-Gumiho.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "medieval",
+    "type": "妖怪",
+    "zh": "在韩国和中国的古老传说里，狐狸活到一千年，就会修炼成精，长出九条美丽的尾巴，叫做「九尾狐」。她可以变成最漂亮的女子。九尾狐有时候很坏——她会变成美女，跑到山路上等着夜里赶路的男人，把他们带到自己的山洞里，吃掉他们的肝脏，因为她相信吃了人的肝就能变得更强大。可是也有些温柔的故事——一些九尾狐其实很想变成真正的人，过普通女子的生活。她要做到这件事，必须找到一个人类做丈夫，并和他生活整整一百天。在这一百天里，她不能让任何人发现她其实是狐狸——只要有人发现，她就会立刻变回狐狸，永远做不成人。可是太多丈夫忍不住偷偷看她的真身，所以九尾狐总是失败，伤心地回到山林里。",
+    "en2": "A fox that lives for a thousand years gains the power to transform into a beautiful woman. The gumiho seduces men and consumes their livers. In gentler tales, she yearns to become truly human, needing one hundred days of her secret remaining undiscovered. A rare few stories end with her transformation — and redemption.",
+    "langs": [
+      "中文",
+      "English",
+      "한국어"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Kumiho"
+  },
+  {
+    "id": 80,
+    "country": "Mexico",
+    "lat": 19.4,
+    "lng": -99.1,
+    "name": "羽蛇神",
+    "en": "Quetzalcoatl",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Quetzalcoatl_telleriano.jpg/400px-Quetzalcoatl_telleriano.jpg",
+    "themes": [
+      "dragon",
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "在古代墨西哥，所有的人都崇拜一位伟大的神，叫「羽蛇神」——他长着鸟的羽毛和蛇的身体，是风、智慧和文明之神。羽蛇神创造了人类，他从冥府偷出最后一代人类的骨头，又用自己的血让骨头活了过来。他还教给人们好多东西：怎么种玉米、怎么看星星、怎么做日历、怎么写字和画画，他甚至还教人们做工艺品。他不喜欢用人献祭，主张和平。可是后来，一位坏的神嫉妒羽蛇神，让他喝醉酒做了傻事。羽蛇神觉得太羞愧了，决定离开人间。他坐在一艘用蛇做成的船上，朝着东方的大海开走，临走前承诺：「总有一天，我会回来的！」几百年后，西班牙征服者从东方乘船而来，墨西哥人以为是羽蛇神回来了。",
+    "en2": "The Feathered Serpent was worshipped across ancient Mexico as god of wind, learning, and civilization. He taught humanity agriculture, the calendar, and the arts. Shamed by a rival god into exile, he departed on a raft of serpents, promising to return from the east. When Cortés arrived centuries later, some believed the prophecy fulfilled.",
+    "langs": [
+      "中文",
+      "English",
+      "Español"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Quetzalcoatl"
+  },
+  {
+    "id": 81,
+    "country": "Mexico",
+    "lat": 20,
+    "lng": -98,
+    "name": "五个太阳",
+    "en": "Five Suns",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sunstone.jpg/400px-Sunstone.jpg",
+    "themes": [
+      "sun",
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "古代阿兹特克人认为，世界曾经被创造和毁灭过四次，现在是第五次。第一个太阳的时代里，巨人住在大地上，但他们被凶猛的美洲豹吃光了，世界毁灭。第二个太阳的时代，人们变成了顽皮的孩子，被一场大风吹走，变成了猴子。第三个太阳的时代，神发怒了，从天上降下火雨，所有人都被烧死，变成了火鸡。第四个太阳的时代，洪水从天而降，整个世界被水淹没，人们变成了鱼。世界已经毁灭四次。这时众神聚集在一起，决定再创造一个新的世界。一位卑微的神特库希斯特卡特尔跳进熊熊燃烧的圣火，他变成了第五个太阳。可是新太阳一动也不动。其他神决定献出自己的生命，让太阳能够运行起来。这就是我们现在所处的「第五个太阳」的时代。",
+    "en2": "Aztec cosmology held that the world had been created and destroyed four times. The First Sun was devoured by jaguars, the Second swept away by wind, the Third consumed by raining fire, the Fourth drowned in flood. Our age — the Fifth Sun — was born at Teotihuacan when the gods sacrificed themselves to become the sun and moon.",
+    "langs": [
+      "中文",
+      "English",
+      "Español"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Five_Suns"
+  },
+  {
+    "id": 82,
+    "country": "Mexico",
+    "lat": 21,
+    "lng": -100,
+    "name": "双胞胎英雄",
+    "en": "Hero Twins",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Hero_Twins_Hunahpu_Xbalanque.jpg/400px-Hero_Twins_Hunahpu_Xbalanque.jpg",
+    "themes": [
+      "moon",
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "在玛雅传说《波波尔·乌》里，有一对双胞胎英雄兄弟，名叫胡那普和伊克斯巴兰克，他们的爸爸被冥界——叫「西伯巴」的死神领主们杀死了。两兄弟决定下到冥界为爸爸报仇。冥界的死神想戏弄他们，他们要兄弟俩比赛玛雅人最爱的球类游戏。死神还出了好几个可怕的考验——把他们关进黑暗的房子、装满刀子的房子、装满美洲豹的房子。可是兄弟俩聪明又勇敢，一个一个挑战都通过了。最后他们和死神进行最后一场球赛。兄弟俩用计骗过死神：他们假装跳进了大火里「自杀」，又变成鱼游回来，再变成穷人。这时他们告诉死神：「我们能死而复生！」死神也想试试，结果真的死了，再也没活回来。胜利的双胞胎飞上天空，一个变成了太阳，一个变成了月亮。",
+    "en2": "In the Mayan Popol Vuh, the Hero Twins Hunahpu and Xbalanque were summoned to Xibalba, the underworld, to play the sacred ball game against the lords of death. Through wit, deception, and courage they defeated the death lords one by one. Killed and resurrected, they were finally transformed into the sun and moon.",
+    "langs": [
+      "中文",
+      "English",
+      "Español"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Maya_Hero_Twins"
+  },
+  {
+    "id": 85,
+    "country": "Nigeria",
+    "lat": 9.1,
+    "lng": 7.5,
+    "name": "奥巴塔拉创世",
+    "en": "Obatala Creates the World",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Yoruba-bronze-head.jpg/400px-Yoruba-bronze-head.jpg",
+    "themes": [
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "在非洲约鲁巴人的传说里，最早的时候，世界上还没有大地——天上是众神的天宫，下面只有一片无边无际的大海。最高的神奥洛杜马雷决定派一位神去创造大地。他选中了温柔的奥巴塔拉。奥洛杜马雷给了他一根铁链、一个装满细沙的蜗牛壳、一只五个脚趾的母鸡和一个棕榈果。奥巴塔拉沿着铁链从天上慢慢爬下来。到了海面上，他打开蜗牛壳，把沙子撒在水上。然后他把母鸡放下去，母鸡用爪子在沙子里到处刨啊刨，沙子被推得越来越广，慢慢形成了第一片大陆。奥巴塔拉在大陆上种下棕榈果，长成了第一棵树。这片大陆被称为「伊费」，就是世界的中心。后来奥巴塔拉又用泥土塑造了第一批人类，奥洛杜马雷给他们吹入了灵魂。",
+    "en2": "The supreme god Olodumare commissioned the orisha Obatala to descend from heaven and create solid land. Obatala slid down an iron chain from the sky, carrying a snail shell full of sand and a five-toed hen. The hen scratched and spread the sand across the primordial waters, forming the first earth at Ile-Ife, the sacred center of the world.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Obatala"
+  },
+  {
+    "id": 86,
+    "country": "Nigeria",
+    "lat": 7,
+    "lng": 3.4,
+    "name": "尚戈雷神",
+    "en": "Shango God of Thunder",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Brooklyn_Museum_1992.133_Figure_of_Shango_on_Horseback.jpg/400px-Brooklyn_Museum_1992.133_Figure_of_Shango_on_Horseback.jpg",
+    "themes": [
+      "fire"
+    ],
+    "era": "ancient",
+    "type": "神话",
+    "zh": "在西非约鲁巴人的传说里，尚戈是最受人崇拜的神——雷电之神。可是尚戈不是一直就是神，他原来是奥约帝国的第三代国王，是个真实存在过的人。尚戈是个英勇的国王，可脾气特别大，他还有一个特别的本领——能从嘴里喷出火来！有一天，尚戈和臣子吵架，他一生气，召唤来了大闪电。可是闪电不听话，反而劈中了王宫，把整座王宫烧成了灰烬，他自己的妻子和孩子也都死在了大火里。尚戈又愧疚又绝望，他觉得自己不配当国王，于是离开了宫殿，最后在树林里上吊自杀了。他死后，约鲁巴人发现每次打雷下雨时，雷声都像是尚戈的怒吼。人们相信，他升上了天空，变成了雷电之神。",
+    "en2": "Shango was once the third Alaafin — king — of the Oyo Empire, renowned for his fierce temper and ability to breathe fire. When he accidentally destroyed his own palace with lightning, he was overcome with shame and hanged himself. He ascended as an orisha — the thunder deity — and now every thunderstrike is said to be Shango dancing.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Shango"
+  },
+  {
+    "id": 87,
+    "country": "Nigeria",
+    "lat": 10,
+    "lng": 8,
+    "name": "阿南西蜘蛛",
+    "en": "Anansi the Spider",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Asante_gold_weight_depicting_Anansi.jpg/400px-Asante_gold_weight_depicting_Anansi.jpg",
+    "themes": [
+      "moon"
+    ],
+    "era": "ancient",
+    "type": "寓言",
+    "zh": "在西非加纳的故事里，最聪明的不是大象，也不是狮子，而是一只小小的蜘蛛——阿南西。最初，世界上所有故事都属于天空之神尼亚梅，谁也讲不出有趣的故事。阿南西想买下这些故事。他爬到天上找尼亚梅。尼亚梅笑着说：「你只要做到三件事：抓住会蜇人的大黄蜂、抓住会吞人的大蟒蛇、抓住凶猛的豹子，故事就给你。」阿南西想啊想，想出了好办法。他用葫芦装水浇黄蜂，骗它们躲进葫芦里。他用一根长棍量蟒蛇，骗蟒蛇伸直身体，趁机绑住了它。他在豹子常走的路上挖了深坑，豹子掉了进去。阿南西把三种动物都带给尼亚梅。尼亚梅守约，把世界上所有的故事都给了阿南西。从此，所有故事都叫「蜘蛛故事」。",
+    "en2": "Anansi the spider bargained with Nyame, the sky god, to purchase all the world's stories. Nyame demanded Anansi capture four impossible things: a swarm of hornets, a python, a leopard, and a fairy. Through cleverness and cunning, Anansi delivered them all. The sky god kept his word — and that is why all stories belong to the spider.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Anansi"
+  },
+  {
+    "id": 88,
+    "country": "Australia",
+    "lat": -25,
+    "lng": 134,
+    "name": "彩虹蛇",
+    "en": "Rainbow Serpent",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Rainbow_Serpent.jpg/400px-Rainbow_Serpent.jpg",
+    "themes": [
+      "flood",
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "在澳大利亚原住民最古老的传说里，有一条神奇的彩虹蛇，它是世界上最伟大的神灵之一。在远古的「梦幻时代」，地球还是一片空荡荡的、平平的、什么也没有。彩虹蛇又长又大，全身闪着七彩的光，像彩虹一样美丽。它从地下钻出来，开始在大地上游动。它走过的地方，留下又深又长的痕迹——那些痕迹变成了奔腾的大河、深深的山谷和清澈的水洼。它还把雨水带到大地上，让花草树木都能生长，让动物们都有水喝。彩虹蛇喜欢人类对它尊敬。它愿意教人类生活的智慧，可是如果有人不尊敬它，做了坏事，它会非常生气，掀起大风暴和洪水。直到今天，彩虹蛇还住在所有水源永远不干的水洼下面，安静地守护着澳大利亚的大地。",
+    "en2": "The Rainbow Serpent is among the world's oldest continuing religious beliefs. During the Dreamtime, this immense being traveled across the bare landscape, carving rivers, gorges, and waterholes as it moved. It brought rain and life but also destruction when offended. It rests still beneath permanent waterholes, alive and watchful.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Rainbow_Serpent"
+  },
+  {
+    "id": 89,
+    "country": "Australia",
+    "lat": -28,
+    "lng": 140,
+    "name": "梦幻时代",
+    "en": "The Dreamtime",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Aboriginal_Art_Australia.jpg/400px-Aboriginal_Art_Australia.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "澳大利亚原住民有一个最古老最神圣的传说，叫「梦幻时代」。梦幻时代不是普通意义上的过去，它一直存在着，和我们现在的时间同时流动。在梦幻时代里，最早的时候，澳大利亚的大地还是一片空荡荡的，没有山、没有河、没有动物。这时候，伟大的祖先灵魂们走到了地球上。他们走啊走，唱着歌穿过大地。他们唱什么，什么就出现——他们唱出了高山，唱出了奔腾的河流，唱出了袋鼠、考拉、鸸鹋，还唱出了第一批人类。每位祖先灵魂走过的路线，叫做「歌之路」。直到今天，澳大利亚原住民还能沿着这些歌之路走遍大地，每唱一段歌，就能找到水源、食物和回家的方向。所以，梦幻时代既是过去，也是现在，永远活在每一首歌里。",
+    "en2": "The Dreamtime is not a distant past but an ever-present spiritual reality in Aboriginal culture. Ancestral beings of great power traveled the bare continent, and their songs called mountains, rivers, and living things into existence. These creation paths — songlines — can still be walked and sung across Australia today.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Dreamtime"
+  },
+  {
+    "id": 90,
+    "country": "Brazil",
+    "lat": -15.8,
+    "lng": -47.9,
+    "name": "图皮大洪水",
+    "en": "Tupi Flood",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Albert_Eckhout_-_Tapuia.jpg/400px-Albert_Eckhout_-_Tapuia.jpg",
+    "themes": [
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "在巴西图皮族的古老传说里，最早的人们因为做了太多坏事——撒谎、偷东西、彼此打架——惹得创世神特别生气。神说：「这些人不知道珍惜，那就让世界重新开始吧！」他下令降下一场大洪水。雨下了好几天好几夜，水位一直涨啊涨，从小河变成大河，从大河变成大海，最后整个世界都被水淹没了。所有的人和动物都被冲走，一个也不剩。可是有一对兄妹很机灵——他们看到洪水来了，赶紧爬上一棵高高的棕榈树。他们紧紧抱住树干，看着下面的洪水翻滚。洪水实在太长，他们吃棕榈果，喝雨水，等了很多很多天。终于雨停了，水开始慢慢退去。兄妹俩从树上爬下来，回到大地上。他们结婚，生下了许多孩子，慢慢繁衍成了今天的人类。",
+    "en2": "The Tupi people of Brazil tell of a time when the creator god grew angry at humanity's corruption and sent a great deluge to wash the world clean. Only two siblings survived by climbing to the crown of a tall palm tree and clinging there until the waters receded. They descended and became the parents of a new human race.",
+    "langs": [
+      "中文",
+      "English",
+      "Português"
+    ],
+    "related": [
+      29
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Tupi_people"
+  },
+  {
+    "id": 91,
+    "country": "Brazil",
+    "lat": -3,
+    "lng": -60,
+    "name": "粉红海豚",
+    "en": "Boto Encantado",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Amazon_river_dolphin.jpg/400px-Amazon_river_dolphin.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "modern",
+    "type": "传说",
+    "zh": "在巴西亚马逊河的村庄里，流传着一个神奇又有点神秘的传说。亚马逊河里住着一种特别的粉红色海豚，叫做「博托」。在月圆的夜里，特别是河边村子开聚会、跳舞唱歌的时候，博托会从水里出来，变成一位英俊的男人——他穿着雪白的西装，戴一顶白色的帽子（用来盖住头顶变成人后留下的小洞），他善于跳舞、说话甜蜜，把村子里所有的姑娘都迷住了。可是天快亮的时候，他必须赶在太阳升起前回到水里，不然就会现出原形。第二天早晨，博托又变回粉红色的海豚，在亚马逊河里游来游去。许多女孩子被博托迷住，怀上了他的孩子。直到今天，亚马逊河边的人们如果说不清孩子的爸爸是谁，就会笑着说：「那肯定是博托！」",
+    "en2": "In the Amazon basin, locals have long told of the Boto — the pink river dolphin — that transforms into a handsome, white-suited man on moonlit festival nights. He appears among the crowd, seduces young women, and returns to the river before dawn. An unexplained pregnancy is traditionally attributed to the Boto Encantado.",
+    "langs": [
+      "中文",
+      "English",
+      "Português"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Boto"
+  },
+  {
+    "id": 92,
+    "country": "Peru",
+    "lat": -13.5,
+    "lng": -72,
+    "name": "印提太阳神",
+    "en": "Inti the Sun God",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Inti_Raymi.jpg/400px-Inti_Raymi.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "印提是印加帝国最伟大的太阳神，他的光芒照亮整个安第斯山脉。印加皇帝相信自己是印提的儿子，所以有「太阳之子」的称号。很久以前，印加人还是丛林里到处流浪的部落，没有家园。印提非常心疼他们，从天上派下了自己的两个孩子——儿子曼科·卡帕克和女儿玛玛·奥克略。印提给了他们一根金光闪闪的杖，告诉他们：「找到一片土地，把金杖插下去，如果完全沉进土里，那就是你们的家。」两个孩子从的的喀喀湖出发，走啊走，最后在一座美丽的山谷里，金杖一插，全部沉进了肥沃的土壤里。他们就在那里建立了印加帝国的首都——库斯科。每年六月的太阳节「印提·拉伊米」，是全帝国最盛大的节日。",
+    "en2": "Inti, the radiant sun god, was the supreme deity of the Inca Empire and the divine ancestor of the royal dynasty. He sent his children — Manco Cápac and Mama Ocllo — from Lake Titicaca to found Cusco, capital of Tawantinsuyu. Inti Raymi, the Festival of the Sun held each June solstice, was the empire's most sacred celebration.",
+    "langs": [
+      "中文",
+      "English",
+      "Español"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Inti"
+  },
+  {
+    "id": 93,
+    "country": "Peru",
+    "lat": -15.5,
+    "lng": -70,
+    "name": "维拉科查创世",
+    "en": "Viracocha",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Viracocha.jpg/400px-Viracocha.jpg",
+    "themes": [
+      "flood",
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "在安第斯山的古老传说里，世界一开始是一片黑暗。伟大的创世神维拉科查，从的的喀喀湖深深的水底升起来。他穿着白色长袍，留着长长的胡须，用魔法权杖在天空中画了几下——太阳出来了，月亮出来了，星星也出来了！整个世界顿时充满了光。维拉科查第一次试着造人，用石头雕了一群高大的巨人。可这些巨人又愚蠢又懒惰，做了好多坏事。维拉科查很失望，把他们都变成了石头，然后降下大洪水，把他们全部冲走。这次他用泥土小心地塑造新的人类，每一个都不一样。他把他们送到地下，让他们从世界各地的山洞、湖泊和泉水里冒出来——这就是为什么不同地方的人长得不一样。最后，维拉科查走过太平洋，消失在大海深处。",
+    "en2": "Viracocha, the Andean creator god, rose from the depths of Lake Titicaca in primordial darkness. He first created giants but sent a flood to destroy them. From clay he fashioned new humans and sent them underground to emerge at sacred sites across the land. Then he walked westward across the Pacific and vanished into the sea.",
+    "langs": [
+      "中文",
+      "English",
+      "Español"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Viracocha"
+  },
+  {
+    "id": 94,
+    "country": "Ireland",
+    "lat": 53.3,
+    "lng": -6.3,
+    "name": "图安麦卡里尔",
+    "en": "Tuan mac Cairill",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tuatha_D%C3%A9_Danann.jpg/400px-Tuatha_D%C3%A9_Danann.jpg",
+    "themes": [
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "传说",
+    "zh": "在古爱尔兰的传说里，有一个奇妙的人活了几千年，亲眼看着爱尔兰一次又一次被新的民族征服。他的名字叫图安。最早他是一个普通人，是第一批移民到爱尔兰岛上的人之一。可是瘟疫袭来，所有人都死了，只剩他一个。突然有一天，他变成了一只健壮的鹿，在大地上奔跑了好多年。后来他又老了，变成了一只大野猪，又过了很多年；接着他变成一只翱翔的雄鹰，飞遍全岛。最后他变成了一条大鲑鱼，被一位皇后吃下去——奇妙的事发生了，他重新回到人的身体里出生了！长大后，他记得过去所有的经历。他把爱尔兰最古老的故事，都讲给了刚来的基督教修道士听，让爱尔兰的历史得以流传下来。",
+    "en2": "Tuan mac Cairill survived every invasion of Ireland across thousands of years by transforming his shape. He lived as a man, then a stag, then a wild boar, an eagle, and finally a salmon — swallowed by a queen and reborn as a man. He lived long enough to tell the Christian monks the complete ancient history of Ireland.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Tuan_mac_Cairill"
+  },
+  {
+    "id": 95,
+    "country": "Ireland",
+    "lat": 53,
+    "lng": -8,
+    "name": "库丘林",
+    "en": "Cu Chulainn",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Cu_Chulainn_Reins_His_Chariot.jpg/400px-Cu_Chulainn_Reins_His_Chariot.jpg",
+    "themes": [
+      "dragon",
+      "fire"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "古代爱尔兰最伟大的英雄叫库丘林，意思是「库兰的猎犬」。他原本叫塞坦塔。七岁那年，他到铁匠库兰家做客。库兰家有一只凶猛的大猎犬看门，没人敢靠近。可是塞坦塔不知道，独自走过去时，大猎犬扑了上来。塞坦塔毫不畏惧，一拳把它打死了。库兰很伤心——这只狗可是他唯一的看门狗啊。塞坦塔说：「对不起，我会代替它给你看门。」从此他就被叫做「库丘林」，意思是「库兰的猎犬」。库丘林后来到天涯海角的女武神斯卡哈那里学习武艺，得到了一把可怕的神矛「加埃·伯尔」。他打仗的时候会变成一种可怕的「狂战士」模样，眼睛发红，肌肉鼓起，谁都打不过他。他孤身一人保卫了阿尔斯特，挡住了敌国大军的进攻。",
+    "en2": "Born Setanta, he earned the name Cu Chulainn after killing a blacksmith's fierce guard dog at age seven. Trained by the warrior goddess Scathach, he mastered the deadly Gáe Bulg spear. In battle he underwent a terrifying transformation — the ríastrad — becoming monstrous and unstoppable, defending Ulster single-handedly against Connacht.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/C%C3%BA_Chulainn"
+  },
+  {
+    "id": 96,
+    "country": "Ireland",
+    "lat": 52,
+    "lng": -7,
+    "name": "利尔的孩子们",
+    "en": "Children of Lir",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Children_of_Lir.jpg/400px-Children_of_Lir.jpg",
+    "themes": [
+      "love",
+      "princess"
+    ],
+    "era": "ancient",
+    "type": "童话",
+    "zh": "在古爱尔兰，海神利尔有四个可爱的孩子——大姐菲奥努拉和三个弟弟。他们的妈妈去世后，利尔娶了第二个妻子艾费。艾费一开始很爱孩子们，可后来变得越来越嫉妒——她受不了利尔最爱的还是孩子们。有一天，艾费带孩子们去湖边玩。她偷偷拿出一根魔杖，把四个孩子变成了四只白天鹅！她用咒语让他们要在三个不同的湖里漂泊整整九百年。变成天鹅的孩子们虽然很伤心，但他们还能说话和唱歌——他们的歌声那么动人，所有人听了都会落泪。一年又一年，三百年、六百年、九百年过去了。当教堂的钟声响起，咒语终于解开了。可是孩子们一变回人形，岁月一下子全压了上来——他们变成了满头白发、瘦得皮包骨的老人。修道士给他们做了洗礼，然后他们安静地闭上了眼睛。",
+    "en2": "The sea god Lir's four beloved children were transformed into swans by their jealous stepmother Aoife for nine hundred years. They drifted through three great Irish lakes, singing heartbreaking songs to all who heard them. When church bells finally broke the spell, they were revealed as ancient, white-haired people who died soon after.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Children_of_Lir"
+  },
+  {
+    "id": 97,
+    "country": "Russia",
+    "lat": 55.8,
+    "lng": 37.6,
+    "name": "芭芭雅嘎",
+    "en": "Baba Yaga",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Baba_Yaga_-_Bilibin.jpg/400px-Baba_Yaga_-_Bilibin.jpg",
+    "themes": [
+      "fire",
+      "princess"
+    ],
+    "era": "medieval",
+    "type": "童话",
+    "zh": "在俄罗斯的童话里，森林深处住着一位最有名也最可怕的女巫，叫芭芭雅嘎。她瘦得像根棍子，腿是骨头做的，嘴里只剩下一颗铁牙。她不像其他女巫骑扫帚，而是坐在一个大石臼里，手里拿着一根杵当桨划，飞过森林。她的家就更奇怪了——一座小木屋长着两条大鸡腿，可以转来转去，只有当来人念出咒语，鸡腿才会让小屋面对来客。所有进入森林的人都怕她。如果你迷了路，找到了芭芭雅嘎的家，她可能会用刀叉把你吃掉，也可能给你一个又一个奇怪的任务——把这堆乱粮食分清楚、把这桶水从这边搬到那边……做不好就吃掉你；做好了，她会赏你宝物、智慧或一匹神马。所以芭芭雅嘎既不全是好人也不全是坏人——她考验每一个找到她的人。",
+    "en2": "Baba Yaga is the great witch of Russian folklore — bony-legged, iron-toothed, flying through the forest in a mortar and pestle. She lives in a hut that stands on chicken legs and can turn to face any direction. Those who seek her must complete impossible tasks with courage. The cowardly she devours; the brave she sometimes helps.",
+    "langs": [
+      "中文",
+      "English",
+      "Русский"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Baba_Yaga"
+  },
+  {
+    "id": 98,
+    "country": "Russia",
+    "lat": 59.9,
+    "lng": 30.3,
+    "name": "火鸟",
+    "en": "The Firebird",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Ivan_Bilibin_062.jpg/400px-Ivan_Bilibin_062.jpg",
+    "themes": [
+      "fire",
+      "princess"
+    ],
+    "era": "medieval",
+    "type": "童话",
+    "zh": "在俄罗斯的童话里，有一只神奇的火鸟——它的羽毛像火焰一样金红闪烁，眼睛像水晶，叫声美妙得像音乐。火鸟住在沙皇花园里，每晚偷偷飞来吃金苹果。沙皇生气极了，命令大儿子去抓住火鸟。可大儿子睡着了，没看到。二儿子也睡着了。最小的伊万王子坚持守了一整夜，火鸟飞来时他扑上去抓，却只抓到了一根金羽毛。沙皇看到金羽毛美得发光，就命令伊万必须把整只火鸟抓回来。伊万带着金羽毛上路，遇到一匹会说话的灰狼——这是他帮过的小动物变的。灰狼带着伊万一路冒险，他帮沙皇抓到了火鸟，又带回了金鬃马，最后还遇到了美丽的公主，赢得了她的爱。终于伊万和公主、火鸟、金鬃马一起回到家，过上了幸福的日子。",
+    "en2": "The Firebird blazes like a living flame, its feathers glowing gold and scarlet, its eyes glittering like crystal. Tsars command heroes to capture it. Prince Ivan found a single fallen feather that drew him into a chain of impossible quests — capturing the Firebird, fetching a faraway bride — until the Firebird helped him win a kingdom.",
+    "langs": [
+      "中文",
+      "English",
+      "Русский"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Firebird_(Slavic_folklore)"
+  },
+  {
+    "id": 99,
+    "country": "Russia",
+    "lat": 56,
+    "lng": 44,
+    "name": "瓦西丽莎",
+    "en": "Vasilisa the Beautiful",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Vasilisa.jpg/400px-Vasilisa.jpg",
+    "themes": [
+      "princess",
+      "fire"
+    ],
+    "era": "medieval",
+    "type": "童话",
+    "zh": "在俄罗斯的童话里，瓦西丽莎是个善良美丽的小女孩。她的妈妈在临死前，把一个木头小娃娃交给她，说：「孩子，遇到困难时给娃娃喂一点食物，它就会帮助你。」妈妈去世后，爸爸娶了一个继母，继母带来两个又懒又丑的女儿，对瓦西丽莎特别坏。有一天，继母让瓦西丽莎去森林深处可怕的女巫芭芭雅嘎家借火，其实是想让她被芭芭雅嘎吃掉。瓦西丽莎吓坏了，但小娃娃在口袋里说：「别担心，我会帮你。」到了芭芭雅嘎家，老巫婆给瓦西丽莎一连串不可能的任务——把混在一起的几袋粮食分清楚、把房间打扫得一尘不染。每次小娃娃都帮她做完。芭芭雅嘎很惊讶，给了她一个里面装着火的骷髅头。瓦西丽莎带回家，骷髅头眼里冒出的火把坏继母和姐姐烧成了灰。",
+    "en2": "Vasilisa's dying mother left her a magical carved doll that could help in times of need. When her stepmother sent her into the dark forest to fetch fire from the fearsome Baba Yaga, the doll guided her safely and did the impossible chores on her behalf. She earned a skull lantern with eyes of living fire — which burned her enemies to ash.",
+    "langs": [
+      "中文",
+      "English",
+      "Русский"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Vasilisa_the_Beautiful"
+  },
+  {
+    "id": 100,
+    "country": "New Zealand",
+    "lat": -41,
+    "lng": 174.8,
+    "name": "毛伊钓岛",
+    "en": "Maui Fishes Up the North Island",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gottfried_Lindauer_-_Tamati_Waka_Nene.jpg/400px-Gottfried_Lindauer_-_Tamati_Waka_Nene.jpg",
+    "themes": [
+      "flood"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "在新西兰毛利人的古老传说里，有一位非常聪明、特别调皮的半神，名叫毛伊。他从小就很机灵，能做出别人想不到的事。有一天，毛伊跟着哥哥们出海打鱼。他偷偷藏了一根特别的鱼钩——那是用奶奶下颚的骨头做成的，有神奇的力量。他还偷偷把自己的血涂在鱼钩上当鱼饵。他把鱼钩抛进深深的大海里，等啊等。突然，鱼钩沉重地下坠，毛伊用尽全身力气往上拉，越拉越重——拉啊拉，海面上慢慢冒出了一片巨大的陆地！这就是新西兰的北岛。今天毛利人还把北岛叫做「毛伊钓上来的鱼」。除了钓岛，毛伊还做了很多神奇的事——他用绳子套住太阳，让太阳跑得慢一点，让一天变得更长；他还从冥府偷出火种，送给人类。",
+    "en2": "The demigod Maui was the great trickster and hero of Polynesian legend. He fished the North Island of New Zealand up from the ocean using his grandmother Murirangawhenua's enchanted jawbone hook. He also lassoed the sun to slow it down and lengthen the day, and stole fire from the underworld for humanity.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/M%C4%81ui_(M%C4%81ori_mythology)"
+  },
+  {
+    "id": 101,
+    "country": "New Zealand",
+    "lat": -38,
+    "lng": 176,
+    "name": "朗伊与帕帕",
+    "en": "Rangi and Papa",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Rangi_and_Papa.jpg/400px-Rangi_and_Papa.jpg",
+    "themes": [
+      "love",
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "创世",
+    "zh": "在新西兰毛利人的传说里，最早的时候，天父朗伊和地母帕帕紧紧抱在一起，谁也不放开。他们的孩子们——森林之神、海洋之神、风之神、人类之神——都被夹在父母中间，挤在一片黑暗里，连站都站不直。孩子们想看看光，看看广阔的世界。可是父母抱得太紧了。孩子们一个一个轮着去推：海洋之神推不动，风之神也推不动……最后，森林之神塔尼想了一个办法——他把头使劲地抵着妈妈帕帕的肚子，用他强壮的腿用力地蹬天父朗伊。蹬啊蹬，朗伊和帕帕终于被分开了！朗伊被推到了高高的天上，帕帕留在了大地。从此，孩子们终于看到了光明，可以自由自在地在世界上奔跑、生长。直到今天，朗伊还在思念帕帕，他流下的眼泪，就是从天上落下来的雨。",
+    "en2": "In Maori creation, Ranginui the Sky Father and Papatuanuku the Earth Mother held each other in an eternal embrace, leaving their children trapped in cramped darkness between them. The god of forests, Tane, lay on his back and pushed them apart with great force. Light flooded the world for the first time. Rangi's tears of separation fall as rain.",
+    "langs": [
+      "中文",
+      "English"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Rangi_and_Papa"
+  },
+  {
+    "id": 102,
+    "country": "Turkey",
+    "lat": 39.9,
+    "lng": 32.9,
+    "name": "伊鲁扬卡斯",
+    "en": "Illuyanka Dragon",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Museum_of_Anatolian_Civilizations.jpg/400px-Museum_of_Anatolian_Civilizations.jpg",
+    "themes": [
+      "dragon"
+    ],
+    "era": "ancient",
+    "type": "英雄",
+    "zh": "赫梯人是古代生活在土耳其一带的民族。他们的神话里有一位勇敢的风暴之神，他和一条可怕的巨龙伊鲁扬卡斯有过两次大决战。第一次，风暴之神去找巨龙单挑。可是伊鲁扬卡斯实在太厉害了，把风暴之神打得落花流水。风暴之神受了重伤，回到天上养伤。他想啊想，决定不能光靠蛮力，要找帮手。他请来了女神伊娜拉，伊娜拉又找了一位勇敢的人类英雄。他们准备了一场超级丰盛的宴会——满桌的山珍海味、几大缸的好酒。伊娜拉去邀请伊鲁扬卡斯来吃。巨龙听说有美味，赶紧爬出洞，张开大嘴吃啊喝啊，把所有的食物和酒都吃光了。它的肚子撑得鼓鼓的，再也钻不回洞里去了。这时风暴之神带着雷电冲过来，重重地把巨龙打死了。",
+    "en2": "In Hittite mythology, the storm god fought the great dragon Illuyanka and was badly defeated in their first battle. He sought human help to devise a trap — luring the dragon to a great feast where it ate and drank until it could not move. He slew it then. In a second version, the cost of victory was the storm god's own son.",
+    "langs": [
+      "中文",
+      "English",
+      "Türkçe"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Illuyanka"
+  },
+  {
+    "id": 103,
+    "country": "Turkey",
+    "lat": 38,
+    "lng": 35,
+    "name": "戈尔迪之结",
+    "en": "Gordian Knot",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Jean-Simon_B%C3%A9rth%C3%A9lemy_-_Alexander_Cuts_the_Gordian_Knot.jpg/400px-Jean-Simon_B%C3%A9rth%C3%A9lemy_-_Alexander_Cuts_the_Gordian_Knot.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "classical",
+    "type": "传说",
+    "zh": "很久很久以前，土耳其的弗里吉亚王国有一个传说——他们的开国国王戈尔迪斯，用一种非常神奇的绳结，把自己的牛车绑在王宫的柱子上。这个结又粗又复杂，看起来根本没有头也没有尾。神谕预言：「谁能解开这个绳结，谁就能成为整个亚洲的国王！」几百年来，无数英雄、王子、智者来到弗里吉亚，想试着解开它。可不管他们多聪明、研究多久，都找不到绳结的头，谁也解不开。终于，一位年轻的将军来了——他就是马其顿的亚历山大大帝。他正带着大军远征东方。他来到神殿，端详着传说中的绳结。他没有去找绳结的头尾，而是猛地拔出了佩剑——「咔嚓」一声，把绳结整个砍成两半！第二年，亚历山大果然征服了整个亚洲。",
+    "en2": "In the ancient Phrygian capital of Gordium, a wagon was tied to a post with an impossibly tangled knot of cornel bark. An oracle decreed that whoever untied it would rule all of Asia. Generations of men attempted and failed. Alexander the Great arrived in 333 BCE, examined the knot briefly, then drew his sword and sliced through it.",
+    "langs": [
+      "中文",
+      "English",
+      "Türkçe"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Gordian_Knot"
+  },
+  {
+    "id": 104,
+    "country": "Saudi Arabia",
+    "lat": 24.7,
+    "lng": 46.7,
+    "name": "阿拉丁与神灯",
+    "en": "Aladdin",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Aladdin_by_Errol_Le_Cain.jpg/400px-Aladdin_by_Errol_Le_Cain.jpg",
+    "themes": [
+      "princess",
+      "love"
+    ],
+    "era": "medieval",
+    "type": "童话",
+    "zh": "在古代阿拉伯，一个叫阿拉丁的穷小伙子整天调皮捣蛋。一天，一个自称是他叔叔的魔法师找上门，骗他：「跟我去取一盏神奇的灯吧！」魔法师带阿拉丁来到一个山洞，让他下去拿一盏旧油灯。阿拉丁拿到灯出来，魔法师急着抢，阿拉丁不肯先给。魔法师一气之下用法术把洞口封了。阿拉丁靠戒指里的小精灵回了家。妈妈想擦亮那盏旧灯，刚一擦——「轰」的一声，从灯里冒出一个巨大的灯神：「我是灯的奴隶，你要什么我都能给你！」阿拉丁要了好多金币、漂亮衣服，还娶了苏丹的女儿，盖起了最豪华的宫殿。可后来魔法师又回来，骗走了灯。阿拉丁靠自己的智慧重新夺回了灯，过上了幸福的生活。",
+    "en2": "Aladdin was a poor young man tricked by a sorcerer into retrieving a magic lamp from a sealed cave. He accidentally rubbed the lamp, releasing a djinn of immense power who granted his wishes. He won a princess and a palace. When the sorcerer later stole the lamp, Aladdin used wits rather than wishes to outsmart him and reclaim everything.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Aladdin"
+  },
+  {
+    "id": 105,
+    "country": "Saudi Arabia",
+    "lat": 21.4,
+    "lng": 39.8,
+    "name": "辛巴达航海",
+    "en": "Sinbad the Sailor",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Sinbad_the_Sailor.jpg/400px-Sinbad_the_Sailor.jpg",
+    "themes": [
+      "dragon",
+      "flood"
+    ],
+    "era": "medieval",
+    "type": "冒险",
+    "zh": "古代阿拉伯有一位最有名的航海家，叫辛巴达。他一共出过七次海，每次都遇到不可思议的奇妙冒险。有一次，他和水手们登上一座绿色的小岛，在岛上生火做饭。结果「小岛」动了起来——原来这不是岛，而是一条巨大的鲸鱼的背！他们慌忙跳回船上。还有一次，辛巴达漂到了一个岛上，遇到了独眼巨人，巨人吃了他的几位伙伴，他们用烧红的木棍刺瞎了巨人的眼睛才逃了出来。他还遇到过会咬人的「海上老人」，紧紧骑在他肩膀上不放，他用酒灌醉了老人才摆脱。他还见过巨大的金雕——洛克鸟，一只爪子能抓走大象。他爬过磁山，山的吸力把船上的钉子都拔出来；他还在堆满钻石的山谷里捡过宝石。每次冒险他都死里逃生，带着满船宝物回家。",
+    "en2": "Sinbad the Sailor made seven extraordinary voyages into unknown seas from Basra. He rode the monstrous Roc bird, blinded a one-eyed giant, escaped from the Old Man of the Sea who clung to his shoulders, navigated the Magnetic Mountain that pulled ships apart, and traversed valleys carpeted with diamonds guarded by giant serpents.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Sinbad_the_Sailor"
+  },
+  {
+    "id": 106,
+    "country": "Saudi Arabia",
+    "lat": 26,
+    "lng": 44,
+    "name": "一千零一夜",
+    "en": "One Thousand and One Nights",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Scheherazade.jpg/400px-Scheherazade.jpg",
+    "themes": [
+      "moon",
+      "love",
+      "princess"
+    ],
+    "era": "medieval",
+    "type": "童话",
+    "zh": "很久很久以前，波斯有一位国王名叫山鲁亚尔。他被王后伤了心，从此变得非常残忍——他每天娶一个新的妻子，第二天天亮就把她杀掉。全国上下都吓坏了。聪明勇敢的姑娘谢赫拉扎德主动站出来要嫁给国王。新婚之夜，谢赫拉扎德开始给国王讲一个精彩的故事。她讲啊讲，正讲到最关键、最吸引人的地方，天亮了。国王太想知道结局了，舍不得杀她，决定让她明天接着讲。第二天晚上她讲完故事，又开始讲一个新的——又是讲到最精彩的地方天亮了。就这样，谢赫拉扎德一连讲了一千零一个夜晚，每一个故事都那么动听有趣。一千零一夜过去了，国王已经深深爱上了她，再也不杀人了。",
+    "en2": "King Shahryar, betrayed by his queen, married a new woman each night and had her executed by morning. The vizier's daughter Scheherazade volunteered to be his bride. She told him a story each night, always pausing at the most suspenseful moment at dawn. The king kept her alive night after night — for one thousand and one nights.",
+    "langs": [
+      "中文",
+      "English",
+      "العربية"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights"
+  },
+  {
+    "id": 107,
+    "country": "Italy",
+    "lat": 41.9,
+    "lng": 12.5,
+    "name": "罗慕路斯与雷慕斯",
+    "en": "Romulus and Remus",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/She-wolf_suckles_Romulus_and_Remus.jpg/400px-She-wolf_suckles_Romulus_and_Remus.jpg",
+    "themes": [
+      "sun"
+    ],
+    "era": "ancient",
+    "type": "传说",
+    "zh": "在古罗马的传说里，战神马尔斯有两个双胞胎儿子，名叫罗慕路斯和雷慕斯。可他们刚出生就被坏国王下令扔进台伯河里。装着兄弟俩的篮子顺水漂啊漂，被一棵大树挡住，停在了河边。一只母狼路过，听到婴儿的哭声，过去看到这两个小宝宝。母狼心软了——她不仅没吃他们，还让他们喝自己的奶把他们养大。后来一位牧羊人发现了这两个孩子，把他们带回家继续抚养。罗慕路斯和雷慕斯长大后变成两个英勇的青年，决定建一座属于自己的城市。可是兄弟俩为了城市建在哪个山头吵了起来。罗慕路斯一气之下杀死了弟弟雷慕斯。然后他在帕拉蒂尼山上建立了一座新城，用自己的名字命名为「罗马」——这就是公元前753年罗马城的诞生。",
+    "en2": "The twin sons of Mars and the princess Rhea Silvia were thrown into the Tiber to drown. They washed ashore and were nursed by a she-wolf on the Palatine Hill. Raised by a shepherd, they grew into leaders. When Romulus and Remus quarreled over their city's site, Romulus killed his brother and founded Rome alone — naming it for himself.",
+    "langs": [
+      "中文",
+      "English",
+      "Italiano"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Romulus_and_Remus"
+  },
+  {
+    "id": 108,
+    "country": "Italy",
+    "lat": 43.7,
+    "lng": 11.3,
+    "name": "匹诺曹",
+    "en": "Pinocchio",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pinocchio.jpg/400px-Pinocchio.jpg",
+    "themes": [
+      "love"
+    ],
+    "era": "modern",
+    "type": "童话",
+    "zh": "在意大利的童话里，从前有一位孤单的老木匠，名字叫盖比特。他用一块神奇的木头雕出了一个可爱的小木偶，给他取名叫匹诺曹。神奇的事发生了——木偶活了过来！盖比特把匹诺曹当亲儿子一样疼爱，希望他长成一个真正的男孩。可匹诺曹特别调皮，他不喜欢上学，老是说谎。每次撒谎，他的鼻子就会变长，撒得越多，鼻子就越长。他被坏狐狸和坏猫骗走过钱，又被坏车夫骗去「玩具岛」上玩，结果变成了一头驴！匹诺曹好不容易逃出来，又被一条大鲸鱼吞进了肚子里。他在鲸鱼肚子里找到了爸爸——爸爸也被鲸鱼吃了！匹诺曹想办法让鲸鱼打喷嚏，背着虚弱的爸爸游回岸边。仙女被他真正的勇敢和爱感动，把他变成了一个真正的男孩。",
+    "en2": "Geppetto carved a puppet from enchanted wood that immediately came alive. Pinocchio's nose grew with every lie, and his adventures — running away, falling into the clutches of a fox and cat, becoming a donkey in the Land of Toys — were all consequences of his own dishonesty. Only by choosing truth and self-sacrifice was he made a real boy.",
+    "langs": [
+      "中文",
+      "English",
+      "Italiano"
+    ],
+    "wikipedia": "https://en.wikipedia.org/wiki/Pinocchio"
+  }
 ]
