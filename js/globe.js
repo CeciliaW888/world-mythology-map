@@ -67,15 +67,40 @@ export function initGlobe(container) {
 }
 
 let countryFeatures = null;     // cached after first load
+let countryLabels = [];         // {lat, lng, name} computed from feature centroids
+let lastMythsForLabels = [];    // remembered so we can re-render labels after borders load
+
 async function loadCountryBorders() {
   try {
     const res = await fetch('https://cdn.jsdelivr.net/gh/datasets/geo-countries@main/data/countries.geojson');
     const geo = await res.json();
     countryFeatures = (geo.features || []).filter(f => f.properties.ISO_A2 !== 'AQ'); // drop Antarctica
+    countryLabels = countryFeatures.map(f => {
+      const c = bboxCenter(f);
+      return { lat: c.lat, lng: c.lng, name: f.properties.ADMIN || f.properties.NAME };
+    });
     if (state.showBorders) renderBorders(true);
+    // Re-render labels now that country names are available
+    renderLabels(lastMythsForLabels);
   } catch (err) {
     console.warn('[globe] country borders failed to load:', err);
   }
+}
+
+// Bounding-box center of a GeoJSON feature (ignores antimeridian crossings — fine for label placement)
+function bboxCenter(feature) {
+  let minLat = Infinity, maxLat = -Infinity, minLng = Infinity, maxLng = -Infinity;
+  function walk(c) {
+    if (typeof c[0] === 'number') {
+      const [lng, lat] = c;
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+      if (lng < minLng) minLng = lng;
+      if (lng > maxLng) maxLng = lng;
+    } else c.forEach(walk);
+  }
+  walk(feature.geometry.coordinates);
+  return { lat: (minLat + maxLat) / 2, lng: (minLng + maxLng) / 2 };
 }
 
 export function renderBorders(show) {
@@ -176,19 +201,31 @@ export function renderMarkers(myths, countries) {
       return el;
     });
 
-  if (state.showLabels) {
-    globe
-      .labelsData(spread)
-      .labelLat(d => d.displayLat)
-      .labelLng(d => d.displayLng)
-      .labelText(d => state.lang === 'zh' ? d.name : (d.en || d.name))
-      .labelSize(0.5)
-      .labelColor(() => 'rgba(245,230,200,0.75)')
-      .labelResolution(2)
-      .labelAltitude(0.02);
-  } else {
-    globe.labelsData([]);
-  }
+  lastMythsForLabels = spread;
+  renderLabels(spread);
+}
+
+// Combined labels layer: country names always visible, myth names only when toggle is on.
+function renderLabels(mythsSpread) {
+  if (!globe) return;
+  const cLabels = countryLabels.map(c => ({ kind: 'country', lat: c.lat, lng: c.lng, text: c.name }));
+  const mLabels = state.showLabels
+    ? (mythsSpread || []).map(m => ({
+        kind: 'myth',
+        lat: m.displayLat,
+        lng: m.displayLng,
+        text: state.lang === 'zh' ? m.name : (m.en || m.name),
+      }))
+    : [];
+  globe
+    .labelsData([...cLabels, ...mLabels])
+    .labelLat(d => d.lat)
+    .labelLng(d => d.lng)
+    .labelText(d => d.text)
+    .labelSize(d => d.kind === 'country' ? 0.55 : 0.45)
+    .labelColor(d => d.kind === 'country' ? 'rgba(245,230,200,0.55)' : 'rgba(245,230,200,0.85)')
+    .labelResolution(2)
+    .labelAltitude(d => d.kind === 'country' ? 0.012 : 0.02);
 }
 
 export function renderConnections(myths) {
