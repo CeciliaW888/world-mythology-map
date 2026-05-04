@@ -6,13 +6,9 @@ import { state, on, emit } from './app.js';
 
 // --- Background music state ---
 let bgAudio = null;
+let pendingAudio = null;   // an Audio currently in canplaythrough wait
 let isMuted = false;
-
-// --- Web Audio API for ambient tones ---
-let audioCtx = null;
-let toneOsc = null;
-let toneGain = null;
-let toneNoteInterval = null;
+let userPaused = false;    // user explicitly hit Stop — don't autoplay until they hit Play
 
 // --- Narration state ---
 let narrationAudio = null;
@@ -20,20 +16,6 @@ let narrationUtterance = null;
 let isNarrating = false;
 let narrationProgress = 0;
 let progressInterval = null;
-
-// Cultural scale mappings (Hz)
-const SCALES = {
-  China:        [262, 294, 330, 392, 440],
-  Japan:        [262, 277, 330, 392, 415],
-  Greece:       [262, 277, 330, 349, 392, 415, 494],
-  Egypt:        [262, 277, 330, 370, 392, 415, 494],
-  India:        [262, 294, 330, 370, 392, 440, 494],
-  Norway:       [262, 294, 330, 370, 392, 440, 494],
-  Iraq:         [262, 277, 330, 370, 392, 415, 494],
-  Turkey:       [262, 277, 330, 370, 392, 415, 494],
-  'Saudi Arabia': [262, 277, 330, 370, 392, 415, 494],
-  default:      [262, 294, 330, 392, 440],
-};
 
 export function initAudio() {
   setupMusicControls();
@@ -50,14 +32,10 @@ function setupVolumeToggle() {
     btn.title = isMuted ? 'Unmute all audio' : 'Mute all audio';
 
     if (isMuted) {
-      // Mute everything currently playing
-      if (toneGain && audioCtx) toneGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.3);
       if (bgAudio) bgAudio.volume = 0;
       if (narrationAudio) narrationAudio.volume = 0;
       if (window.speechSynthesis) window.speechSynthesis.pause();
     } else {
-      // Restore audio
-      if (toneGain && audioCtx) toneGain.gain.linearRampToValueAtTime(0.07, audioCtx.currentTime + 0.3);
       if (bgAudio) fadeInAudio(bgAudio, 0.3, 0.5);
       if (narrationAudio && !narrationAudio.paused) fadeInAudio(narrationAudio, 1.0, 0.5);
       if (window.speechSynthesis && window.speechSynthesis.paused) window.speechSynthesis.resume();
@@ -75,9 +53,12 @@ function setupMusicControls() {
 
   if (playBtn) {
     playBtn.addEventListener('click', () => {
-      if (bgAudio && state.audioPlaying) {
+      // Anything playing OR loading → stop. Otherwise → start.
+      if (bgAudio || pendingAudio || state.audioPlaying) {
+        userPaused = true;
         stopMusic();
       } else if (state.currentAudioCountry) {
+        userPaused = false;
         playCountryMusic(state.currentAudioCountry);
       }
     });
@@ -89,12 +70,11 @@ function setupMusicControls() {
     if (country && infoEl) {
       infoEl.textContent = `${country.instrument} · ${country.zh}`;
     }
-    if (!isMuted) playAmbientTone(countryName);
+    if (!isMuted && !userPaused) playCountryMusic(countryName);
   });
 
   on('countryDeselect', () => {
     stopMusic();
-    stopAmbientTone();
     if (infoEl) infoEl.textContent = '';
     state.currentAudioCountry = null;
   });
@@ -106,92 +86,53 @@ function setupMusicControls() {
       if (country && infoEl) {
         infoEl.textContent = `${country.instrument} · ${country.zh}`;
       }
-      if (!isMuted) playAmbientTone(myth.country);
+      if (!isMuted && !userPaused) playCountryMusic(myth.country);
     }
   });
-}
-
-function playAmbientTone(countryName) {
-  stopAmbientTone();
-
-  try {
-    if (!audioCtx) {
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    }
-    if (audioCtx.state === 'suspended') audioCtx.resume();
-
-    const scale = SCALES[countryName] || SCALES.default;
-
-    toneGain = audioCtx.createGain();
-    toneGain.gain.setValueAtTime(0, audioCtx.currentTime);
-    if (!isMuted) toneGain.gain.linearRampToValueAtTime(0.07, audioCtx.currentTime + 1.5);
-    toneGain.connect(audioCtx.destination);
-
-    toneOsc = audioCtx.createOscillator();
-    toneOsc.type = 'sine';
-    toneOsc.frequency.setValueAtTime(scale[0], audioCtx.currentTime);
-    toneOsc.connect(toneGain);
-    toneOsc.start();
-
-    let noteIndex = 0;
-    toneNoteInterval = setInterval(() => {
-      noteIndex = (noteIndex + 1) % scale.length;
-      if (toneOsc) {
-        toneOsc.frequency.setTargetAtTime(scale[noteIndex], audioCtx.currentTime, 0.4);
-      }
-    }, 2200);
-
-    state.audioPlaying = true;
-    const playBtn = document.querySelector('.audio-btn');
-    if (playBtn) { playBtn.classList.add('playing'); playBtn.innerHTML = '◼'; }
-  } catch (err) {
-    console.warn('Ambient tone failed:', err);
-  }
-}
-
-function stopAmbientTone() {
-  if (toneNoteInterval) { clearInterval(toneNoteInterval); toneNoteInterval = null; }
-  if (toneOsc) {
-    try {
-      if (toneGain && audioCtx) {
-        toneGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.8);
-        toneOsc.stop(audioCtx.currentTime + 0.8);
-      } else {
-        toneOsc.stop();
-      }
-    } catch (_) {}
-    toneOsc = null;
-  }
-  toneGain = null;
 }
 
 async function playCountryMusic(countryName) {
   const country = state.allCountries.find(c => c.name === countryName);
   if (!country || !country.musicUrl) return;
 
-  // Fade out current
+  // Fade out anything currently playing
   if (bgAudio) {
     fadeOutAudio(bgAudio, 1.0);
+    bgAudio = null;
   }
 
   try {
     const audio = new Audio();
+    pendingAudio = audio;   // mark in-flight so Stop can cancel it
     audio.crossOrigin = 'anonymous';
     audio.src = country.musicUrl;
     audio.loop = true;
     audio.volume = 0;
 
-    await new Promise((resolve, reject) => {
+    await new Promise((resolve) => {
       audio.addEventListener('canplaythrough', resolve, { once: true });
-      audio.addEventListener('error', reject, { once: true });
+      audio.addEventListener('error', resolve, { once: true });
       audio.load();
       setTimeout(resolve, 5000);
     });
 
-    await audio.play();
-    fadeInAudio(audio, 0.3, 1.5);
+    // If user hit Stop, or another play happened in between, abort this load.
+    if (pendingAudio !== audio || userPaused) {
+      try { audio.pause(); audio.src = ''; } catch (_) {}
+      return;
+    }
 
+    await audio.play();
+
+    // Re-check after play() resolves — Stop could have fired during the play promise.
+    if (pendingAudio !== audio || userPaused) {
+      try { audio.pause(); audio.src = ''; } catch (_) {}
+      return;
+    }
+
+    fadeInAudio(audio, 0.3, 1.5);
     bgAudio = audio;
+    pendingAudio = null;
     state.audioPlaying = true;
 
     const playBtn = document.querySelector('.audio-btn');
@@ -205,11 +146,17 @@ async function playCountryMusic(countryName) {
 }
 
 function stopMusic() {
+  // Hard-stop the playing audio immediately, then schedule the fade for visual smoothness.
+  // Browsers can keep buffering an OGG even when fading; pause+clear is the only reliable kill.
   if (bgAudio) {
-    fadeOutAudio(bgAudio, 0.5);
+    const dying = bgAudio;
     bgAudio = null;
+    try { dying.pause(); dying.src = ''; dying.load(); } catch (_) {}
   }
-  stopAmbientTone();
+  if (pendingAudio) {
+    try { pendingAudio.pause(); pendingAudio.src = ''; pendingAudio.load(); } catch (_) {}
+    pendingAudio = null;
+  }
   state.audioPlaying = false;
   const playBtn = document.querySelector('.audio-btn');
   if (playBtn) {

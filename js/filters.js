@@ -82,6 +82,7 @@ function rerenderLabels() {
 function setupToggles() {
   const labelsToggle = document.getElementById('toggle-labels');
   const linesToggle = document.getElementById('toggle-lines');
+  const bordersToggle = document.getElementById('toggle-borders');
   if (labelsToggle) {
     labelsToggle.checked = state.showLabels;
     labelsToggle.addEventListener('change', () => { state.showLabels = labelsToggle.checked; applyFilters(); });
@@ -89,5 +90,13 @@ function setupToggles() {
   if (linesToggle) {
     linesToggle.checked = state.showLines;
     linesToggle.addEventListener('change', () => { state.showLines = linesToggle.checked; renderConnections(state.filteredMyths); });
+  }
+  if (bordersToggle) {
+    bordersToggle.checked = state.showBorders;
+    bordersToggle.addEventListener('change', async () => {
+      state.showBorders = bordersToggle.checked;
+      const { renderBorders } = await import('./globe.js');
+      renderBorders(state.showBorders);
+    });
   }
 }

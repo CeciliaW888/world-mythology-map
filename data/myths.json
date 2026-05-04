@@ -6,7 +6,7 @@
     "lng": 105,
     "name": "女娲补天",
     "en": "Nuwa Mends the Sky",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/N%C3%BCwa_Mending_the_Heavens.jpg/400px-N%C3%BCwa_Mending_the_Heavens.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Shanhaijing_N%C3%BCwa_Mends_the_Heavens.svg/330px-Shanhaijing_N%C3%BCwa_Mends_the_Heavens.svg.png",
     "themes": [
       "fire",
       "flood"
@@ -32,7 +32,7 @@
     "lng": 108,
     "name": "后羿射日",
     "en": "Hou Yi Shoots the Suns",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Hou_Yi_射日.jpg/400px-Hou_Yi_射日.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Houyi_Shooting_an_Arrow%2C_Xiao_Yuncong.gif",
     "themes": [
       "sun"
     ],
@@ -57,7 +57,7 @@
     "lng": 103,
     "name": "大禹治水",
     "en": "Great Yu Controls the Flood",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/King_Yu_of_Xia.jpg/400px-King_Yu_of_Xia.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/King_Yu_of_Xia.jpg/330px-King_Yu_of_Xia.jpg",
     "themes": [
       "flood"
     ],
@@ -83,7 +83,7 @@
     "lng": 110,
     "name": "盘古开天",
     "en": "Pangu Creates the World",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pangu.jpg/400px-Pangu.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Pangu.jpg/330px-Pangu.jpg",
     "themes": [
       "sun",
       "moon"
@@ -108,7 +108,7 @@
     "lng": 114,
     "name": "嫦娥奔月",
     "en": "Chang'e Flies to the Moon",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/The_Moon_Goddess_Chang_E.jpg/400px-The_Moon_Goddess_Chang_E.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/The_Moon_Goddess_Chang_E_-_Unidentified_artist%2C_after_Tang_Yin.jpg/330px-The_Moon_Goddess_Chang_E_-_Unidentified_artist%2C_after_Tang_Yin.jpg",
     "themes": [
       "moon",
       "love"
@@ -133,7 +133,7 @@
     "lng": 100,
     "name": "精卫填海",
     "en": "Jingwei Fills the Sea",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Jingwei_bird.jpg/400px-Jingwei_bird.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/6/63/Classic_of_Mountains_and_Seas%2C_1597%2C_plate_XXV_%28detail%29.jpg",
     "themes": [
       "flood"
     ],
@@ -154,7 +154,7 @@
     "lng": 118,
     "name": "牛郎织女",
     "en": "The Cowherd and Weaver Girl",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/The_Cowherd_and_the_Weaver_Girl.jpg/400px-The_Cowherd_and_the_Weaver_Girl.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/The_Magpie_Bridge.jpg/330px-The_Magpie_Bridge.jpg",
     "themes": [
       "love",
       "moon"
@@ -180,7 +180,7 @@
     "lng": 121,
     "name": "白蛇传",
     "en": "Legend of the White Snake",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/erta_di_una_stampa_cinese_della_leggenda_del_serpente_bianco.jpg/400px-erta_di_una_stampa_cinese_della_leggenda_del_serpente_bianco.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Long_Gallery-Legend_white_snake.JPG/330px-Long_Gallery-Legend_white_snake.JPG",
     "themes": [
       "love"
     ],
@@ -201,7 +201,7 @@
     "lng": 106,
     "name": "黄帝战蚩尤",
     "en": "Yellow Emperor vs Chiyou",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Yellow_Emperor.jpg/400px-Yellow_Emperor.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Huang_Di.png/330px-Huang_Di.png",
     "themes": [
       "dragon"
     ],
@@ -222,7 +222,7 @@
     "lng": 112,
     "name": "夸父逐日",
     "en": "Kuafu Chases the Sun",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Kuafu.png/400px-Kuafu.png",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Kua-fu.gif/330px-Kua-fu.gif",
     "themes": [
       "sun"
     ],
@@ -246,7 +246,7 @@
     "lng": 116,
     "name": "孟姜女哭长城",
     "en": "Lady Meng Jiang",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Erta_di_una_stampa_cinese_di_Meng_Jiang_Nu.jpg/400px-Erta_di_una_stampa_cinese_di_Meng_Jiang_Nu.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Meng_Jiang_Nu_Song_Dynasty_Lie_Nu_Zhuan.jpg/330px-Meng_Jiang_Nu_Song_Dynasty_Lie_Nu_Zhuan.jpg",
     "themes": [
       "love"
     ],
@@ -267,7 +267,7 @@
     "lng": 116,
     "name": "哪吒闹海",
     "en": "Nezha Conquers the Sea",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Erta_di_una_stampa_cinese_di_Nezha.jpg/400px-Erta_di_una_stampa_cinese_di_Nezha.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ping_Sien_Si_-_008_Nezha_%28deity%29_%2815513109434%29.jpg/330px-Ping_Sien_Si_-_008_Nezha_%28deity%29_%2815513109434%29.jpg",
     "themes": [
       "fire",
       "dragon"
@@ -289,7 +289,7 @@
     "lng": 107,
     "name": "梁山伯与祝英台",
     "en": "Butterfly Lovers",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Liang_Shanbo_and_Zhu_Yingtai.jpg/400px-Liang_Shanbo_and_Zhu_Yingtai.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Monument_to_Liang_Shanbo_and_Zhu_Yingtai_near_the_Tombe_di_Giulietta_in_Verona%2C_Italy.jpg/330px-Monument_to_Liang_Shanbo_and_Zhu_Yingtai_near_the_Tombe_di_Giulietta_in_Verona%2C_Italy.jpg",
     "themes": [
       "love"
     ],
@@ -313,7 +313,7 @@
     "lng": 109,
     "name": "西游记",
     "en": "Journey to the West",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/XiYouJi.jpg/400px-XiYouJi.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Evl53201b_pic.jpg",
     "themes": [
       "dragon"
     ],
@@ -334,7 +334,7 @@
     "lng": 102,
     "name": "伏羲画卦",
     "en": "Fuxi Creates the Trigrams",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Fuxi_and_N%C3%BCwa.jpg/400px-Fuxi_and_N%C3%BCwa.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Anonymous-Fuxi_and_N%C3%BCwa.jpg/330px-Anonymous-Fuxi_and_N%C3%BCwa.jpg",
     "themes": [
       "sun"
     ],
@@ -355,7 +355,7 @@
     "lng": 23.7,
     "name": "普罗米修斯盗火",
     "en": "Prometheus Brings Fire",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Peter_Paul_Rubens_-_Prometheus_Bound_-_Google_Art_Project.jpg/400px-Peter_Paul_Rubens_-_Prometheus_Bound_-_Google_Art_Project.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Prometheus_and_Atlas%2C_Laconian_black-figure_kylix%2C_by_the_Arkesilas_Painter%2C_560-550_BC%2C_inv._16592_-_Museo_Gregoriano_Etrusco_-_Vatican_Museums_-_DSC01069.jpg/330px-Prometheus_and_Atlas%2C_Laconian_black-figure_kylix%2C_by_the_Arkesilas_Painter%2C_560-550_BC%2C_inv._16592_-_Museo_Gregoriano_Etrusco_-_Vatican_Museums_-_DSC01069.jpg",
     "themes": [
       "fire"
     ],
@@ -380,7 +380,7 @@
     "lng": 22,
     "name": "阿佛洛狄忒诞生",
     "en": "Birth of Aphrodite",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/400px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cnidus_Aphrodite_Altemps_Inv8619.jpg/330px-Cnidus_Aphrodite_Altemps_Inv8619.jpg",
     "themes": [
       "love"
     ],
@@ -402,7 +402,7 @@
     "lng": 22.5,
     "name": "特洛伊战争",
     "en": "Trojan War",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/The_Burning_of_Troy_%281759%29.jpg/400px-The_Burning_of_Troy_%281759%29.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg/330px-Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg",
     "themes": [
       "love"
     ],
@@ -424,7 +424,7 @@
     "lng": 23.9,
     "name": "奥德修斯历险",
     "en": "The Odyssey",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Odysseus_And_The_Sirens_by_John_William_Waterhouse.jpg/400px-Odysseus_And_The_Sirens_by_John_William_Waterhouse.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Fragment_Odyssee_2245_2.jpg/330px-Fragment_Odyssee_2245_2.jpg",
     "themes": [
       "flood"
     ],
@@ -446,7 +446,7 @@
     "lng": 24.5,
     "name": "伊卡洛斯之翼",
     "en": "Icarus and Daedalus",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Jacob_Peter_Gowy%27s_The_Flight_of_Icarus.jpg/400px-Jacob_Peter_Gowy%27s_The_Flight_of_Icarus.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Gowy-icaro-prado.jpg/330px-Gowy-icaro-prado.jpg",
     "themes": [
       "sun"
     ],
@@ -468,7 +468,7 @@
     "lng": 23,
     "name": "俄耳甫斯冥府寻妻",
     "en": "Orpheus and Eurydice",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Christian_Gottlieb_Kratzenstein-Stub_-_Orpheus_and_Eurydice_-_KMS897_-_Statens_Museum_for_Kunst.jpg/400px-Christian_Gottlieb_Kratzenstein-Stub_-_Orpheus_and_Eurydice_-_KMS897_-_Statens_Museum_for_Kunst.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/DSC00355_-_Orfeo_%28epoca_romana%29_-_Foto_G._Dall%27Orto.jpg/330px-DSC00355_-_Orfeo_%28epoca_romana%29_-_Foto_G._Dall%27Orto.jpg",
     "themes": [
       "love"
     ],
@@ -490,7 +490,7 @@
     "lng": 25.4,
     "name": "忒修斯与弥诺陶洛斯",
     "en": "Theseus and the Minotaur",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Barye_-_Theseus_and_the_Minotaur_-_Walters_2754.jpg/400px-Barye_-_Theseus_and_the_Minotaur_-_Walters_2754.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Kylix_Theseus_Aison_MNA_Inv11365_n1.jpg/330px-Kylix_Theseus_Aison_MNA_Inv11365_n1.jpg",
     "themes": [
       "dragon"
     ],
@@ -512,7 +512,7 @@
     "lng": 20.9,
     "name": "潘多拉魔盒",
     "en": "Pandora's Box",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pandora_-_John_William_Waterhouse.jpg/400px-Pandora_-_John_William_Waterhouse.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lawrence_Alma-Tadema_10.jpeg/330px-Lawrence_Alma-Tadema_10.jpeg",
     "themes": [
       "fire"
     ],
@@ -534,7 +534,7 @@
     "lng": 21.7,
     "name": "珀尔修斯斩美杜莎",
     "en": "Perseus and Medusa",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Benvenuto_Cellini_-_Perseus_and_Medusa_-_Right_Side.jpg/400px-Benvenuto_Cellini_-_Perseus_and_Medusa_-_Right_Side.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Perseo_con_la_testa_di_medusa%2C_originale_di_et%C3%A0_flavia_o_traianea%2C_dalle_terme_presso_porta_laurentina%2C_01.JPG/330px-Perseo_con_la_testa_di_medusa%2C_originale_di_et%C3%A0_flavia_o_traianea%2C_dalle_terme_presso_porta_laurentina%2C_01.JPG",
     "themes": [
       "dragon"
     ],
@@ -556,7 +556,7 @@
     "lng": 21.5,
     "name": "丢卡利翁大洪水",
     "en": "Deucalion's Flood",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Deucalion_and_Pyrrha.jpg/400px-Deucalion_and_Pyrrha.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Deucalion.jpg/330px-Deucalion.jpg",
     "themes": [
       "flood"
     ],
@@ -582,7 +582,7 @@
     "lng": 30.8,
     "name": "奥西里斯与伊西斯",
     "en": "Osiris and Isis",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Osiris-tomb-of-Nefertari.jpg/400px-Osiris-tomb-of-Nefertari.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Jewel_Osiris_family-E_6204-IMG_0641-gradient.jpg/330px-Jewel_Osiris_family-E_6204-IMG_0641-gradient.jpg",
     "themes": [
       "love",
       "moon"
@@ -605,7 +605,7 @@
     "lng": 31.2,
     "name": "拉神的太阳船",
     "en": "Ra's Solar Barque",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ra_Barque.jpg/400px-Ra_Barque.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Re-Horakhty.svg/330px-Re-Horakhty.svg.png",
     "themes": [
       "sun"
     ],
@@ -627,7 +627,7 @@
     "lng": 32.6,
     "name": "荷鲁斯之眼",
     "en": "Eye of Horus",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Eye_of_Horus_bw.svg/400px-Eye_of_Horus_bw.svg.png",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Eye_of_Horus_bw.svg/330px-Eye_of_Horus_bw.svg.png",
     "themes": [
       "moon"
     ],
@@ -649,7 +649,7 @@
     "lng": 31.1,
     "name": "阿努比斯称心",
     "en": "Anubis Weighs the Heart",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/BD_Hunefer.jpg/400px-BD_Hunefer.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Anubis_standing.svg/330px-Anubis_standing.svg.png",
     "themes": [
       "moon"
     ],
@@ -671,7 +671,7 @@
     "lng": 30.9,
     "name": "斯芬克斯之谜",
     "en": "Riddle of the Sphinx",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Great_Sphinx_of_Giza_-_20080716a.jpg/400px-Great_Sphinx_of_Giza_-_20080716a.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Sphinx_CdM_Paris_DeRidder865_n2.jpg/330px-Sphinx_CdM_Paris_DeRidder865_n2.jpg",
     "themes": [
       "dragon"
     ],
@@ -693,7 +693,7 @@
     "lng": 31,
     "name": "赛特与混沌",
     "en": "Set God of Chaos",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Set.svg/400px-Set.svg.png",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Set.svg/330px-Set.svg.png",
     "themes": [
       "fire"
     ],
@@ -715,7 +715,7 @@
     "lng": 139.7,
     "name": "天照大神",
     "en": "Amaterasu",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Amaterasu_cave_crop.jpg/400px-Amaterasu_cave_crop.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Amaterasu_cave_crop.jpg/330px-Amaterasu_cave_crop.jpg",
     "themes": [
       "sun"
     ],
@@ -737,7 +737,7 @@
     "lng": 140,
     "name": "伊邪那岐与伊邪那美",
     "en": "Izanagi and Izanami",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Kobayashi_Izanami_and_izanagi.jpg/400px-Kobayashi_Izanami_and_izanagi.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Kobayashi_Izanami_and_Izanagi.jpg/330px-Kobayashi_Izanami_and_Izanagi.jpg",
     "themes": [
       "flood",
       "love"
@@ -763,7 +763,7 @@
     "lng": 135.5,
     "name": "桃太郎",
     "en": "Momotaro",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Momotaro_by_Ogata_Gekko.jpg/400px-Momotaro_by_Ogata_Gekko.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Momotaro2.jpg/330px-Momotaro2.jpg",
     "themes": [
       "dragon"
     ],
@@ -785,7 +785,7 @@
     "lng": 131,
     "name": "八岐大蛇",
     "en": "Yamata no Orochi",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Kuniteru_Yamata_Orochi.jpg/400px-Kuniteru_Yamata_Orochi.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Susano-o_no_Mikoto_Killing_the_Eight-headed_Dragon.jpg/330px-Susano-o_no_Mikoto_Killing_the_Eight-headed_Dragon.jpg",
     "themes": [
       "dragon"
     ],
@@ -810,7 +810,7 @@
     "lng": 136,
     "name": "竹取物语",
     "en": "The Tale of the Bamboo Cutter",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Taketori_Monogatari_2.jpg/400px-Taketori_Monogatari_2.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Japanese_Fairy_Book_-_Ozaki_-_P118.png/330px-Japanese_Fairy_Book_-_Ozaki_-_P118.png",
     "themes": [
       "moon",
       "princess"
@@ -833,7 +833,7 @@
     "lng": 132.5,
     "name": "浦岛太郎",
     "en": "Urashima Taro",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Urashima_Taro.jpg/400px-Urashima_Taro.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Matsuki_Heikichi%281899%29-Urashima-p04.jpg/330px-Matsuki_Heikichi%281899%29-Urashima-p04.jpg",
     "themes": [
       "love"
     ],
@@ -855,7 +855,7 @@
     "lng": 140,
     "name": "雪女",
     "en": "Yuki-onna",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Suuhi_Yuki-onna.jpg/400px-Suuhi_Yuki-onna.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Suushi_Yuki-onna.jpg/330px-Suushi_Yuki-onna.jpg",
     "themes": [
       "love"
     ],
@@ -877,7 +877,7 @@
     "lng": 138.7,
     "name": "富士山传说",
     "en": "Legend of Mount Fuji",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Katsushika_Hokusai_-_Thirty-Six_Views_of_Mount_Fuji-_The_Great_Wave_Off_the_Coast_of_Kanagawa_-_Google_Art_Project.jpg/400px-Katsushika_Hokusai_-_Thirty-Six_Views_of_Mount_Fuji-_The_Great_Wave_Off_the_Coast_of_Kanagawa_-_Google_Art_Project.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg/330px-View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg",
     "themes": [
       "fire"
     ],
@@ -899,7 +899,7 @@
     "lng": 10,
     "name": "诸神黄昏",
     "en": "Ragnarok",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Battle_of_the_Doomed_Gods.jpg/400px-Battle_of_the_Doomed_Gods.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Stave_church_Urnes%2C_craving_detail_1.jpg/330px-Stave_church_Urnes%2C_craving_detail_1.jpg",
     "themes": [
       "fire",
       "flood"
@@ -926,7 +926,7 @@
     "lng": 9,
     "name": "世界树",
     "en": "Yggdrasil",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Yggdrasil.jpg/400px-Yggdrasil.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/AM_738_4to_Yggdrasill.png/330px-AM_738_4to_Yggdrasill.png",
     "themes": [
       "sun"
     ],
@@ -948,7 +948,7 @@
     "lng": 11,
     "name": "托尔战巨蛇",
     "en": "Thor vs Jormungandr",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Thor_and_the_Midgard_Serpent.jpg/400px-Thor_and_the_Midgard_Serpent.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ragnarok_-_Louis_Moe_%2817006%29_-_cropped_%28cropped%29.png/330px-Ragnarok_-_Louis_Moe_%2817006%29_-_cropped_%28cropped%29.png",
     "themes": [
       "dragon",
       "flood"
@@ -971,7 +971,7 @@
     "lng": 10,
     "name": "洛基的诡计",
     "en": "Loki the Trickster",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Processed_SAM_loki.jpg/400px-Processed_SAM_loki.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Processed_SAM_loki.jpg/330px-Processed_SAM_loki.jpg",
     "themes": [
       "fire"
     ],
@@ -993,7 +993,7 @@
     "lng": 8,
     "name": "奥丁求智慧",
     "en": "Odin's Quest for Wisdom",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Georg_von_Rosen_-_Oden_som_vandringsman%2C_1886_%28Odin%2C_the_Wanderer%29.jpg/400px-Georg_von_Rosen_-_Oden_som_vandringsman%2C_1886_%28Odin%2C_the_Wanderer%29.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Georg_von_Rosen_-_Oden_som_vandringsman%2C_1886_%28Odin%2C_the_Wanderer%29.jpg/330px-Georg_von_Rosen_-_Oden_som_vandringsman%2C_1886_%28Odin%2C_the_Wanderer%29.jpg",
     "themes": [
       "moon"
     ],
@@ -1015,7 +1015,7 @@
     "lng": 12,
     "name": "芬里尔巨狼",
     "en": "Fenrir the Wolf",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/The_binding_of_Fenrir.jpg/400px-The_binding_of_Fenrir.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Tullstorpstenen%2C_DR_271%2CTullstorp_1-1%2C_Runristning_%28cropped%29.jpg/330px-Tullstorpstenen%2C_DR_271%2CTullstorp_1-1%2C_Runristning_%28cropped%29.jpg",
     "themes": [
       "sun"
     ],
@@ -1037,7 +1037,7 @@
     "lng": 79,
     "name": "搅拌乳海",
     "en": "Churning of the Ocean",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Kurma_avatar_of_Vishnu.jpg/400px-Kurma_avatar_of_Vishnu.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Samudra-Manthan-The-Churning-of-the-Ocean-of-Milk.jpg/330px-Samudra-Manthan-The-Churning-of-the-Ocean-of-Milk.jpg",
     "themes": [
       "flood",
       "dragon"
@@ -1063,7 +1063,7 @@
     "lng": 81,
     "name": "罗摩衍那",
     "en": "Ramayana",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ravana_cut_painting.jpg/400px-Ravana_cut_painting.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/R%C4%81ma_slays_R%C4%81va%E1%B9%87a.png/330px-R%C4%81ma_slays_R%C4%81va%E1%B9%87a.png",
     "themes": [
       "love",
       "dragon"
@@ -1086,7 +1086,7 @@
     "lng": 73,
     "name": "象头神迦尼萨",
     "en": "Ganesha",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Ganesha_Basohli_miniature_circa_1730_Smithsonian_Institution.jpg/400px-Ganesha_Basohli_miniature_circa_1730_Smithsonian_Institution.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg/330px-Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg",
     "themes": [
       "moon"
     ],
@@ -1108,7 +1108,7 @@
     "lng": 85,
     "name": "摩诃婆罗多",
     "en": "Mahabharata",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kurukshetra.jpg/400px-Kurukshetra.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Kurukshetra.jpg/330px-Kurukshetra.jpg",
     "themes": [
       "fire",
       "dragon"
@@ -1131,7 +1131,7 @@
     "lng": 77,
     "name": "毗湿奴十化身",
     "en": "Avatars of Vishnu",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Dashavatara.jpg/400px-Dashavatara.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Vishnu_Avatars.jpg/330px-Vishnu_Avatars.jpg",
     "themes": [
       "flood"
     ],
@@ -1153,7 +1153,7 @@
     "lng": 77.6,
     "name": "哈努曼飞跃大海",
     "en": "Hanuman Leaps the Ocean",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Hanuman_in_Ramayana.jpg/400px-Hanuman_in_Ramayana.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Shri_Sidhheshwar_Hanuman_Mandir_Simariya_%2C_Chhindwara..jpg/330px-Shri_Sidhheshwar_Hanuman_Mandir_Simariya_%2C_Chhindwara..jpg",
     "themes": [
       "dragon"
     ],
@@ -1175,7 +1175,7 @@
     "lng": 44.4,
     "name": "吉尔伽美什",
     "en": "Epic of Gilgamesh",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Gilgamesh_statue.jpg/400px-Gilgamesh_statue.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/British_Museum_Flood_Tablet.jpg/330px-British_Museum_Flood_Tablet.jpg",
     "themes": [
       "flood",
       "love"
@@ -1201,7 +1201,7 @@
     "lng": 47,
     "name": "苏美尔大洪水",
     "en": "Sumerian Flood",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/GilgachFlworktab.jpg/400px-GilgachFlworktab.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Chaos_Monster_and_Sun_God.png/330px-Chaos_Monster_and_Sun_God.png",
     "themes": [
       "flood"
     ],
@@ -1227,7 +1227,7 @@
     "lng": 45,
     "name": "伊南娜下冥界",
     "en": "Inanna's Descent",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ishtar_on_an_Akkadian_Empire_seal.jpg/400px-Ishtar_on_an_Akkadian_Empire_seal.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Ishtar_on_an_Akkadian_seal.jpg/330px-Ishtar_on_an_Akkadian_seal.jpg",
     "themes": [
       "love",
       "moon"
@@ -1250,7 +1250,7 @@
     "lng": 43,
     "name": "提亚马特",
     "en": "Tiamat the Dragon",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Chaos_Monster_and_Sun_God.png/400px-Chaos_Monster_and_Sun_God.png",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Myths_and_legends_of_Babylonia_and_Assyria_%281916%29_%2814759101646%29.jpg/330px-Myths_and_legends_of_Babylonia_and_Assyria_%281916%29_%2814759101646%29.jpg",
     "themes": [
       "dragon",
       "flood"
@@ -1273,7 +1273,7 @@
     "lng": 127,
     "name": "檀君神话",
     "en": "Dangun",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Dangun_Wanggeom.jpg/400px-Dangun_Wanggeom.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Portrait_of_Dangun.jpg/330px-Portrait_of_Dangun.jpg",
     "themes": [
       "sun"
     ],
@@ -1295,7 +1295,7 @@
     "lng": 129,
     "name": "春香传",
     "en": "Chunhyangjeon",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Chunhyangjeon.jpg/400px-Chunhyangjeon.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Chunhyangjeon.jpg/330px-Chunhyangjeon.jpg",
     "themes": [
       "love",
       "princess"
@@ -1318,7 +1318,7 @@
     "lng": 128,
     "name": "九尾狐",
     "en": "Kumiho",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Gumiho.jpg/400px-Gumiho.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/KUMIHO.jpg/330px-KUMIHO.jpg",
     "themes": [
       "love"
     ],
@@ -1340,7 +1340,7 @@
     "lng": -99.1,
     "name": "羽蛇神",
     "en": "Quetzalcoatl",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Quetzalcoatl_telleriano.jpg/400px-Quetzalcoatl_telleriano.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Quetzalc%C3%B3atl_como_la_serpiente_emplumada_y_el_dios_del_viento_Eh%C3%A9catl%2C_en_el_folio_19.jpg/330px-Quetzalc%C3%B3atl_como_la_serpiente_emplumada_y_el_dios_del_viento_Eh%C3%A9catl%2C_en_el_folio_19.jpg",
     "themes": [
       "dragon",
       "sun"
@@ -1363,7 +1363,7 @@
     "lng": -98,
     "name": "五个太阳",
     "en": "Five Suns",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sunstone.jpg/400px-Sunstone.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/File-Monolito_de_la_Piedra_del_Sol_%28centro%29.jpg/330px-File-Monolito_de_la_Piedra_del_Sol_%28centro%29.jpg",
     "themes": [
       "sun",
       "flood"
@@ -1386,7 +1386,7 @@
     "lng": -100,
     "name": "双胞胎英雄",
     "en": "Hero Twins",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Hero_Twins_Hunahpu_Xbalanque.jpg/400px-Hero_Twins_Hunahpu_Xbalanque.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Altar_5_from_La_Venta%2C_left_side_%28Ruben_Charles%29.jpg/330px-Altar_5_from_La_Venta%2C_left_side_%28Ruben_Charles%29.jpg",
     "themes": [
       "moon",
       "sun"
@@ -1409,7 +1409,7 @@
     "lng": 7.5,
     "name": "奥巴塔拉创世",
     "en": "Obatala Creates the World",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Yoruba-bronze-head.jpg/400px-Yoruba-bronze-head.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Oxal%C3%A1.jpg/330px-Oxal%C3%A1.jpg",
     "themes": [
       "flood"
     ],
@@ -1430,7 +1430,7 @@
     "lng": 3.4,
     "name": "尚戈雷神",
     "en": "Shango God of Thunder",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Brooklyn_Museum_1992.133_Figure_of_Shango_on_Horseback.jpg/400px-Brooklyn_Museum_1992.133_Figure_of_Shango_on_Horseback.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Representa%C3%A7%C3%A3o_de_Xang%C3%B4_MN_01.jpg/330px-Representa%C3%A7%C3%A3o_de_Xang%C3%B4_MN_01.jpg",
     "themes": [
       "fire"
     ],
@@ -1451,7 +1451,7 @@
     "lng": 8,
     "name": "阿南西蜘蛛",
     "en": "Anansi the Spider",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Asante_gold_weight_depicting_Anansi.jpg/400px-Asante_gold_weight_depicting_Anansi.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Anansi-34.png/330px-Anansi-34.png",
     "themes": [
       "moon"
     ],
@@ -1472,7 +1472,7 @@
     "lng": 134,
     "name": "彩虹蛇",
     "en": "Rainbow Serpent",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Rainbow_Serpent.jpg/400px-Rainbow_Serpent.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/RainbowSerpent.jpg/330px-RainbowSerpent.jpg",
     "themes": [
       "flood",
       "dragon"
@@ -1494,7 +1494,7 @@
     "lng": 140,
     "name": "梦幻时代",
     "en": "The Dreamtime",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Aboriginal_Art_Australia.jpg/400px-Aboriginal_Art_Australia.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Aboriginal_art_Carnarvon_Gorge.jpg/330px-Aboriginal_art_Carnarvon_Gorge.jpg",
     "themes": [
       "sun"
     ],
@@ -1515,7 +1515,7 @@
     "lng": -47.9,
     "name": "图皮大洪水",
     "en": "Tupi Flood",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Albert_Eckhout_-_Tapuia.jpg/400px-Albert_Eckhout_-_Tapuia.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Homtupinamba.jpg/330px-Homtupinamba.jpg",
     "themes": [
       "flood"
     ],
@@ -1540,7 +1540,7 @@
     "lng": -60,
     "name": "粉红海豚",
     "en": "Boto Encantado",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Amazon_river_dolphin.jpg/400px-Amazon_river_dolphin.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Inia.jpg/330px-Inia.jpg",
     "themes": [
       "love"
     ],
@@ -1562,7 +1562,7 @@
     "lng": -72,
     "name": "印提太阳神",
     "en": "Inti the Sun God",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Inti_Raymi.jpg/400px-Inti_Raymi.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/C%C3%A1pac_Inti_Raimi.jpg/330px-C%C3%A1pac_Inti_Raimi.jpg",
     "themes": [
       "sun"
     ],
@@ -1584,7 +1584,7 @@
     "lng": -70,
     "name": "维拉科查创世",
     "en": "Viracocha",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Viracocha.jpg/400px-Viracocha.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/MocheBeardedMen.jpg/330px-MocheBeardedMen.jpg",
     "themes": [
       "flood",
       "sun"
@@ -1607,7 +1607,7 @@
     "lng": -6.3,
     "name": "图安麦卡里尔",
     "en": "Tuan mac Cairill",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tuatha_D%C3%A9_Danann.jpg/400px-Tuatha_D%C3%A9_Danann.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Myths_and_legends%3B_the_Celtic_race_%281910%29_%2814760452906%29.jpg/330px-Myths_and_legends%3B_the_Celtic_race_%281910%29_%2814760452906%29.jpg",
     "themes": [
       "flood"
     ],
@@ -1628,7 +1628,7 @@
     "lng": -8,
     "name": "库丘林",
     "en": "Cu Chulainn",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Cu_Chulainn_Reins_His_Chariot.jpg/400px-Cu_Chulainn_Reins_His_Chariot.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/6/60/Cuslayshound.jpg",
     "themes": [
       "dragon",
       "fire"
@@ -1650,7 +1650,7 @@
     "lng": -7,
     "name": "利尔的孩子们",
     "en": "Children of Lir",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Children_of_Lir.jpg/400px-Children_of_Lir.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/John_Duncan_%281924%29_Children_of_Lir.jpg/330px-John_Duncan_%281924%29_Children_of_Lir.jpg",
     "themes": [
       "love",
       "princess"
@@ -1672,7 +1672,7 @@
     "lng": 37.6,
     "name": "芭芭雅嘎",
     "en": "Baba Yaga",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Baba_Yaga_-_Bilibin.jpg/400px-Baba_Yaga_-_Bilibin.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/%D0%A1%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D0%91%D0%B0%D0%B1%D0%B0-%D1%8F%D0%B3%D0%B0_3.jpg/330px-%D0%A1%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D0%91%D0%B0%D0%B1%D0%B0-%D1%8F%D0%B3%D0%B0_3.jpg",
     "themes": [
       "fire",
       "princess"
@@ -1695,7 +1695,7 @@
     "lng": 30.3,
     "name": "火鸟",
     "en": "The Firebird",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Ivan_Bilibin_062.jpg/400px-Ivan_Bilibin_062.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Firebird.jpg/330px-Firebird.jpg",
     "themes": [
       "fire",
       "princess"
@@ -1718,7 +1718,7 @@
     "lng": 44,
     "name": "瓦西丽莎",
     "en": "Vasilisa the Beautiful",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Vasilisa.jpg/400px-Vasilisa.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Russian_Wonder_Tales_081.jpg/330px-Russian_Wonder_Tales_081.jpg",
     "themes": [
       "princess",
       "fire"
@@ -1741,7 +1741,7 @@
     "lng": 174.8,
     "name": "毛伊钓岛",
     "en": "Maui Fishes Up the North Island",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gottfried_Lindauer_-_Tamati_Waka_Nene.jpg/400px-Gottfried_Lindauer_-_Tamati_Waka_Nene.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Te_Tohunga_-_p49.png/330px-Te_Tohunga_-_p49.png",
     "themes": [
       "flood"
     ],
@@ -1762,7 +1762,7 @@
     "lng": 176,
     "name": "朗伊与帕帕",
     "en": "Rangi and Papa",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Rangi_and_Papa.jpg/400px-Rangi_and_Papa.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/WahineTane.jpg/330px-WahineTane.jpg",
     "themes": [
       "love",
       "sun"
@@ -1784,7 +1784,7 @@
     "lng": 32.9,
     "name": "伊鲁扬卡斯",
     "en": "Illuyanka Dragon",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Museum_of_Anatolian_Civilizations.jpg/400px-Museum_of_Anatolian_Civilizations.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Destruction_of_Leviathan.png/330px-Destruction_of_Leviathan.png",
     "themes": [
       "dragon"
     ],
@@ -1806,7 +1806,7 @@
     "lng": 35,
     "name": "戈尔迪之结",
     "en": "Gordian Knot",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Jean-Simon_B%C3%A9rth%C3%A9lemy_-_Alexander_Cuts_the_Gordian_Knot.jpg/400px-Jean-Simon_B%C3%A9rth%C3%A9lemy_-_Alexander_Cuts_the_Gordian_Knot.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Alexander_cuts_the_Gordian_Knot.jpg/330px-Alexander_cuts_the_Gordian_Knot.jpg",
     "themes": [
       "sun"
     ],
@@ -1828,7 +1828,7 @@
     "lng": 46.7,
     "name": "阿拉丁与神灯",
     "en": "Aladdin",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Aladdin_by_Errol_Le_Cain.jpg/400px-Aladdin_by_Errol_Le_Cain.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Alad.jpg/330px-Alad.jpg",
     "themes": [
       "princess",
       "love"
@@ -1851,7 +1851,7 @@
     "lng": 39.8,
     "name": "辛巴达航海",
     "en": "Sinbad the Sailor",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Sinbad_the_Sailor.jpg/400px-Sinbad_the_Sailor.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Having_balanced_my_cargo_exactly.jpg/330px-Having_balanced_my_cargo_exactly.jpg",
     "themes": [
       "dragon",
       "flood"
@@ -1874,7 +1874,7 @@
     "lng": 44,
     "name": "一千零一夜",
     "en": "One Thousand and One Nights",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Scheherazade.jpg/400px-Scheherazade.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/William-Strang-Sindbad-AliBaba-titlepage.JPG/330px-William-Strang-Sindbad-AliBaba-titlepage.JPG",
     "themes": [
       "moon",
       "love",
@@ -1898,7 +1898,7 @@
     "lng": 12.5,
     "name": "罗慕路斯与雷慕斯",
     "en": "Romulus and Remus",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/She-wolf_suckles_Romulus_and_Remus.jpg/400px-She-wolf_suckles_Romulus_and_Remus.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Lupa_Capitolina%2C_Rome.jpg/330px-Lupa_Capitolina%2C_Rome.jpg",
     "themes": [
       "sun"
     ],
@@ -1920,7 +1920,7 @@
     "lng": 11.3,
     "name": "匹诺曹",
     "en": "Pinocchio",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pinocchio.jpg/400px-Pinocchio.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Pinocchio.jpg/330px-Pinocchio.jpg",
     "themes": [
       "love"
     ],

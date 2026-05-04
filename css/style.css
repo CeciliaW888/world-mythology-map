@@ -483,3 +483,20 @@ body {
   #globe-canvas, .header, .filter-container { right: 0 !important; width: 100% !important; }
   .story-panel { right: 20px; }
 }
+
+/* Country border tooltip (globe.gl polygonLabel) */
+.scene-tooltip {
+  pointer-events: none;
+}
+.country-tooltip {
+  background: rgba(40, 28, 16, 0.92);
+  color: #f5e6c8;
+  border: 1px solid rgba(212, 160, 103, 0.6);
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+}

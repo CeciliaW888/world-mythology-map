@@ -13,6 +13,7 @@ export const state = {
   activeEra: null,
   showLabels: false,
   showLines: true,
+  showBorders: true,
   searchQuery: '',
   lang: 'zh',        // current display language: 'zh' or 'en'
   audioPlaying: false,
